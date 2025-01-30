@@ -1,6 +1,9 @@
 package com.pouffydev.gtconstruct;
 
 import com.gregtechceu.gtceu.utils.FormattingUtil;
+import com.pouffydev.gtconstruct.registry.GTCModifiers;
+import com.pouffydev.gtconstruct.registry.GTCToolParts;
+import com.pouffydev.gtconstruct.registry.GTCTools;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -21,6 +24,12 @@ public class GTConstruct
     public GTConstruct()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        modEventBus.register(new GTCTools());
+
+        GTCToolParts.ITEMS.register(modEventBus);
+        GTCTools.ITEMS.register(modEventBus);
+        GTCModifiers.MODIFIERS.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
 

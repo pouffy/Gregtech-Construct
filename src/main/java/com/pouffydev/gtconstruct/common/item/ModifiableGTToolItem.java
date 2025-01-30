@@ -9,12 +9,14 @@ import org.jetbrains.annotations.Nullable;
 import slimeknights.tconstruct.library.tools.definition.ToolDefinition;
 import slimeknights.tconstruct.library.tools.item.ModifiableItem;
 
-public class ModifiableSawItem extends ModifiableItem implements IGTTool {
+public class ModifiableGTToolItem extends ModifiableItem implements IGTTool {
     protected final GTToolType toolType;
+    private final IGTToolDefinition toolStats;
 
-    public ModifiableSawItem(Properties properties, ToolDefinition toolDefinition) {
+    public ModifiableGTToolItem(Properties properties, ToolDefinition toolDefinition, GTToolType type) {
         super(properties, toolDefinition);
-        this.toolType = GTToolType.SAW;
+        this.toolType = type;
+        this.toolStats = type.toolDefinition;
     }
 
     @Override
@@ -29,17 +31,17 @@ public class ModifiableSawItem extends ModifiableItem implements IGTTool {
 
     @Override
     public boolean isElectric() {
-        return false;
+        return toolType.electricTier > -1;
     }
 
     @Override
     public int getElectricTier() {
-        return 0;
+        return toolType.electricTier;
     }
 
     @Override
     public IGTToolDefinition getToolStats() {
-        return null;
+        return toolStats;
     }
 
     @Override
