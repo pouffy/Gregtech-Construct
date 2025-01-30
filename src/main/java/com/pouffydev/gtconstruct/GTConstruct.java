@@ -2,6 +2,7 @@ package com.pouffydev.gtconstruct;
 
 import com.gregtechceu.gtceu.utils.FormattingUtil;
 import com.pouffydev.gtconstruct.registry.GTCModifiers;
+import com.pouffydev.gtconstruct.registry.GTCSmeltery;
 import com.pouffydev.gtconstruct.registry.GTCToolParts;
 import com.pouffydev.gtconstruct.registry.GTCTools;
 import net.minecraft.resources.ResourceLocation;
@@ -29,6 +30,7 @@ public class GTConstruct
 
         GTCToolParts.ITEMS.register(modEventBus);
         GTCTools.ITEMS.register(modEventBus);
+        GTCSmeltery.ITEMS.register(modEventBus);
         GTCModifiers.MODIFIERS.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);

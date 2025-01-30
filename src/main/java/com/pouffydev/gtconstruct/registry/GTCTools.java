@@ -3,8 +3,7 @@ package com.pouffydev.gtconstruct.registry;
 import com.gregtechceu.gtceu.api.item.tool.GTToolType;
 import com.pouffydev.gtconstruct.GTCModule;
 import com.pouffydev.gtconstruct.common.item.ModifiableGTToolItem;
-import com.pouffydev.gtconstruct.datagen.GTCModifierProv;
-import com.pouffydev.gtconstruct.datagen.GTCToolDefinitionProv;
+import com.pouffydev.gtconstruct.datagen.*;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -25,5 +24,9 @@ public class GTCTools extends GTCModule {
 
         generator.addProvider(event.includeServer(), new GTCToolDefinitionProv(output));
         generator.addProvider(event.includeServer(), new GTCModifierProv(output));
+        generator.addProvider(event.includeServer(), new GTCStationSlotLayoutProv(output));
+        generator.addProvider(event.includeServer(), new GTCToolsRecipeProv(output));
+
+        generator.addProvider(event.includeClient(), new GTCToolItemModelProv(output, existingFileHelper));
     }
 }
