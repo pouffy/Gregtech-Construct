@@ -50,4 +50,11 @@ repositories {
         name = 'DVS1 Maven FS'
         url = 'https://dvs1.progwml6.com/files/maven'
     }
+    maven {
+        name 'GregTechCEu Maven'
+        url "https://maven.gtceu.com"
+        content {
+            includeGroup 'com.gregtechceu.gtceu'
+        }
+    }
 }

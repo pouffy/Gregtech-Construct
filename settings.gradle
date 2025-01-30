@@ -40,6 +40,8 @@ dependencyResolutionManagement {
         def mantleVersion = "1.11.36"
         def lombokPluginVersion = "8.7.1"
 
+        def gregTechVersion = "1.6.3"
+
         forge {
             version("forgeShortVersion", forgeVersion)
             def minecraftForge = version("minecraftForge", "${minecraftVersion}-${forgeVersion}")
@@ -82,6 +84,9 @@ dependencyResolutionManagement {
 
             def mantle = version("mantle", minecraftVersion + "-" + mantleVersion)
             library("mantle", "slimeknights.mantle", "Mantle").versionRef(mantle)
+
+            def gregTech = version("gtceu", gregTechVersion)
+            library("gtceu-forge", "com.gregtechceu.gtceu", "gtceu-" + minecraftVersion).versionRef(gregTech)
         }
 
         libs {

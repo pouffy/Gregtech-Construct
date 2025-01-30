@@ -29,6 +29,9 @@ dependencies {
     modRuntimeOnly(forge.tconstruct)
     modRuntimeOnly(forge.mantle)
 
+    // GregTech
+    modImplementation(forge.gtceu.forge) { transitive = false }
+
     // REI
     modCompileOnly(forge.rei.plugin)
     modCompileOnly(forge.rei.api)
