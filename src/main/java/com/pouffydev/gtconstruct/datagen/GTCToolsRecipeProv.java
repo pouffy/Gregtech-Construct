@@ -41,7 +41,10 @@ public class GTCToolsRecipeProv extends BaseRecipeProvider implements IMaterialR
         String castFolder = "smeltery/casts/";
 
         partRecipes(consumer, GTCToolParts.sawBlade,     GTCSmeltery.sawBladeCast,     2, partFolder, castFolder);
+        partRecipes(consumer, GTCToolParts.fileHead,     GTCSmeltery.fileHeadCast,     1, partFolder, castFolder);
         partRecipes(consumer, GTCToolParts.screwdriverHead,     GTCSmeltery.screwdriverHeadCast,     1, partFolder, castFolder);
+        partRecipes(consumer, GTCToolParts.wirecutterClaws,     GTCSmeltery.wirecutterClawsCast,     3, partFolder, castFolder);
+        partRecipes(consumer, GTCToolParts.wrenchHandle,     GTCSmeltery.wrenchHandleCast,     4, partFolder, castFolder);
 
     }
 }
