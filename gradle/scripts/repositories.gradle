@@ -1,60 +1,55 @@
 repositories {
     mavenLocal()
     mavenCentral()
-    maven { url = "https://api.modrinth.com/maven" } // LazyDFU, Jade
-    maven { url = "https://maven.terraformersmc.com/releases/" } // Mod Menu, EMI
-    maven { url = "https://maven.shedaniel.me/" } // Cloth Config, REI
-    maven {
-        url "https://cursemaven.com"
-        content {
-            includeGroup "curse.maven"
-        }
-    } // Curse Forge File
+    maven { // KubeJS and Rhino
+        name = "Saps.dev Maven"
+        url = "https://maven.saps.dev/minecraft"
+    }
     maven {
         name = "Jared's maven"
         url = "https://maven.blamejared.com/"
     } // JEI
-    maven {
-        // location of a maven mirror for JEI files, as a fallback
+    maven { // JEI mirror, AE2
         name = "ModMaven"
         url = "https://modmaven.dev"
-    } // JEI mirror
-    maven { url = "https://maven.parchmentmc.org" } // Parchment mappings
-    maven { url = "https://maven.firstdarkdev.xyz/snapshots" } // LDLib
-    maven { // Flywheel
-        url = "https://maven.tterrag.com/"
-        content {
-            // need to be specific here due to version overlaps
-            includeGroup("com.jozufozu.flywheel")
-            includeGroup("com.tterrag.registrate")
-            includeGroup("com.simibubi.create")
+    }
+    exclusiveContent { // Modrinth Maven
+        forRepository { maven { url = "https://api.modrinth.com/maven" } }
+        filter { includeGroup("maven.modrinth") }
+    }
+    exclusiveContent { // Curseforge Maven
+        forRepository { maven { url = "https://cursemaven.com" } }
+        filter { includeGroup("curse.maven") }
+    }
+    exclusiveContent { // terraformers - EMI
+        forRepository { maven { url = "https://maven.terraformersmc.com/releases/" } }
+        filter { includeGroup("dev.emi") }
+    }
+    exclusiveContent { // shedaniel - REI, architectury, cloth-config
+        forRepository { maven { url = "https://maven.shedaniel.me/" } }
+        filter {
+            includeGroupAndSubgroups("me.shedaniel")
+            includeGroup("dev.architectury")
         }
     }
-    maven {
-        // saps.dev Maven (KubeJS and Rhino)
-        url = "https://maven.saps.dev/minecraft"
-        content {
-            includeGroup "dev.latvian.mods"
-        }
+    maven { // LDLib, Shimmer
+        name = "FirstDarkDev Maven"
+        url = "https://maven.firstdarkdev.xyz/snapshots"
     }
-    maven {
-        name = "Kotlin for Forge"
-        url = "https://thedarkcolour.github.io/KotlinForForge/"
-        content {
-            includeGroup "thedarkcolour"
-        }
+    exclusiveContent {
+        forRepository { maven { url = "https://dvs1.progwml6.com/files/maven" } }
+        filter { includeGroup("slimeknights") }
     }
-    maven { url "https://maven.architectury.dev/" }
-    maven { url 'https://jitpack.io' } // Mixin Extras, Fabric ASM
-    maven {
-        name = 'DVS1 Maven FS'
-        url = 'https://dvs1.progwml6.com/files/maven'
+    exclusiveContent {
+        forRepository { maven { url = "https://maven.gtceu.com" } }
+        filter { includeGroup("com.gregtechceu.gtceu") }
     }
-    maven {
-        name 'GregTechCEu Maven'
-        url "https://maven.gtceu.com"
-        content {
-            includeGroup 'com.gregtechceu.gtceu'
-        }
+    exclusiveContent { // tterrag - registrate
+        forRepository { maven { url = "https://maven.tterrag.com/" } }
+        filter { includeGroup("com.tterrag.registrate") }
+    }
+    exclusiveContent { // KotlinForForge
+        forRepository { maven { url = "https://thedarkcolour.github.io/KotlinForForge/" } }
+        filter { includeGroup("thedarkcolour") }
     }
 }

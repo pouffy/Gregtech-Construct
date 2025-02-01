@@ -1,13 +1,16 @@
 package com.pouffydev.gtconstruct.datagen;
 
 import com.pouffydev.gtconstruct.GTConstruct;
+import com.pouffydev.gtconstruct.registry.GTCRegistration;
+import com.pouffydev.gtconstruct.registry.GTCSmeltery;
+import com.pouffydev.gtconstruct.registry.GTCToolParts;
+import com.tterrag.registrate.providers.RegistrateItemModelProvider;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
-import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import slimeknights.mantle.registration.object.ItemObject;
@@ -15,15 +18,26 @@ import slimeknights.tconstruct.common.data.model.MaterialModelBuilder;
 import slimeknights.tconstruct.common.registration.CastItemObject;
 import slimeknights.tconstruct.library.tools.part.MaterialItem;
 
-public class GTCItemModelProv extends ItemModelProvider {
+public class GTCItemModelProv extends RegistrateItemModelProvider {
     private final ModelFile.UncheckedModelFile GENERATED = new ModelFile.UncheckedModelFile("item/generated");
     public GTCItemModelProv(PackOutput output, ExistingFileHelper existingFileHelper) {
-        super(output, GTConstruct.MOD_ID, existingFileHelper);
+        super(GTCRegistration.REGISTRATE, output, existingFileHelper);
     }
 
     @Override
     protected void registerModels() {
 
+        part(GTCToolParts.fileHead);
+        part(GTCToolParts.sawBlade);
+        part(GTCToolParts.screwdriverHead);
+        part(GTCToolParts.wirecutterClaws);
+        part(GTCToolParts.wrenchHandle);
+
+        cast(GTCSmeltery.fileHeadCast);
+        cast(GTCSmeltery.sawBladeCast);
+        cast(GTCSmeltery.screwdriverHeadCast);
+        cast(GTCSmeltery.wirecutterClawsCast);
+        cast(GTCSmeltery.wrenchHandleCast);
     }
 
     @SuppressWarnings("deprecation") // no its not

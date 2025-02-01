@@ -1,0 +1,53 @@
+{
+  "parts": [
+    {
+      "path": "gtconstruct:item/tool/parts/screwdriver_head",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "gtconstruct:item/tool/parts/wirecutter_claws",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "gtconstruct:item/tool/parts/saw_blade",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "gtconstruct:item/tool/parts/wrench_handle",
+      "stat_type": "tconstruct:handle"
+    },
+    {
+      "path": "gtconstruct:item/tool/parts/file_head",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "gtconstruct:item/tool/saw/head",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "gtconstruct:item/tool/saw/head_broken",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "gtconstruct:item/tool/saw/handle",
+      "stat_type": "tconstruct:handle"
+    },
+    {
+      "path": "gtconstruct:item/tool/saw/binding",
+      "stat_type": "tconstruct:binding"
+    },
+    {
+      "path": "gtconstruct:item/tool/screwdriver/head",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "gtconstruct:item/tool/screwdriver/head_broken",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "gtconstruct:item/tool/screwdriver/handle",
+      "stat_type": "tconstruct:handle"
+    }
+  ],
+  "replace": false
+}

@@ -13,14 +13,24 @@ def mod_issue_tracker = getConfig("mod_issue_tracker")
 String suffix = System.getenv("VERSION_SUFFIX")
 String version_toml = "$version" + (suffix ? "-$suffix" : "")
 
-task printVersion {
+tasks.register('printVersion') {
     doLast {
         println mod_version
     }
 }
 
+// Create run-folders for non-client configs to avoid pollution of dev envs
+tasks.matching { it.name.startsWith('prepare') }.configureEach {
+    doFirst {
+        mkdir('run')
+        mkdir('run/server')
+        mkdir('run/gametest')
+        mkdir('run/data')
+    }
+}
+
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
-    var forgeVers = forge.versions.forgeShortVersion.get().split("\\.")[0]
+    var forgeVers = libs.versions.forge.get().split("\\.")[0]
     var replaceProperties = [
             version             : version_toml,
             mod_id              : mod_id,
@@ -43,3 +53,7 @@ var generateModMetadata = tasks.register("generateModMetadata", ProcessResources
     from "src/main/templates"
     into "build/generated/sources/modMetadata"
 }
+
+sourceSets.main.resources.srcDir generateModMetadata
+
+legacyForge.ideSyncTask generateModMetadata

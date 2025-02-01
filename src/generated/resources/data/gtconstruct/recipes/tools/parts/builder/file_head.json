@@ -1,0 +1,16 @@
+{
+  "type": "tconstruct:part_builder",
+  "cost": 1,
+  "pattern": "gtconstruct:file_head",
+  "pattern_item": [
+    {
+      "tag": "tconstruct:patterns/default"
+    },
+    {
+      "item": "gtconstruct:file_head_cast"
+    }
+  ],
+  "result": {
+    "item": "gtconstruct:file_head"
+  }
+}

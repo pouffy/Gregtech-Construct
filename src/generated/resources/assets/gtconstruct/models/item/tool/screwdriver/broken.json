@@ -1,0 +1,22 @@
+{
+  "loader": "tconstruct:tool",
+  "parent": "forge:item/default-tool",
+  "textures": {
+    "head": "gtconstruct:item/tool/screwdriver/head_broken",
+    "handle": "gtconstruct:item/tool/screwdriver/handle"
+  },
+  "modifier_roots": [
+    "gtconstruct:item/tool/screwdriver/modifiers/broken/",
+    "gtconstruct:item/tool/screwdriver/modifiers/"
+  ],
+  "parts": [
+    {
+      "name": "handle",
+      "index": 1
+    },
+    {
+      "name": "head",
+      "index": 0
+    }
+  ]
+}

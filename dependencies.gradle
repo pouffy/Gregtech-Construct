@@ -1,55 +1,47 @@
 //file:noinspection DependencyNotationArgument
 dependencies {
-    compileOnly 'org.jetbrains:annotations:24.1.0'
+    compileOnly(libs.jetbrains.annotations)
 
     // LDLib
-    modApi(forge.ldlib.forge) { transitive = false }
-    jarJar(forge.ldlib.forge)
+    jarJar(modApi(forge.ldlib.get()))
 
     // Registrate
-    modImplementation(jarJar("com.tterrag.registrate:Registrate:${forge.versions.registrate.get()}"))
+    jarJar(modApi(forge.registrate.get()))
 
     // Configuration
-    modApi(forge.configuration)
-    jarJar(forge.configuration)
+    jarJar(modApi(forge.configuration.get()))
 
     // Mixin (& Extras)
-    api(annotationProcessor("io.github.llamalad7:mixinextras-common:${this.forge.versions.mixinextras.get()}"))
-    jarJar("io.github.llamalad7:mixinextras-forge:${this.forge.versions.mixinextras.get()}")
-    annotationProcessor 'org.spongepowered:mixin:0.8.7:processor'
-
-    // JEI
-    modCompileOnly(forge.jei.common.api) { transitive = false }
-    modCompileOnly(forge.jei.forge.api) { transitive = false }
-    modCompileOnly(forge.jei.forge.impl) { transitive = false }
-
-    // Tinkers
-    modCompileOnly(forge.tconstruct)
-    modCompileOnly(forge.mantle)
-    modRuntimeOnly(forge.tconstruct)
-    modRuntimeOnly(forge.mantle)
-
-    // GregTech
-    modImplementation(forge.gtceu.forge) { transitive = false }
-
-    // REI
-    modCompileOnly(forge.rei.plugin)
-    modCompileOnly(forge.rei.api)
-    modCompileOnly(forge.rei.forge)
-
-    // EMI
-    //modCompileOnly("dev.emi:emi-forge:${forge.versions.emi.get()}:api")
+    annotationProcessor(variantOf(libs.mixin) { classifier("processor") })
+    annotationProcessor(forge.mixinExtras.common)
+    api(forge.mixinExtras.common)
+    jarJar(forge.mixinExtras.forge)
+    // Recipe Viewers
+    modCompileOnly(forge.bundles.jei)
+    modCompileOnly(forge.bundles.rei)
     modCompileOnly(forge.emi)
 
+    // Tinkers
+    //modImplementation(forge.bundles.tinkers)
+
+    modImplementation("slimeknights.mantle:Mantle:${minecraft_version}-${forge.versions.mantle.get()}")
+    modImplementation("slimeknights.tconstruct:TConstruct:${minecraft_version}-${forge.versions.tconstruct.get()}")
+
+    // GregTech
+    modImplementation(forge.gtceu)
+
+
+
     // KJS
-    modCompileOnly(forge.kubejs) { transitive = false }
+    modCompileOnly(forge.kubejs)
     modCompileOnly(forge.architectury)
     modCompileOnly(forge.rhino)
 
     // Runtime Recipe Viewers - uncomment whichever group you want to use //
     modRuntimeOnly(forge.emi)
 
-    modExtraRuntimeOnly(forge.kubejs)
-    modExtraRuntimeOnly(forge.architectury)
-    modExtraRuntimeOnly(forge.rhino)
+    modExtraRuntimeOnly(forge.bundles.kjs)
+    modExtraRuntimeOnly(forge.bundles.jei)
+
+    testImplementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 }

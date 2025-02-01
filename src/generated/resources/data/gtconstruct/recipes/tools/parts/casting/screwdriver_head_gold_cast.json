@@ -1,0 +1,8 @@
+{
+  "type": "tconstruct:table_casting_material",
+  "cast": {
+    "tag": "gtconstruct:casts/multi_use/screwdriver_head"
+  },
+  "item_cost": 1,
+  "result": "gtconstruct:screwdriver_head"
+}

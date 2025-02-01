@@ -1,0 +1,8 @@
+{
+  "type": "tconstruct:item_part_builder",
+  "pattern": "gtconstruct:wirecutter_claws",
+  "pattern_item": {
+    "tag": "tconstruct:casts/sand"
+  },
+  "result": "gtconstruct:wirecutter_claws_sand_cast"
+}

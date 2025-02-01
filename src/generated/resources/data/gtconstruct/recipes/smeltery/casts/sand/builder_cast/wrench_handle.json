@@ -1,0 +1,8 @@
+{
+  "type": "tconstruct:item_part_builder",
+  "pattern": "gtconstruct:wrench_handle",
+  "pattern_item": {
+    "tag": "tconstruct:casts/sand"
+  },
+  "result": "gtconstruct:wrench_handle_sand_cast"
+}

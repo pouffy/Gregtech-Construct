@@ -1,40 +1,63 @@
 package com.pouffydev.gtconstruct;
 
 import com.gregtechceu.gtceu.utils.FormattingUtil;
-import com.pouffydev.gtconstruct.registry.GTCModifiers;
-import com.pouffydev.gtconstruct.registry.GTCSmeltery;
-import com.pouffydev.gtconstruct.registry.GTCToolParts;
-import com.pouffydev.gtconstruct.registry.GTCTools;
+import com.pouffydev.gtconstruct.datagen.*;
+import com.pouffydev.gtconstruct.registry.*;
+import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.data.event.GatherDataEvent;
+import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.loading.FMLLoader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import static com.pouffydev.gtconstruct.registry.GTCRegistration.REGISTRATE;
+
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(GTConstruct.MOD_ID)
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class GTConstruct
 {
     public static final String MOD_ID = "gtconstruct";
     public static final String NAME = "GregTech Construct";
     public static final Logger LOGGER = LoggerFactory.getLogger(NAME);
 
-    public GTConstruct()
-    {
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+    public static GTConstruct instance;
+
+    public GTConstruct() {
+        instance = this;
+
+        onCtor();
+    }
+
+    public static void onCtor() {
+        ModLoadingContext modLoadingContext = ModLoadingContext.get();
+
+        IEventBus modEventBus = FMLJavaModLoadingContext.get()
+                .getModEventBus();
+        IEventBus forgeEventBus = MinecraftForge.EVENT_BUS;
+
+        REGISTRATE.registerEventListeners(modEventBus);
 
         modEventBus.register(new GTCTools());
 
-        GTCToolParts.ITEMS.register(modEventBus);
-        GTCTools.ITEMS.register(modEventBus);
-        GTCSmeltery.ITEMS.register(modEventBus);
-        GTCModifiers.MODIFIERS.register(modEventBus);
+        modEventBus.register(new GTCCommons());
+        modEventBus.register(new GTCToolParts());
+        modEventBus.register(new GTCSmeltery());
+        modEventBus.register(new GTCModifiers());
+        modEventBus.register(new GTCTools());
 
-        MinecraftForge.EVENT_BUS.register(this);
+        modEventBus.addListener(EventPriority.LOWEST, GTCDataGen::gatherData);
 
+        GTCModule.initRegisters();
     }
 
     public static ResourceLocation id(String path) {

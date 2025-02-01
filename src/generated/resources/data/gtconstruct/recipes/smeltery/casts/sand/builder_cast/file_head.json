@@ -1,0 +1,8 @@
+{
+  "type": "tconstruct:item_part_builder",
+  "pattern": "gtconstruct:file_head",
+  "pattern_item": {
+    "tag": "tconstruct:casts/sand"
+  },
+  "result": "gtconstruct:file_head_sand_cast"
+}

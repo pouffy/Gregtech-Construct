@@ -1,13 +1,14 @@
 import org.slf4j.event.Level
 
-mixin {
-    add sourceSets.main, "gtconstruct.refmap.json"
-    config 'gtconstruct.mixins.json'
-}
+//mixin {
+//    var refmap = add sourceSets.main, "gtconstruct.refmap.json"
+//    slimJar.from refmap
+//    config 'gtconstruct.mixins.json'
+//}
 
-neoForge {
-    // Specify the version of NeoForge to use.
-    version = forge.versions.minecraftForge.get()
+legacyForge {
+    // Specify Forge version
+    version = libs.versions.minecraftForge.get()
 
     parchment {
         minecraftVersion = libs.versions.minecraft.get()
@@ -17,7 +18,7 @@ neoForge {
     accessTransformers = project.files('src/main/resources/META-INF/accesstransformer.cfg')
 
     addModdingDependenciesTo(sourceSets.test)
-    addModdingDependenciesTo(sourceSets.extra)
+    //addModdingDependenciesTo(sourceSets.extra)
 
     mods {
         // define mod <-> source bindings
@@ -34,7 +35,7 @@ neoForge {
             sourceSet = sourceSets.extra
             ideName = "Client 1"
 
-            systemProperty('forge.enabledGameTestNamespaces', project.mod_id)
+            systemProperty('forge.enabledGameTestNamespaces', "gtconstruct")
         }
 
         client2 {
@@ -43,7 +44,7 @@ neoForge {
             ideName = "Client 2"
 
             programArguments.addAll('--username', '_Pouffy_')
-            systemProperty('forge.enabledGameTestNamespaces', project.mod_id)
+            systemProperty('forge.enabledGameTestNamespaces', "gtconstruct")
         }
 
         // Client with GTM + Jade, EMI, AE2
@@ -52,7 +53,7 @@ neoForge {
             sourceSet = sourceSets.main
             ideName = "Clean Client"
 
-            systemProperty('forge.enabledGameTestNamespaces', project.mod_id)
+            systemProperty('forge.enabledGameTestNamespaces', "gtconstruct")
         }
 
         server {
@@ -62,7 +63,7 @@ neoForge {
 
             gameDirectory.set(file('run/server'))
             programArgument '--nogui'
-            systemProperty('forge.enabledGameTestNamespaces', project.mod_id)
+            systemProperty('forge.enabledGameTestNamespaces', "gtconstruct")
         }
 
         // This run config launches GameTestServer and runs all registered gametests, then exits.
@@ -74,7 +75,7 @@ neoForge {
             ideName = "Game Tests"
 
             gameDirectory.set(file('run/gametest'))
-            systemProperty('forge.enabledGameTestNamespaces', project.mod_id)
+            systemProperty('forge.enabledGameTestNamespaces', "gtconstruct")
         }
 
         data {
@@ -84,10 +85,11 @@ neoForge {
 
             gameDirectory.set(file('run/data'))
             // Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources.
-            programArguments.addAll('--mod', project.mod_id)
+            programArguments.addAll('--mod', "gtconstruct")
             programArguments.addAll('--all')
             programArguments.addAll('--output', file('src/generated/resources/').getAbsolutePath())
             programArguments.addAll('--existing', file('src/main/resources/').getAbsolutePath())
+            programArguments.addAll('--existing-mod', 'tconstruct')
         }
 
         // applies to all the run configs above

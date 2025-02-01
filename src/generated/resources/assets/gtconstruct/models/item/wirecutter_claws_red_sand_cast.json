@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "gtconstruct:item/red_sand_cast/wirecutter_claws"
+  }
+}

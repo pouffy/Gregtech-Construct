@@ -1,0 +1,16 @@
+{
+  "type": "tconstruct:part_builder",
+  "cost": 4,
+  "pattern": "gtconstruct:wrench_handle",
+  "pattern_item": [
+    {
+      "tag": "tconstruct:patterns/default"
+    },
+    {
+      "item": "gtconstruct:wrench_handle_cast"
+    }
+  ],
+  "result": {
+    "item": "gtconstruct:wrench_handle"
+  }
+}

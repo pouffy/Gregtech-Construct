@@ -1,0 +1,27 @@
+{
+  "loader": "tconstruct:tool",
+  "parent": "forge:item/default-tool",
+  "textures": {
+    "head": "gtconstruct:item/tool/saw/head_broken",
+    "handle": "gtconstruct:item/tool/saw/handle",
+    "binding": "gtconstruct:item/tool/saw/binding"
+  },
+  "modifier_roots": [
+    "gtconstruct:item/tool/saw/modifiers/broken/",
+    "gtconstruct:item/tool/saw/modifiers/"
+  ],
+  "parts": [
+    {
+      "name": "handle",
+      "index": 1
+    },
+    {
+      "name": "head",
+      "index": 0
+    },
+    {
+      "name": "binding",
+      "index": 2
+    }
+  ]
+}

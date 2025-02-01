@@ -1,0 +1,8 @@
+{
+  "type": "tconstruct:table_casting_material",
+  "cast": {
+    "tag": "gtconstruct:casts/multi_use/wirecutter_claws"
+  },
+  "item_cost": 3,
+  "result": "gtconstruct:wirecutter_claws"
+}

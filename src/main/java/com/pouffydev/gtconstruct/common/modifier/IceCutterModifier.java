@@ -22,7 +22,7 @@ import java.util.List;
 public class IceCutterModifier extends NoLevelsModifier implements BlockBreakModifierHook {
     @Override
     public void afterBlockBreak(IToolStackView tool, ModifierEntry modifier, ToolHarvestContext context) {
-        if (tool.getModifier(TinkerModifiers.silky.get()) == ModifierEntry.EMPTY && context.getState().is(BlockTags.ICE)) {
+        if (tool.getModifierLevel(TinkerModifiers.silky.get()) == 0 && context.getState().is(BlockTags.ICE)) {
             Item iceBlock = context.getState().getBlock().asItem();
             List<ItemStack> drops = Block.getDrops(context.getState(), context.getWorld(), context.getPos(), null);
             if (drops.stream().noneMatch(drop -> drop.getItem() == iceBlock)) {

@@ -5,27 +5,26 @@ import com.pouffydev.gtconstruct.registry.GTCToolParts;
 import com.pouffydev.gtconstruct.registry.GTCTools;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.FinishedRecipe;
-import slimeknights.tconstruct.common.data.BaseRecipeProvider;
+import org.jetbrains.annotations.NotNull;
 import slimeknights.tconstruct.library.data.recipe.IMaterialRecipeHelper;
 import slimeknights.tconstruct.library.data.recipe.IToolRecipeHelper;
-import slimeknights.tconstruct.smeltery.TinkerSmeltery;
 
 import java.util.function.Consumer;
 
-public class GTCToolsRecipeProv extends BaseRecipeProvider implements IMaterialRecipeHelper, IToolRecipeHelper {
+public class GTCToolsRecipeProv extends GTCRecipeProvider implements IMaterialRecipeHelper, IToolRecipeHelper {
     public GTCToolsRecipeProv(PackOutput generator) {
         super(generator);
+    }
+
+    @Override
+    public @NotNull String getName() {
+        return "GTConstruct Tools Recipes";
     }
 
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
         this.addToolBuildingRecipes(consumer);
         this.addPartRecipes(consumer);
-    }
-
-    @Override
-    public String getName() {
-        return "";
     }
 
     private void addToolBuildingRecipes(Consumer<FinishedRecipe> consumer) {

@@ -1,0 +1,11 @@
+{
+  "type": "tconstruct:molding_table",
+  "material": {
+    "tag": "tconstruct:casts/sand"
+  },
+  "pattern": {
+    "type": "tconstruct:material",
+    "item": "gtconstruct:screwdriver_head"
+  },
+  "result": "gtconstruct:screwdriver_head_sand_cast"
+}

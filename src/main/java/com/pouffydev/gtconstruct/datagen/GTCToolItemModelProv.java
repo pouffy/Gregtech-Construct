@@ -26,6 +26,6 @@ public class GTCToolItemModelProv  extends AbstractToolItemModelProvider {
 
     @Override
     public String getName() {
-        return "";
+        return "GregTech Construct Tool Item Models";
     }
 }
