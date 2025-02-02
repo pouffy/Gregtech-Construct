@@ -9,4 +9,5 @@ import slimeknights.tconstruct.tools.TinkerTools;
 public class GTCToolDefinitions {
     public static final ToolDefinition SAW = ToolDefinition.create(GTCTools.saw);
     public static final ToolDefinition SCREWDRIVER = ToolDefinition.create(GTCTools.screwdriver);
+    public static final ToolDefinition FILE = ToolDefinition.create(GTCTools.file);
 }

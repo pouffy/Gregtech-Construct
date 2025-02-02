@@ -29,13 +29,13 @@ public class GTCItemModelProv extends RegistrateItemModelProvider {
 
         part(GTCToolParts.fileHead);
         part(GTCToolParts.sawBlade);
-        part(GTCToolParts.screwdriverHead);
+        part(GTCToolParts.screwdriverTip);
         part(GTCToolParts.wirecutterClaws);
         part(GTCToolParts.wrenchHandle);
 
         cast(GTCSmeltery.fileHeadCast);
         cast(GTCSmeltery.sawBladeCast);
-        cast(GTCSmeltery.screwdriverHeadCast);
+        cast(GTCSmeltery.screwdriverTipCast);
         cast(GTCSmeltery.wirecutterClawsCast);
         cast(GTCSmeltery.wrenchHandleCast);
     }

@@ -8,15 +8,19 @@ import com.gregtechceu.gtceu.api.item.tool.GTToolType;
 import com.gregtechceu.gtceu.api.item.tool.IGTToolDefinition;
 import com.gregtechceu.gtceu.api.sound.SoundEntry;
 import com.gregtechceu.gtceu.utils.FormattingUtil;
+import com.pouffydev.gtconstruct.util.GTCToolHelper;
 import net.minecraft.client.resources.language.I18n;
+import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.Tag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.api.distmarker.Dist;
@@ -25,6 +29,7 @@ import net.minecraftforge.common.ForgeHooks;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import slimeknights.tconstruct.library.tools.definition.ToolDefinition;
+import slimeknights.tconstruct.library.tools.helper.ToolDamageUtil;
 import slimeknights.tconstruct.library.tools.item.ModifiableItem;
 import slimeknights.tconstruct.library.tools.nbt.ToolStack;
 import slimeknights.tconstruct.library.tools.stat.ToolStats;
@@ -84,6 +89,28 @@ public class ModifiableGTToolItem extends ModifiableItem implements IGTTool {
         return super.hasCraftingRemainingItem();
     }
 
+    @Override
+    public ItemStack getDefaultInstance() {
+        return get();
+    }
+
+    @Override
+    public InteractionResult onItemUseFirst(ItemStack itemStack, UseOnContext context) {
+        super.onItemUseFirst(itemStack, context);
+        return definition$onItemUseFirst(itemStack, context);
+    }
+
+    @Override
+    public InteractionResult useOn(UseOnContext context) {
+        super.useOn(context);
+        return definition$onItemUse(context);
+    }
+
+    @Override
+    public boolean mineBlock(ItemStack stack, Level level, BlockState state, BlockPos pos, LivingEntity miningEntity) {
+        return definition$mineBlock(stack, level, state, pos, miningEntity) && super.mineBlock(stack, level, state, pos, miningEntity);
+    }
+
     public boolean hasCraftingRemainingItem(ItemStack stack) {
         return definition$hasCraftingRemainingItem(stack);
     }
@@ -93,21 +120,16 @@ public class ModifiableGTToolItem extends ModifiableItem implements IGTTool {
     }
 
     public static void damageItemWhenCrafting(@NotNull ItemStack stack, @Nullable LivingEntity entity) {
-        int damage = 2;
-        if (stack.getItem() instanceof IGTTool) {
-            damage = ((IGTTool) stack.getItem()).getToolStats().getToolDamagePerCraft(stack);
-        } else {
-            if (stack.getTags().anyMatch(s -> s.location().getPath().startsWith("tool") ||
-                    s.location().getPath().startsWith("crafting_tool"))) {
-                damage = 1;
-            }
+        int damage = ((IGTTool) stack.getItem()).getToolStats().getToolDamagePerCraft(stack);
+        if (stack.getTags().anyMatch(s -> s.location().getPath().startsWith("tool") ||
+                s.location().getPath().startsWith("crafting_tool"))) {
+            damage = 1;
         }
-
+        ToolStack toolStack = ToolStack.from(stack);
+        ToolDamageUtil.damage(toolStack, damage, entity, stack);
     }
 
     public ItemStack definition$getCraftingRemainingItem(ItemStack stack) {
-        // Sanity-check, callers should really validate with hasContainerItem themselves...
-        ToolStack toolStack = ToolStack.from(stack);
         if (!definition$hasCraftingRemainingItem(stack)) {
             return ItemStack.EMPTY;
         }
@@ -115,13 +137,6 @@ public class ModifiableGTToolItem extends ModifiableItem implements IGTTool {
         Player player = ForgeHooks.getCraftingPlayer();
         damageItemWhenCrafting(stack, player);
         playCraftingSound(player, stack);
-        // We cannot simply return the copied stack here because Forge's bug
-        // Introduced here: https://github.com/MinecraftForge/MinecraftForge/pull/3388
-        // Causing PlayerDestroyItemEvent to never be fired under correct circumstances.
-        // While preliminarily fixing ItemStack being null in ForgeHooks#getContainerItem in the PR
-        // The semantics was misunderstood, any stack that are "broken" (damaged beyond maxDamage)
-        // Will be "empty" ItemStacks (while not == ItemStack.EMPTY, but isEmpty() == true)
-        // PlayerDestroyItemEvent will not be fired correctly because of this oversight.
         if (stack.isEmpty()) { // Equal to listening to PlayerDestroyItemEvent
             return getToolStats().getBrokenStack();
         }
@@ -154,14 +169,10 @@ public class ModifiableGTToolItem extends ModifiableItem implements IGTTool {
             // show this
             int damageRemaining = toolStack.getStats().getInt(ToolStats.DURABILITY) - stack.getDamageValue() + 1;
             if (toolStats.isSuitableForCrafting(stack)) {
-                tooltip.add(Component.translatable("item.gtceu.tool.tooltip.crafting_uses", FormattingUtil
-                        .formatNumbers(toolStack.getCurrentDurability() / Math.max(1, toolStats.getToolDamagePerCraft(stack)))));
+                tooltip.add(Component.translatable("item.gtceu.tool.tooltip.crafting_uses", FormattingUtil.formatNumbers(toolStack.getCurrentDurability() / Math.max(1, toolStats.getToolDamagePerCraft(stack)))));
             }
-            tooltip.add(Component.translatable("item.gtceu.tool.tooltip.max_uses",
-                    FormattingUtil.formatNumbers(toolStack.getStats().getInt(ToolStats.DURABILITY))));
-            tooltip.add(Component.translatable("item.gtceu.tool.tooltip.general_uses",
-                    FormattingUtil.formatNumbers(damageRemaining)));
-
+            tooltip.add(Component.translatable("item.gtceu.tool.tooltip.max_uses", FormattingUtil.formatNumbers(toolStack.getStats().getInt(ToolStats.DURABILITY))));
+            tooltip.add(Component.translatable("item.gtceu.tool.tooltip.general_uses", FormattingUtil.formatNumbers(damageRemaining)));
         }
 
         String uniqueTooltip = "item.gtceu.tool." + BuiltInRegistries.ITEM.getKey(this.asItem()).getPath() + ".tooltip";

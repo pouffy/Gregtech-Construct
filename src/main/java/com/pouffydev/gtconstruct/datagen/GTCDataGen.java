@@ -1,6 +1,7 @@
 package com.pouffydev.gtconstruct.datagen;
 
 import com.pouffydev.gtconstruct.GTConstruct;
+import com.pouffydev.gtconstruct.datagen.lang.LangHandler;
 import com.pouffydev.gtconstruct.registry.GTCRegistration;
 import com.tterrag.registrate.providers.ProviderType;
 import net.minecraft.core.HolderLookup;
@@ -39,6 +40,8 @@ public class GTCDataGen {
     }
     private static void addExtraRegistrateData() {
         GTCRegistrateTags.addGenerators();
+
+        GTCRegistration.REGISTRATE.addDataGenerator(ProviderType.LANG, LangHandler::init);
     }
 
 }

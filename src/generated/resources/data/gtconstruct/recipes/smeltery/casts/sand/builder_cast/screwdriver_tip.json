@@ -1,0 +1,8 @@
+{
+  "type": "tconstruct:item_part_builder",
+  "pattern": "gtconstruct:screwdriver_tip",
+  "pattern_item": {
+    "tag": "tconstruct:casts/sand"
+  },
+  "result": "gtconstruct:screwdriver_tip_sand_cast"
+}

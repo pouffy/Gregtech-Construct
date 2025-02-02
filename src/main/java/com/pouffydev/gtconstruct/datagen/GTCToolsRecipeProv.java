@@ -8,6 +8,8 @@ import net.minecraft.data.recipes.FinishedRecipe;
 import org.jetbrains.annotations.NotNull;
 import slimeknights.tconstruct.library.data.recipe.IMaterialRecipeHelper;
 import slimeknights.tconstruct.library.data.recipe.IToolRecipeHelper;
+import slimeknights.tconstruct.tools.TinkerToolParts;
+import slimeknights.tconstruct.tools.stats.PlatingMaterialStats;
 
 import java.util.function.Consumer;
 
@@ -32,6 +34,7 @@ public class GTCToolsRecipeProv extends GTCRecipeProvider implements IMaterialRe
 
         toolBuilding(consumer, GTCTools.saw, folder);
         toolBuilding(consumer, GTCTools.screwdriver, folder);
+        toolBuilding(consumer, GTCTools.file, folder);
 
     }
 
@@ -41,9 +44,8 @@ public class GTCToolsRecipeProv extends GTCRecipeProvider implements IMaterialRe
 
         partRecipes(consumer, GTCToolParts.sawBlade,     GTCSmeltery.sawBladeCast,     2, partFolder, castFolder);
         partRecipes(consumer, GTCToolParts.fileHead,     GTCSmeltery.fileHeadCast,     1, partFolder, castFolder);
-        partRecipes(consumer, GTCToolParts.screwdriverHead,     GTCSmeltery.screwdriverHeadCast,     1, partFolder, castFolder);
-        partRecipes(consumer, GTCToolParts.wirecutterClaws,     GTCSmeltery.wirecutterClawsCast,     3, partFolder, castFolder);
+        partCasting(consumer, GTCToolParts.wirecutterClaws.get(), GTCSmeltery.wirecutterClawsCast, 3, partFolder, castFolder);
+        partCasting(consumer, GTCToolParts.screwdriverTip.get(), GTCSmeltery.screwdriverTipCast, 1, partFolder, castFolder);
         partRecipes(consumer, GTCToolParts.wrenchHandle,     GTCSmeltery.wrenchHandleCast,     4, partFolder, castFolder);
-
     }
 }

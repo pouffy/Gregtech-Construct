@@ -16,12 +16,14 @@ import java.util.function.Supplier;
 public class GTCTools extends GTCModule {
 
     public static final ItemObject<ModifiableGTToolItem> saw = ITEMS.register("saw", () -> new ModifiableGTToolItem(UNSTACKABLE_PROPS, GTCToolDefinitions.SAW, GTToolType.SAW));
-    public static final ItemObject<ModifiableGTToolItem> screwdriver = ITEMS.register("screwdriver", () -> new ModifiableGTToolItem(UNSTACKABLE_PROPS, GTCToolDefinitions.SAW, GTToolType.SCREWDRIVER));
+    public static final ItemObject<ModifiableGTToolItem> screwdriver = ITEMS.register("screwdriver", () -> new ModifiableGTToolItem(UNSTACKABLE_PROPS, GTCToolDefinitions.SCREWDRIVER, GTToolType.SCREWDRIVER));
+    public static final ItemObject<ModifiableGTToolItem> file = ITEMS.register("file", () -> new ModifiableGTToolItem(UNSTACKABLE_PROPS, GTCToolDefinitions.FILE, GTToolType.FILE));
 
     private static void addTabItems(CreativeModeTab.ItemDisplayParameters itemDisplayParameters, CreativeModeTab.Output tab) {
         Consumer<ItemStack> output = tab::accept;
         acceptTool(output, saw);
         acceptTool(output, screwdriver);
+        acceptTool(output, file);
     }
 
     /** Adds a tool to the tab */

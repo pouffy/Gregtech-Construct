@@ -8,10 +8,7 @@ import com.pouffydev.gtconstruct.registry.GTCToolParts;
 import net.minecraft.data.PackOutput;
 import slimeknights.tconstruct.library.data.tinkering.AbstractToolDefinitionDataProvider;
 import slimeknights.tconstruct.library.materials.RandomMaterial;
-import slimeknights.tconstruct.library.tools.definition.module.aoe.BoxAOEIterator;
-import slimeknights.tconstruct.library.tools.definition.module.aoe.IBoxExpansion;
 import slimeknights.tconstruct.library.tools.definition.module.build.SetStatsModule;
-import slimeknights.tconstruct.library.tools.definition.module.build.ToolActionsModule;
 import slimeknights.tconstruct.library.tools.definition.module.build.ToolTraitsModule;
 import slimeknights.tconstruct.library.tools.definition.module.material.DefaultMaterialsModule;
 import slimeknights.tconstruct.library.tools.definition.module.material.PartStatsModule;
@@ -52,7 +49,8 @@ public class GTCToolDefinitionProv extends AbstractToolDefinitionDataProvider {
 
         define(GTCToolDefinitions.SCREWDRIVER)
                 .module(PartStatsModule.parts()
-                        .part(GTCToolParts.screwdriverHead)
+                        .part(GTCToolParts.screwdriverTip)
+                        .part(TinkerToolParts.toolBinding)
                         .part(TinkerToolParts.toolHandle).build())
                 .module(defaultTwoParts)
                 .module(new SetStatsModule(StatsNBT.builder()
@@ -60,6 +58,19 @@ public class GTCToolDefinitionProv extends AbstractToolDefinitionDataProvider {
                         .set(ToolStats.ATTACK_SPEED, 3.0F).build()))
                 .smallToolStartingSlots()
                 .module(ToolTraitsModule.builder().trait(ModifierIds.baneOfSssss, 1).build())
+                .build();
+
+        define(GTCToolDefinitions.FILE)
+                .module(PartStatsModule.parts()
+                        .part(GTCToolParts.fileHead)
+                        .part(TinkerToolParts.toolBinding)
+                        .part(TinkerToolParts.toolHandle).build())
+                .module(defaultTwoParts)
+                .module(new SetStatsModule(StatsNBT.builder()
+                        .set(ToolStats.ATTACK_DAMAGE, 0.0F)
+                        .set(ToolStats.ATTACK_SPEED, -2.4F).build()))
+                .smallToolStartingSlots()
+                .module(ToolTraitsModule.builder().trait(GTCModifiers.blunt, 1).build())
                 .build();
     }
 

@@ -6,10 +6,10 @@
   "input_slots": [
     {
       "filter": {
-        "item": "gtconstruct:screwdriver_head"
+        "item": "gtconstruct:screwdriver_tip"
       },
-      "icon": "gtconstruct:screwdriver_head",
-      "translation_key": "item.gtconstruct.screwdriver_head",
+      "icon": "gtconstruct:screwdriver_tip",
+      "translation_key": "item.gtconstruct.screwdriver_tip",
       "x": 39,
       "y": 35
     },
