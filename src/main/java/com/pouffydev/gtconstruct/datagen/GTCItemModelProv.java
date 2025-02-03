@@ -32,6 +32,7 @@ public class GTCItemModelProv extends RegistrateItemModelProvider {
         part(GTCToolParts.screwdriverTip);
         part(GTCToolParts.wirecutterClaws);
         part(GTCToolParts.wrenchHandle);
+        part(GTCToolParts.plungerHead);
 
         cast(GTCSmeltery.fileHeadCast);
         cast(GTCSmeltery.sawBladeCast);

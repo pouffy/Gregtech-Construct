@@ -1,6 +1,7 @@
 package com.pouffydev.gtconstruct.registry;
 
 import com.pouffydev.gtconstruct.GTCModule;
+import com.pouffydev.gtconstruct.common.stats.PlungerHeadMaterialStats;
 import slimeknights.mantle.registration.object.ItemObject;
 import slimeknights.tconstruct.library.tools.part.ToolPartItem;
 import slimeknights.tconstruct.tools.stats.HandleMaterialStats;
@@ -13,6 +14,6 @@ public class GTCToolParts extends GTCModule {
     public static final ItemObject<ToolPartItem> fileHead = ITEMS.register("file_head", () -> new ToolPartItem(ITEM_PROPS, HeadMaterialStats.ID));
     public static final ItemObject<ToolPartItem> wirecutterClaws = ITEMS.register("wirecutter_claws", () -> new ToolPartItem(ITEM_PROPS, HeadMaterialStats.ID));
     public static final ItemObject<ToolPartItem> wrenchHandle = ITEMS.register("wrench_handle", () -> new ToolPartItem(ITEM_PROPS, HandleMaterialStats.ID));
-    //public static final ItemObject<ToolPartItem> plungerHead = ITEMS.register("plunger_head", () -> new ToolPartItem(ITEM_PROPS, HeadMaterialStats.ID));
+    public static final ItemObject<ToolPartItem> plungerHead = ITEMS.register("plunger_head", () -> new ToolPartItem(ITEM_PROPS, PlungerHeadMaterialStats.ID));
 
 }

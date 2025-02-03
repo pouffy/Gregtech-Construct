@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_fluid",
+  "fluid": {
+    "amount": 90,
+    "fluid": "gtceu:black_bronze"
+  },
+  "output": "gtconstruct:black_bronze",
+  "temperature": 1028
+}

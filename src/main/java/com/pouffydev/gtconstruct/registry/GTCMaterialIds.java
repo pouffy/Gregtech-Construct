@@ -14,6 +14,14 @@ public class GTCMaterialIds {
     public static final MaterialId blueSteel = id("blue_steel"); // CuAg4 x1, BiZnCu3 x1, Ni(AuAgCu3)Fe3 x 4, Fe x 2
     public static final MaterialId redSteel = id("red_steel"); // CuAu4 x1, ZnCu3 x1, Ni(AuAgCu3)Fe3 x 4, Fe x 2
 
+    // Rubbers & Plastics (No Composition Comments becuz complex)
+    public static final MaterialId siliconeRubber = id("silicone_rubber");
+    public static final MaterialId styreneButadieneRubber = id("styrene_butadiene_rubber");
+    public static final MaterialId polybenzimidazole = id("polybenzimidazole");
+    public static final MaterialId polyethylene = id("polyethylene");
+    public static final MaterialId polytetrachloroethylene = id("polytetrachloroethylene");
+    public static final MaterialId rubber = id("rubber");
+
     // Metals
     public static final MaterialId bismuth = id("bismuth");
 

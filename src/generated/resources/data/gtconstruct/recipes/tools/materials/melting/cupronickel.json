@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_melting",
+  "input": "gtconstruct:cupronickel",
+  "result": {
+    "amount": 90,
+    "fluid": "gtceu:cupronickel"
+  },
+  "temperature": 1242
+}

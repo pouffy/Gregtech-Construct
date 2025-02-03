@@ -1,0 +1,34 @@
+{
+  "perStat": {
+    "tconstruct:armor": [
+      {
+        "level": 1,
+        "name": "tconstruct:consecrated"
+      },
+      {
+        "level": 1,
+        "name": "tconstruct:dwarven"
+      }
+    ],
+    "tconstruct:melee_harvest": [
+      {
+        "level": 1,
+        "name": "tconstruct:smite"
+      },
+      {
+        "level": 1,
+        "name": "tconstruct:dwarven"
+      }
+    ],
+    "tconstruct:ranged": [
+      {
+        "level": 1,
+        "name": "tconstruct:holy"
+      },
+      {
+        "level": 1,
+        "name": "tconstruct:dwarven"
+      }
+    ]
+  }
+}

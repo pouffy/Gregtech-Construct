@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_melting",
+  "input": "gtconstruct:bismuth",
+  "result": {
+    "amount": 90,
+    "fluid": "gtceu:bismuth"
+  },
+  "temperature": 245
+}

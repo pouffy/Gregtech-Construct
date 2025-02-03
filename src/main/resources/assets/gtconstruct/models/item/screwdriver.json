@@ -3,12 +3,14 @@
   "parent": "forge:item/default-tool",
   "textures": {
     "head":    "gtconstruct:item/tool/screwdriver/head",
-    "handle":  "gtconstruct:item/tool/screwdriver/handle"
+    "handle":  "gtconstruct:item/tool/screwdriver/handle",
+    "binding": "gtconstruct:item/tool/screwdriver/binding"
   },
   "modifier_roots": [ "gtconstruct:item/tool/screwdriver/modifiers/" ],
   "parts": [
-    { "name": "handle",  "index": 1 },
-    { "name": "head",    "index": 0 }
+    { "name": "handle",  "index": 2 },
+    { "name": "head",    "index": 0 },
+    { "name": "binding", "index": 1 }
   ],
   "overrides": [
     {

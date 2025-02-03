@@ -10,11 +10,13 @@ public class TinkerLang {
         initCastsAndPatterns(provider);
         initModifiers(provider);
         initPartNames(provider);
+        initMaterials(provider);
     }
 
     private static void initToolNames(RegistrateLangProvider provider) {
-        provider.add("item.gtconstruct.saw", "Saw");
-        provider.add("item.gtconstruct.screwdriver", "Screwdriver");
+        toEng(provider, "item.gtconstruct.saw");
+        toEng(provider, "item.gtconstruct.screwdriver");
+        toEng(provider, "item.gtconstruct.file");
     }
 
     private static void initCastsAndPatterns(RegistrateLangProvider provider) {
@@ -26,15 +28,33 @@ public class TinkerLang {
     }
 
     private static void initModifiers(RegistrateLangProvider provider) {
-        provider.add("modifier.gtconstruct.ice_cutter", "Ice Cutter");
+        toEng(provider,"modifier.gtconstruct.ice_cutter");
+        toEng(provider,"modifier.gtconstruct.blunt");
     }
 
     private static void initPartNames(RegistrateLangProvider provider) {
-        provider.add("item.gtconstruct.saw_blade", "Saw Blade");
-        provider.add("item.gtconstruct.screwdriver_tip", "Screwdriver Tip");
-        provider.add("item.gtconstruct.file_head", "File Head");
-        provider.add("item.gtconstruct.wirecutter_claws", "Wirecutter Claws");
-        provider.add("item.gtconstruct.wrench_handle", "Wrench Handle");
+        toEng(provider, "item.gtconstruct.saw_blade");
+        toEng(provider, "item.gtconstruct.screwdriver_tip");
+        toEng(provider, "item.gtconstruct.file_head");
+        toEng(provider, "item.gtconstruct.wirecutter_claws");
+        toEng(provider, "item.gtconstruct.wrench_handle");
+    }
+
+    private static void initMaterials(RegistrateLangProvider provider) {
+        toEng(provider, "material.gtconstruct.sterling_silver");
+        toEng(provider, "material.gtconstruct.bismuth_bronze");
+        toEng(provider, "material.gtconstruct.cupronickel");
+        toEng(provider, "material.gtconstruct.black_bronze");
+        toEng(provider, "material.gtconstruct.black_steel");
+        toEng(provider, "material.gtconstruct.blue_steel");
+        toEng(provider, "material.gtconstruct.red_steel");
+        toEng(provider, "material.gtconstruct.bismuth");
+        toEng(provider, "material.gtconstruct.silicone_rubber");
+        toEng(provider, "material.gtconstruct.styrene_butadiene_rubber");
+        toEng(provider, "material.gtconstruct.polybenzimidazole");
+        toEng(provider, "material.gtconstruct.polyethylene");
+        toEng(provider, "material.gtconstruct.polytetrachloroethylene");
+        toEng(provider, "material.gtconstruct.rubber");
     }
 
     private static void createCastsAndPattern(RegistrateLangProvider provider, String name) {
@@ -42,5 +62,14 @@ public class TinkerLang {
         provider.add("item.gtconstruct.%s_sand_cast".formatted(name), "%s Sand Cast".formatted(FormattingUtil.toEnglishName(name)));
         provider.add("item.gtconstruct.%s_red_sand_cast".formatted(name), "%s Red Sand Cast".formatted(FormattingUtil.toEnglishName(name)));
         provider.add("pattern.gtconstruct.%s".formatted(name), "%s".formatted(FormattingUtil.toEnglishName(name)));
+    }
+
+
+
+    private static void toEng(RegistrateLangProvider provider, String name) {
+        // get the last part of the translation key to use as the english name
+        String[] parts = name.split("\\.");
+        String toTranslate = parts[parts.length - 1];
+        provider.add(name, "%s".formatted(FormattingUtil.toEnglishName(toTranslate)));
     }
 }

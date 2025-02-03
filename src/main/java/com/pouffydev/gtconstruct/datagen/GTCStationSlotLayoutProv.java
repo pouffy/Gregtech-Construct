@@ -26,6 +26,13 @@ public class GTCStationSlotLayoutProv extends AbstractStationSlotLayoutProvider 
                 .addInputItem(TinkerToolParts.toolHandle, 21, 53)
                 .addInputItem(TinkerToolParts.toolBinding, 57, 53)
                 .build();
+
+        defineModifiable(GTCTools.file)
+                .sortIndex(SORT_HARVEST)
+                .addInputItem(GTCToolParts.fileHead, 39, 35)
+                .addInputItem(TinkerToolParts.toolHandle, 21, 53)
+                .addInputItem(TinkerToolParts.toolBinding, 57, 53)
+                .build();
     }
 
     @Override

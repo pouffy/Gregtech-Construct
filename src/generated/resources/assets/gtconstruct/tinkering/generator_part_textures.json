@@ -1,7 +1,7 @@
 {
   "parts": [
     {
-      "path": "gtconstruct:item/tool/parts/screwdriver_head",
+      "path": "gtconstruct:item/tool/parts/screwdriver_tip",
       "stat_type": "tconstruct:head"
     },
     {
@@ -19,6 +19,10 @@
     {
       "path": "gtconstruct:item/tool/parts/file_head",
       "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "gtconstruct:item/tool/parts/plunger_head",
+      "stat_type": "gtconstruct:plunger_head"
     },
     {
       "path": "gtconstruct:item/tool/saw/head",
@@ -47,6 +51,26 @@
     {
       "path": "gtconstruct:item/tool/screwdriver/handle",
       "stat_type": "tconstruct:handle"
+    },
+    {
+      "path": "gtconstruct:item/tool/screwdriver/binding",
+      "stat_type": "tconstruct:binding"
+    },
+    {
+      "path": "gtconstruct:item/tool/file/head",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "gtconstruct:item/tool/file/head_broken",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "gtconstruct:item/tool/file/handle",
+      "stat_type": "tconstruct:handle"
+    },
+    {
+      "path": "gtconstruct:item/tool/file/binding",
+      "stat_type": "tconstruct:binding"
     }
   ],
   "replace": false

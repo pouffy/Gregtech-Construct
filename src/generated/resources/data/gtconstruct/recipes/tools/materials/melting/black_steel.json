@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_melting",
+  "input": "gtconstruct:black_steel",
+  "result": {
+    "amount": 90,
+    "fluid": "gtceu:black_steel"
+  },
+  "temperature": 1458
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_fluid",
+  "fluid": {
+    "amount": 90,
+    "fluid": "gtceu:sterling_silver"
+  },
+  "output": "gtconstruct:sterling_silver",
+  "temperature": 958
+}

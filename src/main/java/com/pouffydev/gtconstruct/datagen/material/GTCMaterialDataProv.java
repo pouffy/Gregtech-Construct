@@ -16,15 +16,22 @@ public class GTCMaterialDataProv extends AbstractMaterialDataProvider {
 
     @Override
     protected void addMaterials() {
-        addMaterial(GTCMaterialIds.bismuth,             2, ORDER_COMPAT + ORDER_GENERAL, false);
+        addMaterial(GTCMaterialIds.bismuth,                 2, ORDER_COMPAT + ORDER_GENERAL, false);
 
-        addMaterial(GTCMaterialIds.bismuthBronze,       3, ORDER_COMPAT + ORDER_SPECIAL, false);
-        addMaterial(GTCMaterialIds.cupronickel,         3, ORDER_COMPAT + ORDER_SPECIAL, false);
-        addMaterial(GTCMaterialIds.sterlingSilver,      3, ORDER_COMPAT + ORDER_SPECIAL, false);
-        addMaterial(GTCMaterialIds.blackBronze,         3, ORDER_COMPAT + ORDER_SPECIAL, false);
+        addMaterial(GTCMaterialIds.bismuthBronze,           3, ORDER_COMPAT + ORDER_SPECIAL, false);
+        addMaterial(GTCMaterialIds.cupronickel,             3, ORDER_COMPAT + ORDER_SPECIAL, false);
+        addMaterial(GTCMaterialIds.sterlingSilver,          3, ORDER_COMPAT + ORDER_SPECIAL, false);
+        addMaterial(GTCMaterialIds.blackBronze,             3, ORDER_COMPAT + ORDER_SPECIAL, false);
 
-        addMaterial(GTCMaterialIds.blackSteel,          4, ORDER_COMPAT + ORDER_SPECIAL, false);
-        addMaterial(GTCMaterialIds.blueSteel,           4, ORDER_COMPAT + ORDER_SPECIAL, false);
-        addMaterial(GTCMaterialIds.redSteel,            4, ORDER_COMPAT + ORDER_SPECIAL, false);
+        addMaterial(GTCMaterialIds.blackSteel,              4, ORDER_COMPAT + ORDER_SPECIAL, false);
+        addMaterial(GTCMaterialIds.blueSteel,               4, ORDER_COMPAT + ORDER_SPECIAL, false);
+        addMaterial(GTCMaterialIds.redSteel,                4, ORDER_COMPAT + ORDER_SPECIAL, false);
+
+        addMaterial(GTCMaterialIds.siliconeRubber,          1, ORDER_COMPAT + ORDER_GENERAL, false);
+        addMaterial(GTCMaterialIds.styreneButadieneRubber,  1, ORDER_COMPAT + ORDER_GENERAL, false);
+        addMaterial(GTCMaterialIds.polybenzimidazole,       1, ORDER_COMPAT + ORDER_GENERAL, false);
+        addMaterial(GTCMaterialIds.polyethylene,            1, ORDER_COMPAT + ORDER_GENERAL, false);
+        addMaterial(GTCMaterialIds.polytetrachloroethylene, 1, ORDER_COMPAT + ORDER_GENERAL, false);
+        addMaterial(GTCMaterialIds.rubber,                  1, ORDER_COMPAT + ORDER_GENERAL, false);
     }
 }

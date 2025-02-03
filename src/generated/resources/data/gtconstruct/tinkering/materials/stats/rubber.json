@@ -1,0 +1,11 @@
+{
+  "stats": {
+    "gtconstruct:plunger_head": {
+      "durability": 225,
+      "melee_attack": 0.5,
+      "mining_speed": 0.5,
+      "mining_tier": "minecraft:wood"
+    },
+    "tconstruct:binding": {}
+  }
+}

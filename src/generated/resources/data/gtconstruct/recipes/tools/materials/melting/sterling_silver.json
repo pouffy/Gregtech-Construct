@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_melting",
+  "input": "gtconstruct:sterling_silver",
+  "result": {
+    "amount": 90,
+    "fluid": "gtceu:sterling_silver"
+  },
+  "temperature": 958
+}

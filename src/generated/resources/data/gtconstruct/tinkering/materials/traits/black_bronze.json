@@ -1,0 +1,12 @@
+{
+  "default": [
+    {
+      "level": 1,
+      "name": "tconstruct:maintained"
+    },
+    {
+      "level": 1,
+      "name": "tconstruct:dwarven"
+    }
+  ]
+}

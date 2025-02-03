@@ -21,6 +21,15 @@
       "translation_key": "item.tconstruct.tool_handle",
       "x": 21,
       "y": 53
+    },
+    {
+      "filter": {
+        "item": "tconstruct:tool_binding"
+      },
+      "icon": "tconstruct:tool_binding",
+      "translation_key": "item.tconstruct.tool_binding",
+      "x": 57,
+      "y": 53
     }
   ],
   "sortIndex": 6,

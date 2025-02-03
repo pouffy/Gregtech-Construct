@@ -4,6 +4,7 @@
       "type": "tconstruct:part_stats",
       "parts": [
         "gtconstruct:screwdriver_tip",
+        "tconstruct:tool_binding",
         "tconstruct:tool_handle"
       ],
       "primary_part": 0

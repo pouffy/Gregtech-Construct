@@ -90,11 +90,6 @@ public class ModifiableGTToolItem extends ModifiableItem implements IGTTool {
     }
 
     @Override
-    public ItemStack getDefaultInstance() {
-        return get();
-    }
-
-    @Override
     public InteractionResult onItemUseFirst(ItemStack itemStack, UseOnContext context) {
         super.onItemUseFirst(itemStack, context);
         return definition$onItemUseFirst(itemStack, context);
