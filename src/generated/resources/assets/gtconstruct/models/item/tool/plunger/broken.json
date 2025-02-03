@@ -1,0 +1,27 @@
+{
+  "loader": "tconstruct:tool",
+  "parent": "forge:item/default-tool",
+  "textures": {
+    "head": "gtconstruct:item/tool/plunger/head_broken",
+    "handle": "gtconstruct:item/tool/plunger/handle",
+    "binding": "gtconstruct:item/tool/plunger/binding"
+  },
+  "modifier_roots": [
+    "gtconstruct:item/tool/plunger/modifiers/broken/",
+    "gtconstruct:item/tool/plunger/modifiers/"
+  ],
+  "parts": [
+    {
+      "name": "handle",
+      "index": 2
+    },
+    {
+      "name": "head",
+      "index": 0
+    },
+    {
+      "name": "binding",
+      "index": 1
+    }
+  ]
+}

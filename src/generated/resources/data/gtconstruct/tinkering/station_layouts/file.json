@@ -20,7 +20,7 @@
       "icon": "tconstruct:tool_handle",
       "translation_key": "item.tconstruct.tool_handle",
       "x": 21,
-      "y": 53
+      "y": 35
     },
     {
       "filter": {
@@ -28,8 +28,8 @@
       },
       "icon": "tconstruct:tool_binding",
       "translation_key": "item.tconstruct.tool_binding",
-      "x": 57,
-      "y": 53
+      "x": 3,
+      "y": 35
     }
   ],
   "sortIndex": 6,

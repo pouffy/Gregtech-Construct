@@ -99,7 +99,7 @@ public class GTCMaterialStatsProv extends AbstractMaterialStatsDataProvider {
         addMaterialStats(GTCMaterialIds.styreneButadieneRubber, new PlungerHeadMaterialStats(430, 0.5f, WOOD, 0.5f), StatlessMaterialStats.BINDING);
         addMaterialStats(GTCMaterialIds.polybenzimidazole, new PlungerHeadMaterialStats(985, 0.5f, WOOD, 0.5f), StatlessMaterialStats.BINDING);
         addMaterialStats(GTCMaterialIds.polyethylene, new PlungerHeadMaterialStats(225, 0.5f, WOOD, 0.5f), StatlessMaterialStats.BINDING);
-        addMaterialStats(GTCMaterialIds.polytetrachloroethylene, new PlungerHeadMaterialStats(430, 0.5f, WOOD, 0.5f), StatlessMaterialStats.BINDING);
+        addMaterialStats(GTCMaterialIds.polytetrafluoroethylene, new PlungerHeadMaterialStats(430, 0.5f, WOOD, 0.5f), StatlessMaterialStats.BINDING);
         addMaterialStats(GTCMaterialIds.rubber, new PlungerHeadMaterialStats(225, 0.5f, WOOD, 0.5f), StatlessMaterialStats.BINDING);
     }
 

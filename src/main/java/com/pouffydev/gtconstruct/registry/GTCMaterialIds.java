@@ -19,7 +19,7 @@ public class GTCMaterialIds {
     public static final MaterialId styreneButadieneRubber = id("styrene_butadiene_rubber");
     public static final MaterialId polybenzimidazole = id("polybenzimidazole");
     public static final MaterialId polyethylene = id("polyethylene");
-    public static final MaterialId polytetrachloroethylene = id("polytetrachloroethylene");
+    public static final MaterialId polytetrafluoroethylene = id("polytetrafluoroethylene");
     public static final MaterialId rubber = id("rubber");
 
     // Metals

@@ -72,7 +72,7 @@ public class GTCMaterialSpriteProv extends AbstractMaterialSpriteProvider {
                 .fallbacks("cloth")
                 .statType(StatlessMaterialStats.BINDING.getIdentifier(), PlungerHeadMaterialStats.ID).repairKit()
                 .colorMapper(GreyToColorMapping.builderFromBlack().addARGB(63, 0xFF595959).addARGB(102, 0xFF6d6d6d).addARGB(140, 0xFF7f7f7f).addARGB(178, 0xFF919191).addARGB(216, 0xFFa2a2a2).addARGB(255, 0xFFbdbdbd).build());
-        buildMaterial(GTCMaterialIds.polytetrachloroethylene)
+        buildMaterial(GTCMaterialIds.polytetrafluoroethylene)
                 .fallbacks("cloth")
                 .statType(StatlessMaterialStats.BINDING.getIdentifier(), PlungerHeadMaterialStats.ID).repairKit()
                 .colorMapper(GreyToColorMapping.builderFromBlack().addARGB(63, 0xFF131313).addARGB(102, 0xFF262626).addARGB(140, 0xFF353535).addARGB(178, 0xFF474747).addARGB(216, 0xFF595959).addARGB(255, 0xFF828282).build());

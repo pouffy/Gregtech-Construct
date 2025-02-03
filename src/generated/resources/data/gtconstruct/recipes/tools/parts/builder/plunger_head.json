@@ -1,0 +1,11 @@
+{
+  "type": "tconstruct:part_builder",
+  "cost": 1,
+  "pattern": "gtconstruct:plunger_head",
+  "pattern_item": {
+    "tag": "tconstruct:patterns/default"
+  },
+  "result": {
+    "item": "gtconstruct:plunger_head"
+  }
+}

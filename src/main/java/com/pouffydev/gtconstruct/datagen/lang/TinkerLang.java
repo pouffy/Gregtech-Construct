@@ -17,6 +17,7 @@ public class TinkerLang {
         toEng(provider, "item.gtconstruct.saw");
         toEng(provider, "item.gtconstruct.screwdriver");
         toEng(provider, "item.gtconstruct.file");
+        toEng(provider, "item.gtconstruct.plunger");
     }
 
     private static void initCastsAndPatterns(RegistrateLangProvider provider) {
@@ -38,6 +39,7 @@ public class TinkerLang {
         toEng(provider, "item.gtconstruct.file_head");
         toEng(provider, "item.gtconstruct.wirecutter_claws");
         toEng(provider, "item.gtconstruct.wrench_handle");
+        toEng(provider, "item.gtconstruct.plunger_head");
     }
 
     private static void initMaterials(RegistrateLangProvider provider) {
@@ -53,7 +55,7 @@ public class TinkerLang {
         toEng(provider, "material.gtconstruct.styrene_butadiene_rubber");
         toEng(provider, "material.gtconstruct.polybenzimidazole");
         toEng(provider, "material.gtconstruct.polyethylene");
-        toEng(provider, "material.gtconstruct.polytetrachloroethylene");
+        toEng(provider, "material.gtconstruct.polytetrafluoroethylene");
         toEng(provider, "material.gtconstruct.rubber");
     }
 

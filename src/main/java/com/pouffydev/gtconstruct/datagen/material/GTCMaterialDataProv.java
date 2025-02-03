@@ -31,7 +31,7 @@ public class GTCMaterialDataProv extends AbstractMaterialDataProvider {
         addMaterial(GTCMaterialIds.styreneButadieneRubber,  1, ORDER_COMPAT + ORDER_GENERAL, false);
         addMaterial(GTCMaterialIds.polybenzimidazole,       1, ORDER_COMPAT + ORDER_GENERAL, false);
         addMaterial(GTCMaterialIds.polyethylene,            1, ORDER_COMPAT + ORDER_GENERAL, false);
-        addMaterial(GTCMaterialIds.polytetrachloroethylene, 1, ORDER_COMPAT + ORDER_GENERAL, false);
+        addMaterial(GTCMaterialIds.polytetrafluoroethylene, 1, ORDER_COMPAT + ORDER_GENERAL, false);
         addMaterial(GTCMaterialIds.rubber,                  1, ORDER_COMPAT + ORDER_GENERAL, false);
     }
 }

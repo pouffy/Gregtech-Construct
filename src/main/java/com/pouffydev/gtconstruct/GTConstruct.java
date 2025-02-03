@@ -1,23 +1,23 @@
 package com.pouffydev.gtconstruct;
 
 import com.gregtechceu.gtceu.utils.FormattingUtil;
+import com.pouffydev.gtconstruct.common.stats.PlungerHeadMaterialStats;
 import com.pouffydev.gtconstruct.datagen.*;
 import com.pouffydev.gtconstruct.registry.*;
-import net.minecraft.data.DataGenerator;
-import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.loading.FMLLoader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import slimeknights.tconstruct.library.materials.MaterialRegistry;
+import slimeknights.tconstruct.library.materials.stats.MaterialStatsId;
 
 import static com.pouffydev.gtconstruct.registry.GTCRegistration.REGISTRATE;
 
@@ -58,6 +58,13 @@ public class GTConstruct
         modEventBus.addListener(EventPriority.LOWEST, GTCDataGen::gatherData);
 
         GTCModule.initRegisters();
+    }
+
+
+
+    @SubscribeEvent
+    static void commonSetup(final FMLCommonSetupEvent event) {
+        event.enqueueWork(GTCMaterialRegistry::setup);
     }
 
     public static ResourceLocation id(String path) {

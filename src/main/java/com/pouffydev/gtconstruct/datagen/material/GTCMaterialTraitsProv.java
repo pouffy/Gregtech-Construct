@@ -37,7 +37,7 @@ public class GTCMaterialTraitsProv extends AbstractMaterialTraitDataProvider {
         noTraits(GTCMaterialIds.styreneButadieneRubber);
         noTraits(GTCMaterialIds.polybenzimidazole);
         noTraits(GTCMaterialIds.polyethylene);
-        noTraits(GTCMaterialIds.polytetrachloroethylene);
+        noTraits(GTCMaterialIds.polytetrafluoroethylene);
         noTraits(GTCMaterialIds.rubber);
     }
 

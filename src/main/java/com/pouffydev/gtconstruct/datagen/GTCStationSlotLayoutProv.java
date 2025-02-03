@@ -23,15 +23,22 @@ public class GTCStationSlotLayoutProv extends AbstractStationSlotLayoutProvider 
         defineModifiable(GTCTools.screwdriver)
                 .sortIndex(SORT_HARVEST)
                 .addInputItem(GTCToolParts.screwdriverTip, 39, 35)
-                .addInputItem(TinkerToolParts.toolHandle, 21, 53)
-                .addInputItem(TinkerToolParts.toolBinding, 57, 53)
+                .addInputItem(TinkerToolParts.toolHandle, 21, 35)
+                .addInputItem(TinkerToolParts.toolBinding, 3, 35)
                 .build();
 
         defineModifiable(GTCTools.file)
                 .sortIndex(SORT_HARVEST)
                 .addInputItem(GTCToolParts.fileHead, 39, 35)
-                .addInputItem(TinkerToolParts.toolHandle, 21, 53)
-                .addInputItem(TinkerToolParts.toolBinding, 57, 53)
+                .addInputItem(TinkerToolParts.toolHandle, 21, 35)
+                .addInputItem(TinkerToolParts.toolBinding, 3, 35)
+                .build();
+
+        defineModifiable(GTCTools.plunger)
+                .sortIndex(SORT_HARVEST)
+                .addInputItem(GTCToolParts.plungerHead, 39, 35)
+                .addInputItem(TinkerToolParts.toolHandle, 21, 35)
+                .addInputItem(TinkerToolParts.toolBinding, 3, 35)
                 .build();
     }
 

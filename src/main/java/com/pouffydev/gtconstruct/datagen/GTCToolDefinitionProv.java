@@ -52,7 +52,7 @@ public class GTCToolDefinitionProv extends AbstractToolDefinitionDataProvider {
                         .part(GTCToolParts.screwdriverTip)
                         .part(TinkerToolParts.toolBinding)
                         .part(TinkerToolParts.toolHandle).build())
-                .module(defaultTwoParts)
+                .module(defaultThreeParts)
                 .module(new SetStatsModule(StatsNBT.builder()
                         .set(ToolStats.ATTACK_DAMAGE, -1.0F)
                         .set(ToolStats.ATTACK_SPEED, 3.0F).build()))
@@ -65,12 +65,25 @@ public class GTCToolDefinitionProv extends AbstractToolDefinitionDataProvider {
                         .part(GTCToolParts.fileHead)
                         .part(TinkerToolParts.toolBinding)
                         .part(TinkerToolParts.toolHandle).build())
-                .module(defaultTwoParts)
+                .module(defaultThreeParts)
                 .module(new SetStatsModule(StatsNBT.builder()
                         .set(ToolStats.ATTACK_DAMAGE, 0.0F)
                         .set(ToolStats.ATTACK_SPEED, -2.4F).build()))
                 .smallToolStartingSlots()
                 .module(ToolTraitsModule.builder().trait(GTCModifiers.blunt, 1).build())
+                .build();
+
+        define(GTCToolDefinitions.PLUNGER)
+                .module(PartStatsModule.parts()
+                        .part(GTCToolParts.plungerHead)
+                        .part(TinkerToolParts.toolBinding)
+                        .part(TinkerToolParts.toolHandle).build())
+                .module(defaultThreeParts)
+                .module(new SetStatsModule(StatsNBT.builder()
+                        .set(ToolStats.ATTACK_DAMAGE, 0.0F)
+                        .set(ToolStats.ATTACK_SPEED, -2.4F).build()))
+                .smallToolStartingSlots()
+                .module(ToolTraitsModule.builder().trait(ModifierIds.hydraulic, 1).build())
                 .build();
     }
 

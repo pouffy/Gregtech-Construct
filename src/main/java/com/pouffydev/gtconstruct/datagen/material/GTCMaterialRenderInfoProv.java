@@ -28,7 +28,7 @@ public class GTCMaterialRenderInfoProv extends AbstractMaterialRenderInfoProvide
         buildRenderInfo(GTCMaterialIds.styreneButadieneRubber).fallbacks("cloth");
         buildRenderInfo(GTCMaterialIds.polybenzimidazole).fallbacks("cloth");
         buildRenderInfo(GTCMaterialIds.polyethylene).fallbacks("cloth");
-        buildRenderInfo(GTCMaterialIds.polytetrachloroethylene).fallbacks("cloth");
+        buildRenderInfo(GTCMaterialIds.polytetrafluoroethylene).fallbacks("cloth");
         buildRenderInfo(GTCMaterialIds.rubber).fallbacks("cloth");
 
     }
