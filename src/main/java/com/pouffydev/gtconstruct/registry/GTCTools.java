@@ -34,6 +34,8 @@ public class GTCTools extends GTCModule {
 
     public static final ItemObject<ModifiableGTToolItem> plunger = ITEMS.register("plunger", () -> new ModifiableGTToolItem(UNSTACKABLE_PROPS, GTCToolDefinitions.PLUNGER, GTToolType.PLUNGER));
 
+    //TODO: Wirecutter, Wrench, Crafting Hammer, Soft Mallet
+
     private static void addTabItems(CreativeModeTab.ItemDisplayParameters itemDisplayParameters, CreativeModeTab.Output tab) {
         Consumer<ItemStack> output = tab::accept;
         acceptTool(output, saw);
