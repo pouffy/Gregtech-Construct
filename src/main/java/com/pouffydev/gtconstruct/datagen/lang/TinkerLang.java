@@ -17,6 +17,7 @@ public class TinkerLang {
         toEng(provider, "item.gtconstruct.saw");
         toEng(provider, "item.gtconstruct.screwdriver");
         toEng(provider, "item.gtconstruct.file");
+        toEng(provider, "item.gtconstruct.wire_cutters");
         toEng(provider, "item.gtconstruct.plunger");
     }
 

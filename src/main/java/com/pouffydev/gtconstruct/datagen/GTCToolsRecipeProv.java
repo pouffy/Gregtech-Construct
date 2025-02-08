@@ -43,6 +43,7 @@ public class GTCToolsRecipeProv extends GTCRecipeProvider implements IMaterialRe
         toolBuilding(consumer, GTCTools.saw, folder);
         toolBuilding(consumer, GTCTools.screwdriver, folder);
         toolBuilding(consumer, GTCTools.file, folder);
+        toolBuilding(consumer, GTCTools.wirecutter, folder);
         toolBuilding(consumer, GTCTools.plunger, folder);
 
     }

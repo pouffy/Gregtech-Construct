@@ -1,4 +1,4 @@
-// 1.20.1	2025-02-03T20:29:39.4661489	GTConstruct Tools Recipes
+// 1.20.1	2025-02-08T15:38:11.4968909	GTConstruct Tools Recipes
 1e9892a8b317e1723f01885ac88690cd3fe4822a data/gtconstruct/recipes/smeltery/casts/gold/file_head.json
 0c74c05e91fd002095ae0a70ea2c903d5dd39ec9 data/gtconstruct/recipes/smeltery/casts/gold/saw_blade.json
 42ebfb86b312bc31dd38009828317c5c9e77022e data/gtconstruct/recipes/smeltery/casts/gold/screwdriver_tip.json
@@ -38,6 +38,7 @@ bed6af15d5f16f8d48047b5583c591bf89ee569b data/gtconstruct/recipes/tools/building
 3aefacf1f9d4f441bfd5dae265e7cef10a923eef data/gtconstruct/recipes/tools/building/plunger.json
 078df689672261b30ace523b741e9e4d2aff77f9 data/gtconstruct/recipes/tools/building/saw.json
 dc70de69ad39cc148ae33964c583b9310765d583 data/gtconstruct/recipes/tools/building/screwdriver.json
+7c8679d43285e45753973819fb51d051f3d1302c data/gtconstruct/recipes/tools/building/wire_cutters.json
 643a53ae49e633054bba0d112c5c8f13a9b7558a data/gtconstruct/recipes/tools/parts/builder/file_head.json
 8e1db3026b6c0ea93c96566b23d5b260d43b49d6 data/gtconstruct/recipes/tools/parts/builder/plunger_head.json
 67302668de181fb6019ebe72625abf878a14c1ee data/gtconstruct/recipes/tools/parts/builder/saw_blade.json

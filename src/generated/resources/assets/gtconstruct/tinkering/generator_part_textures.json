@@ -71,6 +71,42 @@
     {
       "path": "gtconstruct:item/tool/file/binding",
       "stat_type": "tconstruct:binding"
+    },
+    {
+      "path": "gtconstruct:item/tool/wire_cutters/head",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "gtconstruct:item/tool/wire_cutters/head_broken",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "gtconstruct:item/tool/wire_cutters/right_handle",
+      "stat_type": "tconstruct:handle"
+    },
+    {
+      "path": "gtconstruct:item/tool/wire_cutters/left_handle",
+      "stat_type": "tconstruct:handle"
+    },
+    {
+      "path": "gtconstruct:item/tool/wire_cutters/binding",
+      "stat_type": "tconstruct:binding"
+    },
+    {
+      "path": "gtconstruct:item/tool/plunger/head",
+      "stat_type": "gtconstruct:plunger_head"
+    },
+    {
+      "path": "gtconstruct:item/tool/plunger/head_broken",
+      "stat_type": "gtconstruct:plunger_head"
+    },
+    {
+      "path": "gtconstruct:item/tool/plunger/handle",
+      "stat_type": "tconstruct:handle"
+    },
+    {
+      "path": "gtconstruct:item/tool/plunger/binding",
+      "stat_type": "tconstruct:binding"
     }
   ],
   "replace": false

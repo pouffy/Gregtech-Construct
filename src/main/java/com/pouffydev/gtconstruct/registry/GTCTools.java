@@ -32,15 +32,18 @@ public class GTCTools extends GTCModule {
 
     public static final ItemObject<ModifiableGTToolItem> file = ITEMS.register("file", () -> new ModifiableGTToolItem(UNSTACKABLE_PROPS, GTCToolDefinitions.FILE, GTToolType.FILE));
 
+    public static final ItemObject<ModifiableGTToolItem> wirecutter = ITEMS.register("wire_cutters", () -> new ModifiableGTToolItem(UNSTACKABLE_PROPS, GTCToolDefinitions.WIRECUTTER, GTToolType.WIRE_CUTTER));
+
     public static final ItemObject<ModifiableGTToolItem> plunger = ITEMS.register("plunger", () -> new ModifiableGTToolItem(UNSTACKABLE_PROPS, GTCToolDefinitions.PLUNGER, GTToolType.PLUNGER));
 
-    //TODO: Wirecutter, Wrench, Crafting Hammer, Soft Mallet
+    //TODO: Wrench, Crafting Hammer, Soft Mallet
 
     private static void addTabItems(CreativeModeTab.ItemDisplayParameters itemDisplayParameters, CreativeModeTab.Output tab) {
         Consumer<ItemStack> output = tab::accept;
         acceptTool(output, saw);
         acceptTool(output, screwdriver);
         acceptTool(output, file);
+        acceptTool(output, wirecutter);
         acceptTool(output, plunger);
     }
 

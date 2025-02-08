@@ -1,0 +1,27 @@
+{
+  "loader": "tconstruct:tool",
+  "parent": "forge:item/default-tool",
+  "textures": {
+    "head":   "gtconstruct:item/tool/wire_cutters/head",
+    "binding": "gtconstruct:item/tool/wire_cutters/binding",
+    "right_handle":   "gtconstruct:item/tool/wire_cutters/right_handle",
+    "left_handle":  "gtconstruct:item/tool/wire_cutters/left_handle"
+  },
+  "modifier_roots": [ "gtconstruct:item/tool/wire_cutters/modifiers/" ],
+  "parts": [
+    { "name": "binding", "index": 1 },
+    { "name": "head",   "index": 0 },
+    { "name": "right_handle",   "index": 2 },
+    { "name": "left_handle",  "index": 3 }
+  ],
+  "overrides": [
+    {
+      "predicate": { "tconstruct:charging": 2 },
+      "model": "gtconstruct:item/tool/wire_cutters/blocking"
+    },
+    {
+      "predicate": { "tconstruct:broken": 1 },
+      "model": "gtconstruct:item/tool/wire_cutters/broken"
+    }
+  ]
+}

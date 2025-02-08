@@ -1,5 +1,6 @@
-// 1.20.1	2025-02-03T18:46:12.2847788	GregTech Construct Tool Definitions
+// 1.20.1	2025-02-08T15:38:11.4948917	GregTech Construct Tool Definitions
 436dc8209eab8de36f28bebb9b659a35db7bb49c data/gtconstruct/tinkering/tool_definitions/file.json
 9199a3b0c2214625919ae05a54295292e923a7a9 data/gtconstruct/tinkering/tool_definitions/plunger.json
 5336ce041e3637a8a4f4e765727d8bcb9712585c data/gtconstruct/tinkering/tool_definitions/saw.json
 9d2ca3513d16c27109c399370c6f965daa16d2c6 data/gtconstruct/tinkering/tool_definitions/screwdriver.json
+d05bc16e7a3ced02969e77ba03d902086f653808 data/gtconstruct/tinkering/tool_definitions/wire_cutters.json

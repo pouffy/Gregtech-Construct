@@ -1,4 +1,4 @@
-// 1.20.1	2025-02-03T18:46:12.2867815	GregTech Construct Tool Item Models
+// 1.20.1	2025-02-08T15:38:11.495895	GregTech Construct Tool Item Models
 7c7739cde366b15db3f2e8ec5e4e4d093ccddf4b assets/gtconstruct/models/item/tool/file/blocking.json
 c7cf173f199e0d164c1922923bfaf5ae5a40b942 assets/gtconstruct/models/item/tool/file/broken.json
 1c526891bb230a485a94d8ea30d530cb8ea2b2e1 assets/gtconstruct/models/item/tool/plunger/blocking.json
@@ -7,3 +7,5 @@ acb55e07cac9fff92dfb17541c57016c44c9ce57 assets/gtconstruct/models/item/tool/plu
 9ecc7770ba2ddc3ff51c91bf1bb4732514603011 assets/gtconstruct/models/item/tool/saw/broken.json
 5f5b171c8cbccf2a1d8860d592b89089e4df0b3e assets/gtconstruct/models/item/tool/screwdriver/blocking.json
 500f801a3918b70e05dc6ee83fed9ef35f918add assets/gtconstruct/models/item/tool/screwdriver/broken.json
+dc91c71229e76b6de0dba372285bf3322ad33a55 assets/gtconstruct/models/item/tool/wire_cutters/blocking.json
+0c2938186a7f2942bb3ca3a4d3c813ab57ca3fc5 assets/gtconstruct/models/item/tool/wire_cutters/broken.json

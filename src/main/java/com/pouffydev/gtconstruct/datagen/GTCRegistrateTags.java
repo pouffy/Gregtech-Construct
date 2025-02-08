@@ -34,7 +34,9 @@ public class GTCRegistrateTags {
         prov.tag(TagUtil.createItemTag("tools/saws", false)).add(GTCTools.saw.asItem());
         prov.tag(TagUtil.createItemTag("tools/screwdrivers", false)).add(GTCTools.screwdriver.asItem());
         prov.tag(TagUtil.createItemTag("tools/files", false)).add(GTCTools.file.asItem());
+        prov.tag(TagUtil.createItemTag("tools/wire_cutters", false)).add(GTCTools.wirecutter.asItem());
         prov.tag(TagUtil.createItemTag("tools/plungers", false)).add(GTCTools.plunger.asItem());
+
 
         prov.tag(GTCSmeltery.sawBladeCast.getMultiUseTag()).add(GTCSmeltery.sawBladeCast.get());
         prov.tag(GTCSmeltery.fileHeadCast.getMultiUseTag()).add(GTCSmeltery.fileHeadCast.get());
