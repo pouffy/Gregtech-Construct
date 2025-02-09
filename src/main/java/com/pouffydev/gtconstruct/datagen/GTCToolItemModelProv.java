@@ -25,6 +25,7 @@ public class GTCToolItemModelProv  extends AbstractToolItemModelProvider {
         tool(GTCTools.file, toolBlocking, "head");
         tool(GTCTools.wirecutter, toolBlocking, "head");
         tool(GTCTools.plunger, toolBlocking, "head");
+        tool(GTCTools.softMallet, toolBlocking, "head");
     }
 
     @Override

@@ -1,0 +1,6 @@
+{
+  "type": "tconstruct:table_casting_composite",
+  "casting_stat_conflict": "tconstruct:plating_shield",
+  "item_cost": 1,
+  "result": "gtconstruct:soft_mallet_head"
+}

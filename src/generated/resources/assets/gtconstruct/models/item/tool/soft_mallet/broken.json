@@ -1,0 +1,27 @@
+{
+  "loader": "tconstruct:tool",
+  "parent": "forge:item/default-tool",
+  "textures": {
+    "head": "gtconstruct:item/tool/soft_mallet/head_broken",
+    "handle": "gtconstruct:item/tool/soft_mallet/handle",
+    "binding": "gtconstruct:item/tool/soft_mallet/binding"
+  },
+  "modifier_roots": [
+    "gtconstruct:item/tool/soft_mallet/modifiers/broken/",
+    "gtconstruct:item/tool/soft_mallet/modifiers/"
+  ],
+  "parts": [
+    {
+      "name": "handle",
+      "index": 2
+    },
+    {
+      "name": "head",
+      "index": 0
+    },
+    {
+      "name": "binding",
+      "index": 1
+    }
+  ]
+}

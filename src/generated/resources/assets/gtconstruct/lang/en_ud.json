@@ -16,6 +16,8 @@
   "item.gtconstruct.screwdriver_tip_cast": "ʇsɐƆ pןo⅁ dı⟘ ɹǝʌıɹpʍǝɹɔS",
   "item.gtconstruct.screwdriver_tip_red_sand_cast": "ʇsɐƆ puɐS pǝᴚ dı⟘ ɹǝʌıɹpʍǝɹɔS",
   "item.gtconstruct.screwdriver_tip_sand_cast": "ʇsɐƆ puɐS dı⟘ ɹǝʌıɹpʍǝɹɔS",
+  "item.gtconstruct.soft_mallet": "ʇǝןןɐW ʇɟoS",
+  "item.gtconstruct.soft_mallet_head": "pɐǝH ʇǝןןɐW ʇɟoS",
   "item.gtconstruct.wire_cutters": "sɹǝʇʇnƆ ǝɹıM",
   "item.gtconstruct.wirecutter_claws": "sʍɐןƆ ɹǝʇʇnɔǝɹıM",
   "item.gtconstruct.wirecutter_claws_cast": "ʇsɐƆ pןo⅁ sʍɐןƆ ɹǝʇʇnɔǝɹıM",
@@ -42,8 +44,10 @@
   "modifier.gtconstruct.blunt": "ʇunןᗺ",
   "modifier.gtconstruct.ice_cutter": "ɹǝʇʇnƆ ǝɔI",
   "pattern.gtconstruct.file_head": "pɐǝH ǝןıℲ",
+  "pattern.gtconstruct.plunger_head": "pɐǝH ɹǝbunןԀ",
   "pattern.gtconstruct.saw_blade": "ǝpɐןᗺ ʍɐS",
   "pattern.gtconstruct.screwdriver_tip": "dı⟘ ɹǝʌıɹpʍǝɹɔS",
+  "pattern.gtconstruct.soft_mallet_head": "pɐǝH ʇǝןןɐW ʇɟoS",
   "pattern.gtconstruct.wirecutter_claws": "sʍɐןƆ ɹǝʇʇnɔǝɹıM",
   "pattern.gtconstruct.wrench_handle": "ǝןpuɐH ɥɔuǝɹM"
 }

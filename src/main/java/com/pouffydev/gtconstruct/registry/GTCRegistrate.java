@@ -1,5 +1,6 @@
 package com.pouffydev.gtconstruct.registry;
 
+import com.gregtechceu.gtceu.api.registry.registrate.GTRegistrate;
 import com.gregtechceu.gtceu.utils.FormattingUtil;
 import com.tterrag.registrate.Registrate;
 import com.tterrag.registrate.builders.Builder;
@@ -28,7 +29,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
-public class GTCRegistrate extends Registrate {
+public class GTCRegistrate extends GTRegistrate {
 
     private final AtomicBoolean registered = new AtomicBoolean(false);
 

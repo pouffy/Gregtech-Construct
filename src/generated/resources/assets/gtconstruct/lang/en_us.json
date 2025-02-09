@@ -16,6 +16,8 @@
   "item.gtconstruct.screwdriver_tip_cast": "Screwdriver Tip Gold Cast",
   "item.gtconstruct.screwdriver_tip_red_sand_cast": "Screwdriver Tip Red Sand Cast",
   "item.gtconstruct.screwdriver_tip_sand_cast": "Screwdriver Tip Sand Cast",
+  "item.gtconstruct.soft_mallet": "Soft Mallet",
+  "item.gtconstruct.soft_mallet_head": "Soft Mallet Head",
   "item.gtconstruct.wire_cutters": "Wire Cutters",
   "item.gtconstruct.wirecutter_claws": "Wirecutter Claws",
   "item.gtconstruct.wirecutter_claws_cast": "Wirecutter Claws Gold Cast",
@@ -42,8 +44,10 @@
   "modifier.gtconstruct.blunt": "Blunt",
   "modifier.gtconstruct.ice_cutter": "Ice Cutter",
   "pattern.gtconstruct.file_head": "File Head",
+  "pattern.gtconstruct.plunger_head": "Plunger Head",
   "pattern.gtconstruct.saw_blade": "Saw Blade",
   "pattern.gtconstruct.screwdriver_tip": "Screwdriver Tip",
+  "pattern.gtconstruct.soft_mallet_head": "Soft Mallet Head",
   "pattern.gtconstruct.wirecutter_claws": "Wirecutter Claws",
   "pattern.gtconstruct.wrench_handle": "Wrench Handle"
 }

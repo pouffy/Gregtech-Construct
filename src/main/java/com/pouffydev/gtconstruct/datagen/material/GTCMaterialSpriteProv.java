@@ -1,7 +1,9 @@
 package com.pouffydev.gtconstruct.datagen.material;
 
 import com.pouffydev.gtconstruct.common.stats.PlungerHeadMaterialStats;
+import com.pouffydev.gtconstruct.common.stats.SoftMalletHeadMaterialStats;
 import com.pouffydev.gtconstruct.registry.GTCMaterialIds;
+import com.pouffydev.gtconstruct.registry.GTCStatlessMaterialStats;
 import net.minecraft.resources.ResourceLocation;
 import slimeknights.tconstruct.library.client.data.material.AbstractMaterialSpriteProvider;
 import slimeknights.tconstruct.library.client.data.spritetransformer.GreyToColorMapping;
@@ -58,27 +60,27 @@ public class GTCMaterialSpriteProv extends AbstractMaterialSpriteProvider {
 
         buildMaterial(GTCMaterialIds.siliconeRubber)
                 .fallbacks("cloth")
-                .statType(StatlessMaterialStats.BINDING.getIdentifier(), PlungerHeadMaterialStats.ID).repairKit()
+                .statType(StatlessMaterialStats.BINDING.getIdentifier(), PlungerHeadMaterialStats.ID, SoftMalletHeadMaterialStats.ID).repairKit()
                 .colorMapper(GreyToColorMapping.builderFromBlack().addARGB(63, 0xFF686865).addARGB(102, 0xFF81817e).addARGB(140, 0xFF979795).addARGB(178, 0xFFadadac).addARGB(216, 0xFFc2c2c2).addARGB(255, 0xFFd8d8d8).build());
         buildMaterial(GTCMaterialIds.styreneButadieneRubber)
                 .fallbacks("cloth")
-                .statType(StatlessMaterialStats.BINDING.getIdentifier(), PlungerHeadMaterialStats.ID).repairKit()
+                .statType(StatlessMaterialStats.BINDING.getIdentifier(), PlungerHeadMaterialStats.ID, SoftMalletHeadMaterialStats.ID).repairKit()
                 .colorMapper(GreyToColorMapping.builderFromBlack().addARGB(63, 0xFF0a0706).addARGB(102, 0xFF12100e).addARGB(140, 0xFF1a1714).addARGB(178, 0xFF221f1b).addARGB(216, 0xFF2a2823).addARGB(255, 0xFF5b5955).build());
         buildMaterial(GTCMaterialIds.polybenzimidazole)
                 .fallbacks("cloth")
-                .statType(StatlessMaterialStats.BINDING.getIdentifier(), PlungerHeadMaterialStats.ID).repairKit()
+                .statType(StatlessMaterialStats.BINDING.getIdentifier(), PlungerHeadMaterialStats.ID, SoftMalletHeadMaterialStats.ID).repairKit()
                 .colorMapper(GreyToColorMapping.builderFromBlack().addARGB(63, 0xFF1a160e).addARGB(102, 0xFF221f19).addARGB(140, 0xFF292621).addARGB(178, 0xFF312e2b).addARGB(216, 0xFF393735).addARGB(255, 0xFF676664).build());
         buildMaterial(GTCMaterialIds.polyethylene)
                 .fallbacks("cloth")
-                .statType(StatlessMaterialStats.BINDING.getIdentifier(), PlungerHeadMaterialStats.ID).repairKit()
+                .statType(StatlessMaterialStats.BINDING.getIdentifier(), PlungerHeadMaterialStats.ID, SoftMalletHeadMaterialStats.ID).repairKit()
                 .colorMapper(GreyToColorMapping.builderFromBlack().addARGB(63, 0xFF595959).addARGB(102, 0xFF6d6d6d).addARGB(140, 0xFF7f7f7f).addARGB(178, 0xFF919191).addARGB(216, 0xFFa2a2a2).addARGB(255, 0xFFbdbdbd).build());
         buildMaterial(GTCMaterialIds.polytetrafluoroethylene)
                 .fallbacks("cloth")
-                .statType(StatlessMaterialStats.BINDING.getIdentifier(), PlungerHeadMaterialStats.ID).repairKit()
+                .statType(StatlessMaterialStats.BINDING.getIdentifier(), PlungerHeadMaterialStats.ID, SoftMalletHeadMaterialStats.ID).repairKit()
                 .colorMapper(GreyToColorMapping.builderFromBlack().addARGB(63, 0xFF131313).addARGB(102, 0xFF262626).addARGB(140, 0xFF353535).addARGB(178, 0xFF474747).addARGB(216, 0xFF595959).addARGB(255, 0xFF828282).build());
         buildMaterial(GTCMaterialIds.rubber)
                 .fallbacks("cloth")
-                .statType(StatlessMaterialStats.BINDING.getIdentifier(), PlungerHeadMaterialStats.ID).repairKit()
+                .statType(StatlessMaterialStats.BINDING.getIdentifier(), PlungerHeadMaterialStats.ID, SoftMalletHeadMaterialStats.ID).repairKit()
                 .colorMapper(GreyToColorMapping.builderFromBlack().addARGB(63, 0xFF070706).addARGB(102, 0xFF10100d).addARGB(140, 0xFF181813).addARGB(178, 0xFF21211a).addARGB(216, 0xFF2b2b21).addARGB(255, 0xFF5c5c54).build());
     }
 

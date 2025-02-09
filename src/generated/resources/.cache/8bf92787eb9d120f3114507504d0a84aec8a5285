@@ -1,4 +1,4 @@
-// 1.20.1	2025-02-08T15:38:11.4968909	GTConstruct Tools Recipes
+// 1.20.1	2025-02-09T16:43:39.620782	GTConstruct Tools Recipes
 1e9892a8b317e1723f01885ac88690cd3fe4822a data/gtconstruct/recipes/smeltery/casts/gold/file_head.json
 0c74c05e91fd002095ae0a70ea2c903d5dd39ec9 data/gtconstruct/recipes/smeltery/casts/gold/saw_blade.json
 42ebfb86b312bc31dd38009828317c5c9e77022e data/gtconstruct/recipes/smeltery/casts/gold/screwdriver_tip.json
@@ -38,21 +38,24 @@ bed6af15d5f16f8d48047b5583c591bf89ee569b data/gtconstruct/recipes/tools/building
 3aefacf1f9d4f441bfd5dae265e7cef10a923eef data/gtconstruct/recipes/tools/building/plunger.json
 078df689672261b30ace523b741e9e4d2aff77f9 data/gtconstruct/recipes/tools/building/saw.json
 dc70de69ad39cc148ae33964c583b9310765d583 data/gtconstruct/recipes/tools/building/screwdriver.json
+7c293eca503a149202e757914e1843e2b5edce5c data/gtconstruct/recipes/tools/building/soft_mallet.json
 7c8679d43285e45753973819fb51d051f3d1302c data/gtconstruct/recipes/tools/building/wire_cutters.json
 643a53ae49e633054bba0d112c5c8f13a9b7558a data/gtconstruct/recipes/tools/parts/builder/file_head.json
-8e1db3026b6c0ea93c96566b23d5b260d43b49d6 data/gtconstruct/recipes/tools/parts/builder/plunger_head.json
+0887991eae10e6c017ec8661eaa489625b36fae7 data/gtconstruct/recipes/tools/parts/builder/plunger_head.json
 67302668de181fb6019ebe72625abf878a14c1ee data/gtconstruct/recipes/tools/parts/builder/saw_blade.json
+a5d1af423579586af6ef45a6564e2aa350c2631c data/gtconstruct/recipes/tools/parts/builder/soft_mallet_head.json
 7172c72a97031f50c0724131c95268fa95aaefe3 data/gtconstruct/recipes/tools/parts/builder/wrench_handle.json
 086945654f24ddde9a54ac01e3f1e35ac99ef2e2 data/gtconstruct/recipes/tools/parts/casting/file_head_composite.json
 8595e9500e1ff0325afe1dffc2959a554ab02d31 data/gtconstruct/recipes/tools/parts/casting/file_head_gold_cast.json
 fb7e484516c5e7ae4eb732963239fcdcaccc37b0 data/gtconstruct/recipes/tools/parts/casting/file_head_sand_cast.json
-41c525088318459ae43554b78b91d609f5b266a6 data/gtconstruct/recipes/tools/parts/casting/plunger_head_composite.json
+5acf38c37e68f475e1a6db650b2d8cdf448329a0 data/gtconstruct/recipes/tools/parts/casting/plunger_head_composite.json
 27113f8014b9c37c7b988317a0554233bb23e199 data/gtconstruct/recipes/tools/parts/casting/saw_blade_composite.json
 fb698532a0f1890de5fa498d45fb8cd91c105abc data/gtconstruct/recipes/tools/parts/casting/saw_blade_gold_cast.json
 40e7a6b9257b0198fb74f23d9b6ad208c1944ed3 data/gtconstruct/recipes/tools/parts/casting/saw_blade_sand_cast.json
 63b04ddb3448dd8ea154f8be81af643185d41cdd data/gtconstruct/recipes/tools/parts/casting/screwdriver_tip_composite.json
 315e6d9abc54f4c4f8d69a85965c18bceed9bf55 data/gtconstruct/recipes/tools/parts/casting/screwdriver_tip_gold_cast.json
 fda2a5dcad753bbb23813bb2eed6b15aa357e993 data/gtconstruct/recipes/tools/parts/casting/screwdriver_tip_sand_cast.json
+6e6cd006a6198a546a69f73f36b6ea4689ff116f data/gtconstruct/recipes/tools/parts/casting/soft_mallet_head_composite.json
 dd6bd47cea7c314d5dd4ba9c7a27f620cbb26130 data/gtconstruct/recipes/tools/parts/casting/wirecutter_claws_composite.json
 11774d0f6e586219c739d97726da4eca77a36ec1 data/gtconstruct/recipes/tools/parts/casting/wirecutter_claws_gold_cast.json
 d16a04f86e445cdf81a4d64ee8ef151f6eb54b34 data/gtconstruct/recipes/tools/parts/casting/wirecutter_claws_sand_cast.json

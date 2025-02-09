@@ -101,6 +101,18 @@ public class GTCToolDefinitionProv extends AbstractToolDefinitionDataProvider {
                 .smallToolStartingSlots()
                 .module(ToolTraitsModule.builder().trait(ModifierIds.hydraulic, 1).build())
                 .build();
+
+        define(GTCToolDefinitions.SOFT_MALLET)
+                .module(PartStatsModule.parts()
+                        .part(GTCToolParts.softMalletHead)
+                        .part(TinkerToolParts.toolBinding)
+                        .part(TinkerToolParts.toolHandle).build())
+                .module(defaultThreeParts)
+                .module(new SetStatsModule(StatsNBT.builder()
+                        .set(ToolStats.ATTACK_DAMAGE, 0.0F)
+                        .set(ToolStats.ATTACK_SPEED, -2.4F).build()))
+                .smallToolStartingSlots()
+                .build();
     }
 
     @Override

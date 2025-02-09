@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material",
+  "ingredient": {
+    "item": "gtceu:polyethylene_block"
+  },
+  "material": "gtconstruct:polyethylene",
+  "needed": 1,
+  "value": 9
+}

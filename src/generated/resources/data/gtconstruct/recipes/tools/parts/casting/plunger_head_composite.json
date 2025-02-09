@@ -1,5 +1,5 @@
 {
   "type": "tconstruct:table_casting_composite",
-  "item_cost": 1,
+  "item_cost": 2,
   "result": "gtconstruct:plunger_head"
 }

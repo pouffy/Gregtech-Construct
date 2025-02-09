@@ -25,6 +25,10 @@
       "stat_type": "gtconstruct:plunger_head"
     },
     {
+      "path": "gtconstruct:item/tool/parts/soft_mallet_head",
+      "stat_type": "gtconstruct:soft_mallet_head"
+    },
+    {
       "path": "gtconstruct:item/tool/saw/head",
       "stat_type": "tconstruct:head"
     },
@@ -106,6 +110,22 @@
     },
     {
       "path": "gtconstruct:item/tool/plunger/binding",
+      "stat_type": "tconstruct:binding"
+    },
+    {
+      "path": "gtconstruct:item/tool/soft_mallet/head",
+      "stat_type": "gtconstruct:soft_mallet_head"
+    },
+    {
+      "path": "gtconstruct:item/tool/soft_mallet/head_broken",
+      "stat_type": "gtconstruct:soft_mallet_head"
+    },
+    {
+      "path": "gtconstruct:item/tool/soft_mallet/handle",
+      "stat_type": "tconstruct:handle"
+    },
+    {
+      "path": "gtconstruct:item/tool/soft_mallet/binding",
       "stat_type": "tconstruct:binding"
     }
   ],

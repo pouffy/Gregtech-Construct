@@ -13,4 +13,5 @@ public class GTCToolDefinitions {
     public static final ToolDefinition WIRECUTTER = ToolDefinition.create(GTCTools.wirecutter);
 
     public static final ToolDefinition PLUNGER = ToolDefinition.create(GTCTools.plunger);
+    public static final ToolDefinition SOFT_MALLET = ToolDefinition.create(GTCTools.softMallet);
 }

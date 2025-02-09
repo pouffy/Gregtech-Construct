@@ -22,16 +22,16 @@ public class GTCStationSlotLayoutProv extends AbstractStationSlotLayoutProvider 
 
         defineModifiable(GTCTools.screwdriver)
                 .sortIndex(SORT_HARVEST)
-                .addInputItem(GTCToolParts.screwdriverTip, 39, 35)
-                .addInputItem(TinkerToolParts.toolHandle, 21, 35)
-                .addInputItem(TinkerToolParts.toolBinding, 3, 35)
+                .addInputItem(GTCToolParts.screwdriverTip, 53, 22)
+                .addInputItem(TinkerToolParts.toolBinding, 15, 60)
+                .addInputItem(TinkerToolParts.toolHandle, 33, 42)
                 .build();
 
         defineModifiable(GTCTools.file)
                 .sortIndex(SORT_HARVEST)
-                .addInputItem(GTCToolParts.fileHead, 39, 35)
-                .addInputItem(TinkerToolParts.toolHandle, 21, 35)
-                .addInputItem(TinkerToolParts.toolBinding, 3, 35)
+                .addInputItem(GTCToolParts.fileHead, 53, 22)
+                .addInputItem(TinkerToolParts.toolBinding, 15, 60)
+                .addInputItem(TinkerToolParts.toolHandle, 33, 42)
                 .build();
 
         defineModifiable(GTCTools.wirecutter)
@@ -44,9 +44,16 @@ public class GTCStationSlotLayoutProv extends AbstractStationSlotLayoutProvider 
 
         defineModifiable(GTCTools.plunger)
                 .sortIndex(SORT_HARVEST)
-                .addInputItem(GTCToolParts.plungerHead, 39, 35)
-                .addInputItem(TinkerToolParts.toolHandle, 21, 35)
-                .addInputItem(TinkerToolParts.toolBinding, 3, 35)
+                .addInputItem(GTCToolParts.plungerHead, 53, 22)
+                .addInputItem(TinkerToolParts.toolBinding, 15, 60)
+                .addInputItem(TinkerToolParts.toolHandle, 33, 42)
+                .build();
+
+        defineModifiable(GTCTools.softMallet)
+                .sortIndex(SORT_HARVEST)
+                .addInputItem(GTCToolParts.softMalletHead, 53, 22)
+                .addInputItem(TinkerToolParts.toolBinding, 15, 60)
+                .addInputItem(TinkerToolParts.toolHandle, 33, 42)
                 .build();
     }
 

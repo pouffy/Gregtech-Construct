@@ -36,6 +36,8 @@ public class GTCTools extends GTCModule {
 
     public static final ItemObject<ModifiableGTToolItem> plunger = ITEMS.register("plunger", () -> new ModifiableGTToolItem(UNSTACKABLE_PROPS, GTCToolDefinitions.PLUNGER, GTToolType.PLUNGER));
 
+    public static final ItemObject<ModifiableGTToolItem> softMallet = ITEMS.register("soft_mallet", () -> new ModifiableGTToolItem(UNSTACKABLE_PROPS, GTCToolDefinitions.SOFT_MALLET, GTToolType.SOFT_MALLET));
+
     //TODO: Wrench, Crafting Hammer, Soft Mallet
 
     private static void addTabItems(CreativeModeTab.ItemDisplayParameters itemDisplayParameters, CreativeModeTab.Output tab) {
@@ -45,6 +47,7 @@ public class GTCTools extends GTCModule {
         acceptTool(output, file);
         acceptTool(output, wirecutter);
         acceptTool(output, plunger);
+        acceptTool(output, softMallet);
     }
 
 

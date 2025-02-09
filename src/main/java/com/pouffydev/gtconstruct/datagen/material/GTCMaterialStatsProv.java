@@ -1,10 +1,13 @@
 package com.pouffydev.gtconstruct.datagen.material;
 
 import com.pouffydev.gtconstruct.common.stats.PlungerHeadMaterialStats;
+import com.pouffydev.gtconstruct.common.stats.SoftMalletHeadMaterialStats;
 import com.pouffydev.gtconstruct.registry.GTCMaterialIds;
+import com.pouffydev.gtconstruct.registry.GTCStatlessMaterialStats;
 import net.minecraft.data.PackOutput;
 import slimeknights.tconstruct.library.data.material.AbstractMaterialDataProvider;
 import slimeknights.tconstruct.library.data.material.AbstractMaterialStatsDataProvider;
+import slimeknights.tconstruct.tools.data.material.MaterialIds;
 import slimeknights.tconstruct.tools.stats.*;
 
 import static net.minecraft.world.item.Tiers.*;
@@ -86,6 +89,17 @@ public class GTCMaterialStatsProv extends AbstractMaterialStatsDataProvider {
         addMaterialStats(GTCMaterialIds.redSteel,
                 new LimbMaterialStats(1140, -0.05f, 0.15f, 0.45f),
                 new GripMaterialStats(1.4f, 0.25f, 2.2f));
+
+        addMaterialStats(MaterialIds.wood, new SoftMalletHeadMaterialStats(60, 2f, WOOD, 0f));
+        addMaterialStats(MaterialIds.bamboo, new SoftMalletHeadMaterialStats(70, 1.5f, WOOD, 0f));
+        addMaterialStats(MaterialIds.chorus, new SoftMalletHeadMaterialStats(180, 3.0f, STONE, 1.0f));
+
+        // tier 2
+        addMaterialStats(MaterialIds.slimewood, new SoftMalletHeadMaterialStats(375, 4f, IRON, 1f));
+        // tier 3
+        addMaterialStats(MaterialIds.nahuatl, new SoftMalletHeadMaterialStats(350, 4.5f, DIAMOND, 3f));
+        // tier 4
+        //addMaterialStats(MaterialIds.blazewood, GTCStatlessMaterialStats.SOFT_MALLET_HEAD);
     }
 
     private void addArmor() {
@@ -95,12 +109,12 @@ public class GTCMaterialStatsProv extends AbstractMaterialStatsDataProvider {
     }
 
     private void addMisc() {
-        addMaterialStats(GTCMaterialIds.siliconeRubber, new PlungerHeadMaterialStats(430, 0.5f, WOOD, 0.5f), StatlessMaterialStats.BINDING);
-        addMaterialStats(GTCMaterialIds.styreneButadieneRubber, new PlungerHeadMaterialStats(430, 0.5f, WOOD, 0.5f), StatlessMaterialStats.BINDING);
-        addMaterialStats(GTCMaterialIds.polybenzimidazole, new PlungerHeadMaterialStats(985, 0.5f, WOOD, 0.5f), StatlessMaterialStats.BINDING);
-        addMaterialStats(GTCMaterialIds.polyethylene, new PlungerHeadMaterialStats(225, 0.5f, WOOD, 0.5f), StatlessMaterialStats.BINDING);
-        addMaterialStats(GTCMaterialIds.polytetrafluoroethylene, new PlungerHeadMaterialStats(430, 0.5f, WOOD, 0.5f), StatlessMaterialStats.BINDING);
-        addMaterialStats(GTCMaterialIds.rubber, new PlungerHeadMaterialStats(225, 0.5f, WOOD, 0.5f), StatlessMaterialStats.BINDING);
+        addMaterialStats(GTCMaterialIds.siliconeRubber, new PlungerHeadMaterialStats(430, 0.5f, WOOD, 0.5f), StatlessMaterialStats.BINDING, new SoftMalletHeadMaterialStats(430, 0.5f, WOOD, 0.5f));
+        addMaterialStats(GTCMaterialIds.styreneButadieneRubber, new PlungerHeadMaterialStats(430, 0.5f, WOOD, 0.5f), StatlessMaterialStats.BINDING, new SoftMalletHeadMaterialStats(430, 0.5f, WOOD, 0.5f));
+        addMaterialStats(GTCMaterialIds.polybenzimidazole, new PlungerHeadMaterialStats(985, 0.5f, WOOD, 0.5f), StatlessMaterialStats.BINDING, new SoftMalletHeadMaterialStats(985, 0.5f, WOOD, 0.5f));
+        addMaterialStats(GTCMaterialIds.polyethylene, new PlungerHeadMaterialStats(225, 0.5f, WOOD, 0.5f), StatlessMaterialStats.BINDING, new SoftMalletHeadMaterialStats(225, 0.5f, WOOD, 0.5f));
+        addMaterialStats(GTCMaterialIds.polytetrafluoroethylene, new PlungerHeadMaterialStats(430, 0.5f, WOOD, 0.5f), StatlessMaterialStats.BINDING, new SoftMalletHeadMaterialStats(430, 0.5f, WOOD, 0.5f));
+        addMaterialStats(GTCMaterialIds.rubber, new PlungerHeadMaterialStats(225, 0.5f, WOOD, 0.5f), StatlessMaterialStats.BINDING, new SoftMalletHeadMaterialStats(225, 0.5f, WOOD, 0.5f));
     }
 
     @Override

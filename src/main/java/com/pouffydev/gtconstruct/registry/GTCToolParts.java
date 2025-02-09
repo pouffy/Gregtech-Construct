@@ -2,6 +2,7 @@ package com.pouffydev.gtconstruct.registry;
 
 import com.pouffydev.gtconstruct.GTCModule;
 import com.pouffydev.gtconstruct.common.stats.PlungerHeadMaterialStats;
+import com.pouffydev.gtconstruct.common.stats.SoftMalletHeadMaterialStats;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
@@ -45,6 +46,7 @@ public class GTCToolParts extends GTCModule {
     public static final ItemObject<ToolPartItem> wirecutterClaws = ITEMS.register("wirecutter_claws", () -> new ToolPartItem(ITEM_PROPS, HeadMaterialStats.ID));
     public static final ItemObject<ToolPartItem> wrenchHandle = ITEMS.register("wrench_handle", () -> new ToolPartItem(ITEM_PROPS, HandleMaterialStats.ID));
     public static final ItemObject<ToolPartItem> plungerHead = ITEMS.register("plunger_head", () -> new ToolPartItem(ITEM_PROPS, PlungerHeadMaterialStats.ID));
+    public static final ItemObject<ToolPartItem> softMalletHead = ITEMS.register("soft_mallet_head", () -> new ToolPartItem(ITEM_PROPS, SoftMalletHeadMaterialStats.ID));
 
     private static void addTabItems(CreativeModeTab.ItemDisplayParameters itemDisplayParameters, CreativeModeTab.Output tab) {
         Consumer<ItemStack> output = tab::accept;
@@ -54,6 +56,7 @@ public class GTCToolParts extends GTCModule {
         accept(output, wirecutterClaws);
         accept(output, wrenchHandle);
         accept(output, plungerHead);
+        accept(output, softMalletHead);
     }
 
     private static void accept(Consumer<ItemStack> output, Supplier<? extends IMaterialItem> item) {

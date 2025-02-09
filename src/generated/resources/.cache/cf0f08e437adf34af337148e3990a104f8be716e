@@ -1,6 +1,7 @@
-// 1.20.1	2025-02-08T15:38:11.4988937	GregTech Construct Station Slot Layouts
-1bb27f6b80ce9ea15a494e6e4971aa4cf7bf0d4d data/gtconstruct/tinkering/station_layouts/file.json
-d06e21dfbdf8cf99f523370ee9a7ba8c50eea8e8 data/gtconstruct/tinkering/station_layouts/plunger.json
+// 1.20.1	2025-02-09T17:05:32.3661116	GregTech Construct Station Slot Layouts
+46d3baae838b002e0c760ea845e73b577dcf761c data/gtconstruct/tinkering/station_layouts/file.json
+7cf7df154f0835ad100f63be3d990ffc18beb3b4 data/gtconstruct/tinkering/station_layouts/plunger.json
 df4043626c2280776a5f7e4b6c6c42aee7ace8bb data/gtconstruct/tinkering/station_layouts/saw.json
-65cf786f60301525825656a64aa774470517bd00 data/gtconstruct/tinkering/station_layouts/screwdriver.json
+09e8c924036ca9db6ffe05c21d7cc8c8baef564b data/gtconstruct/tinkering/station_layouts/screwdriver.json
+cc34963802e1517122d3228c920fd2f6ba88b861 data/gtconstruct/tinkering/station_layouts/soft_mallet.json
 49b2b9601de2965dc5003e79c15396a3f461cbdb data/gtconstruct/tinkering/station_layouts/wire_cutters.json

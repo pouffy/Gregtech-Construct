@@ -1,0 +1,7 @@
+{
+  "parent": "forge:item/default",
+  "loader": "tconstruct:material",
+  "textures": {
+    "texture": "gtconstruct:item/tool/parts/soft_mallet_head"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material",
+  "ingredient": {
+    "item": "gtceu:styrene_butadiene_rubber_nugget"
+  },
+  "material": "gtconstruct:styrene_butadiene_rubber",
+  "needed": 9,
+  "value": 1
+}

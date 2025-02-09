@@ -7,6 +7,7 @@
     "supported_stats": [
       "tconstruct:binding",
       "gtconstruct:plunger_head",
+      "gtconstruct:soft_mallet_head",
       "tconstruct:repair_kit"
     ],
     "transformer": {

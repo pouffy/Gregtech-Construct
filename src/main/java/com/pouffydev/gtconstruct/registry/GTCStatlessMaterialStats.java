@@ -11,13 +11,14 @@ import slimeknights.tconstruct.library.tools.stat.ModifierStatsBuilder;
 
 import java.util.List;
 
+@Getter
 public enum GTCStatlessMaterialStats implements IMaterialStats {
     PLUNGER_HEAD("plunger_head"),
+    SOFT_MALLET_HEAD("soft_mallet_head"),
     ;
 
     private static final List<Component> LOCALIZED = List.of(IMaterialStats.makeTooltip(TConstruct.getResource("extra.no_stats")));
     private static final List<Component> DESCRIPTION = List.of(Component.empty());
-    @Getter
     private final MaterialStatType<GTCStatlessMaterialStats> type;
 
     // no stats

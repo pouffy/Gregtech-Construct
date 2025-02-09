@@ -1,4 +1,4 @@
-// 1.20.1	2025-02-03T15:30:59.0975954	Item models
+// 1.20.1	2025-02-09T16:43:39.6167855	Item models
 a62731ab91a03b3193a5f9ec075c55315c21d5f2 assets/gtconstruct/models/item/file_head.json
 dd223846c01803960fcc1cc45429736034f4ce82 assets/gtconstruct/models/item/file_head_cast.json
 0942187b8e30df9dd35ad23a3acc521b27037288 assets/gtconstruct/models/item/file_head_red_sand_cast.json
@@ -12,6 +12,7 @@ a25bf4751d7f8c504951b2a5b275ec15b4ef8d6d assets/gtconstruct/models/item/screwdri
 63486a9ba53d54b3cc7249bd47ceab3dde9bb045 assets/gtconstruct/models/item/screwdriver_tip_cast.json
 a48fcb39a2583120ed467763d1146b59bd4fe83d assets/gtconstruct/models/item/screwdriver_tip_red_sand_cast.json
 c4c4b8740ce737edb4ffb7332430b09b8f2ec0a1 assets/gtconstruct/models/item/screwdriver_tip_sand_cast.json
+809f4ec7580ea2de27d4cf0c13263f7e57bec153 assets/gtconstruct/models/item/soft_mallet_head.json
 1b733cdf5275727630788f773b416aa2ec13f4a8 assets/gtconstruct/models/item/wirecutter_claws.json
 5b9d70ed53c70c1a1ef37463717d82ff73dfb84a assets/gtconstruct/models/item/wirecutter_claws_cast.json
 c86811d9486f7ffbc199523670d00256c4b2cc38 assets/gtconstruct/models/item/wirecutter_claws_red_sand_cast.json

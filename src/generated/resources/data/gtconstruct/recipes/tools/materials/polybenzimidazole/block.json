@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material",
+  "ingredient": {
+    "item": "gtceu:polybenzimidazole_block"
+  },
+  "material": "gtconstruct:polybenzimidazole",
+  "needed": 1,
+  "value": 9
+}

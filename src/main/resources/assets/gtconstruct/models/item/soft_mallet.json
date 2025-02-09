@@ -1,0 +1,25 @@
+{
+  "loader": "tconstruct:tool",
+  "parent": "forge:item/default-tool",
+  "textures": {
+    "head":    "gtconstruct:item/tool/soft_mallet/head",
+    "handle":  "gtconstruct:item/tool/soft_mallet/handle",
+    "binding": "gtconstruct:item/tool/soft_mallet/binding"
+  },
+  "modifier_roots": [ "gtconstruct:item/tool/soft_mallet/modifiers/" ],
+  "parts": [
+    { "name": "handle",  "index": 2 },
+    { "name": "head",    "index": 0 },
+    { "name": "binding", "index": 1 }
+  ],
+  "overrides": [
+    {
+      "predicate": { "tconstruct:charging": 2 },
+      "model": "gtconstruct:item/tool/soft_mallet/blocking"
+    },
+    {
+      "predicate": { "tconstruct:broken": 1 },
+      "model": "gtconstruct:item/tool/soft_mallet/broken"
+    }
+  ]
+}

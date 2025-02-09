@@ -6,6 +6,7 @@
       "mining_speed": 0.5,
       "mining_tier": "minecraft:wood"
     },
+    "gtconstruct:soft_mallet_head": {},
     "tconstruct:binding": {}
   }
 }

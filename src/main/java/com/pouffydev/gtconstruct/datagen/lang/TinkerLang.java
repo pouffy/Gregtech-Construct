@@ -19,6 +19,7 @@ public class TinkerLang {
         toEng(provider, "item.gtconstruct.file");
         toEng(provider, "item.gtconstruct.wire_cutters");
         toEng(provider, "item.gtconstruct.plunger");
+        toEng(provider, "item.gtconstruct.soft_mallet");
     }
 
     private static void initCastsAndPatterns(RegistrateLangProvider provider) {
@@ -27,6 +28,8 @@ public class TinkerLang {
         createCastsAndPattern(provider, "file_head");
         createCastsAndPattern(provider, "wirecutter_claws");
         createCastsAndPattern(provider, "wrench_handle");
+        createPattern(provider, "plunger_head");
+        createPattern(provider, "soft_mallet_head");
     }
 
     private static void initModifiers(RegistrateLangProvider provider) {
@@ -41,6 +44,7 @@ public class TinkerLang {
         toEng(provider, "item.gtconstruct.wirecutter_claws");
         toEng(provider, "item.gtconstruct.wrench_handle");
         toEng(provider, "item.gtconstruct.plunger_head");
+        toEng(provider, "item.gtconstruct.soft_mallet_head");
     }
 
     private static void initMaterials(RegistrateLangProvider provider) {
@@ -64,6 +68,10 @@ public class TinkerLang {
         provider.add("item.gtconstruct.%s_cast".formatted(name), "%s Gold Cast".formatted(FormattingUtil.toEnglishName(name)));
         provider.add("item.gtconstruct.%s_sand_cast".formatted(name), "%s Sand Cast".formatted(FormattingUtil.toEnglishName(name)));
         provider.add("item.gtconstruct.%s_red_sand_cast".formatted(name), "%s Red Sand Cast".formatted(FormattingUtil.toEnglishName(name)));
+        provider.add("pattern.gtconstruct.%s".formatted(name), "%s".formatted(FormattingUtil.toEnglishName(name)));
+    }
+
+    private static void createPattern(RegistrateLangProvider provider, String name) {
         provider.add("pattern.gtconstruct.%s".formatted(name), "%s".formatted(FormattingUtil.toEnglishName(name)));
     }
 
