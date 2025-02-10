@@ -1,18 +1,17 @@
 package com.pouffydev.gtconstruct;
 
-import com.gregtechceu.gtceu.api.addon.IGTAddon;
-import com.gregtechceu.gtceu.api.registry.registrate.GTRegistrate;
 import com.gregtechceu.gtceu.utils.FormattingUtil;
-import com.pouffydev.gtconstruct.common.stats.PlungerHeadMaterialStats;
+import com.pouffydev.gtconstruct.api.GTConstructAPI;
+import com.pouffydev.gtconstruct.client.ClientProxy;
+import com.pouffydev.gtconstruct.common.CommonProxy;
 import com.pouffydev.gtconstruct.datagen.*;
-import com.pouffydev.gtconstruct.datagen.recipe.GTCMaterialRecipeHandler;
 import com.pouffydev.gtconstruct.registry.*;
-import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -21,11 +20,8 @@ import net.minecraftforge.fml.loading.FMLLoader;
 import net.minecraftforge.fml.loading.FMLPaths;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import slimeknights.tconstruct.library.materials.MaterialRegistry;
-import slimeknights.tconstruct.library.materials.stats.MaterialStatsId;
 
 import java.nio.file.Path;
-import java.util.function.Consumer;
 
 import static com.pouffydev.gtconstruct.registry.GTCRegistration.REGISTRATE;
 
@@ -38,11 +34,9 @@ public class GTConstruct
     public static final String NAME = "GregTech Construct";
     public static final Logger LOGGER = LoggerFactory.getLogger(NAME);
 
-    public static GTConstruct instance;
-
     public GTConstruct() {
-        instance = this;
-
+        GTConstructAPI.instance = this;
+        DistExecutor.unsafeRunForDist(() -> ClientProxy::new, () -> CommonProxy::new);
         onCtor();
     }
 
@@ -61,7 +55,6 @@ public class GTConstruct
 
         modEventBus.register(new GTCTools());
 
-        GTCCommons.init();
         modEventBus.register(new GTCCommons());
         modEventBus.register(new GTCToolParts());
         modEventBus.register(new GTCSmeltery());

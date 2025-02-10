@@ -6,7 +6,12 @@
       "mining_speed": 0.5,
       "mining_tier": "minecraft:wood"
     },
-    "gtconstruct:soft_mallet_head": {},
+    "gtconstruct:soft_mallet_head": {
+      "durability": 430,
+      "melee_attack": 0.5,
+      "mining_speed": 0.5,
+      "mining_tier": "minecraft:wood"
+    },
     "tconstruct:binding": {}
   }
 }

@@ -1,5 +1,10 @@
 {
   "stats": {
-    "gtconstruct:soft_mallet_head": {}
+    "gtconstruct:soft_mallet_head": {
+      "durability": 350,
+      "melee_attack": 3.0,
+      "mining_speed": 4.5,
+      "mining_tier": "minecraft:diamond"
+    }
   }
 }
