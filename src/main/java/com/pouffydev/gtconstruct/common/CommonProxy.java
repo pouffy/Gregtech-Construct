@@ -33,11 +33,7 @@ public class CommonProxy {
 
     public static void init() {
         GTConstruct.LOGGER.info("GTConstruct common proxy init!");
-        initMaterialLinks();
-
-        MaterialRegistryManager managerInternal = (MaterialRegistryManager) GTCEuAPI.materialManager;
-        if (managerInternal.getPhase() == IMaterialRegistryManager.Phase.FROZEN)
-            GTCItems.init();
+        //initMaterialLinks();
 
         GTCRegistration.REGISTRATE.registerRegistrate();
     }

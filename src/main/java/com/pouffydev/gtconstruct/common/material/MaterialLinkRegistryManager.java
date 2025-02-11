@@ -193,9 +193,12 @@ public final class MaterialLinkRegistryManager implements IMaterialLinkRegistryM
 
     public void freezeRegistries() {
         Collection<MaterialLink> collection = new ArrayList<>();
+        int size = 0;
         for (MaterialLinkRegistry registry : registries.values()) {
             collection.addAll(registry.getAllLinkedMaterials());
+            size += registry.getAllLinkedMaterials().size();
         }
+        GTConstruct.LOGGER.info("froze registries for {} material links", size);
         registeredMaterialLinks = Collections.unmodifiableCollection(collection);
         registries.values().forEach(MaterialLinkRegistryImpl::freeze);
         registrationPhase = IMaterialLinkRegistryManager.Phase.FROZEN;

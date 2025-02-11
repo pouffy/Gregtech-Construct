@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "gtconstruct:item/soft_mallet_head_extruder_mold"
+  }
+}

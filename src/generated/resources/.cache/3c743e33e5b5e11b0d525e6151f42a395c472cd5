@@ -1,6 +1,10 @@
-// 1.20.1	2025-02-09T16:43:39.6187825	Registrate Provider for gtconstruct [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), generic_server_provider, Blockstates, Item models, Lang (en_us/en_ud), generic_client_provider]
-bb19febd5a4c545c66cf93a5e4cc351b5d48694c assets/gtconstruct/lang/en_ud.json
-8fe298c5a807a720989825b618e038c906b423de assets/gtconstruct/lang/en_us.json
+// 1.20.1	2025-02-11T19:12:41.6036381	Registrate Provider for gtconstruct [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), generic_server_provider, Blockstates, Item models, Lang (en_us/en_ud), generic_client_provider]
+fb33cf622a706ad59f865a45ea3b8bb233963c1f assets/gtconstruct/lang/en_ud.json
+a1c3bb535bfc7fd64094c6a3d688685316e81c07 assets/gtconstruct/lang/en_us.json
+168eb15379c58a7b0caecb195cd1c03109c7be0b assets/gtconstruct/models/item/plunger_head_extruder_mold.json
+a39bd9858c91ca663128434203d04dc297dd7404 assets/gtconstruct/models/item/soft_mallet_head_extruder_mold.json
+dbaa3dde0fea39bdd63f00bfc7be43760c1244d7 assets/gtconstruct/models/item/tool_binding_extruder_mold.json
+32843c3717d84e2fd6c20a9ecdbc82c9ea4aeba1 assets/gtconstruct/models/item/tough_collar_extruder_mold.json
 f764b1710798b8cfd21ac51a63a7b173b2ef6699 data/forge/tags/items/tools/files.json
 d6b71440fafe410b227b8e5af741677081e0f677 data/forge/tags/items/tools/plungers.json
 28c19a8d53a09d85f1af7f07e8a56c6b96e960d4 data/forge/tags/items/tools/saws.json

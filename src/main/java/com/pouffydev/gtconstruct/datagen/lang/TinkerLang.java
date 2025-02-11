@@ -45,6 +45,9 @@ public class TinkerLang {
         toEng(provider, "item.gtconstruct.wrench_handle");
         toEng(provider, "item.gtconstruct.plunger_head");
         toEng(provider, "item.gtconstruct.soft_mallet_head");
+
+        toEng(provider, "stat.gtconstruct.plunger_head");
+        toEng(provider, "stat.gtconstruct.soft_mallet_head");
     }
 
     private static void initMaterials(RegistrateLangProvider provider) {

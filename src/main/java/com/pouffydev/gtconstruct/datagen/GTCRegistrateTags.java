@@ -16,6 +16,7 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import slimeknights.tconstruct.TConstruct;
 
 public class GTCRegistrateTags {
     public static void addGenerators() {
@@ -38,6 +39,45 @@ public class GTCRegistrateTags {
         prov.tag(TagUtil.createItemTag("tools/plungers", false)).add(GTCTools.plunger.asItem());
         prov.tag(TagUtil.createItemTag("tools/soft_mallets", false)).add(GTCTools.softMallet.asItem());
 
+        prov.tag(TagUtil.createItemTag("tools", false))
+                .add(
+                        GTCTools.saw.asItem(),
+                        GTCTools.screwdriver.asItem(),
+                        GTCTools.file.asItem(),
+                        GTCTools.wirecutter.asItem(),
+                        GTCTools.plunger.asItem(),
+                        GTCTools.softMallet.asItem()
+                );
+
+        prov.tag(TagUtil.createItemTag("tools", true))
+                .add(
+                        GTCTools.saw.asItem(),
+                        GTCTools.screwdriver.asItem(),
+                        GTCTools.file.asItem(),
+                        GTCTools.wirecutter.asItem(),
+                        GTCTools.plunger.asItem(),
+                        GTCTools.softMallet.asItem()
+                );
+
+        prov.tag(TagUtil.optionalTag(BuiltInRegistries.ITEM, TConstruct.getResource("modifiable")))
+                .add(
+                        GTCTools.saw.asItem(),
+                        GTCTools.screwdriver.asItem(),
+                        GTCTools.file.asItem(),
+                        GTCTools.wirecutter.asItem(),
+                        GTCTools.plunger.asItem(),
+                        GTCTools.softMallet.asItem()
+                );
+
+        prov.tag(TagUtil.optionalTag(BuiltInRegistries.ITEM, TConstruct.getResource("modifiable/interactable")))
+                .add(
+                        GTCTools.saw.asItem(),
+                        GTCTools.screwdriver.asItem(),
+                        GTCTools.file.asItem(),
+                        GTCTools.wirecutter.asItem(),
+                        GTCTools.plunger.asItem(),
+                        GTCTools.softMallet.asItem()
+                );
 
         prov.tag(GTCSmeltery.sawBladeCast.getMultiUseTag()).add(GTCSmeltery.sawBladeCast.get());
         prov.tag(GTCSmeltery.fileHeadCast.getMultiUseTag()).add(GTCSmeltery.fileHeadCast.get());
