@@ -7,7 +7,7 @@ import com.pouffydev.gtconstruct.common.stats.PlungerHeadMaterialStats;
 import com.pouffydev.gtconstruct.common.stats.SoftMalletHeadMaterialStats;
 import net.minecraft.resources.ResourceLocation;
 import slimeknights.tconstruct.library.materials.definition.MaterialId;
-import slimeknights.tconstruct.tools.stats.StatlessMaterialStats;
+import slimeknights.tconstruct.tools.stats.*;
 
 public class GTCMaterialLinks {
 
@@ -21,6 +21,10 @@ public class GTCMaterialLinks {
     public static MaterialLink Polyethylene;
     public static MaterialLink Polytetrafluoroethylene;
     public static MaterialLink Rubber;
+
+    public static MaterialLink SterlingSilver;
+    public static MaterialLink BlackBronze;
+    public static MaterialLink Cupronickel;
 
     public static class Links {
         public static void register() {
@@ -41,6 +45,16 @@ public class GTCMaterialLinks {
                     .buildAndRegister();
             Rubber = link(GTCMaterialIds.rubber, GTMaterials.Rubber)
                     .withStats(StatlessMaterialStats.BINDING.getIdentifier(), PlungerHeadMaterialStats.ID, SoftMalletHeadMaterialStats.ID)
+                    .buildAndRegister();
+
+            SterlingSilver = link(GTCMaterialIds.sterlingSilver, GTMaterials.SterlingSilver)
+                    .withStats(HeadMaterialStats.ID, HandleMaterialStats.ID, StatlessMaterialStats.BINDING.getIdentifier(), LimbMaterialStats.ID, GripMaterialStats.ID)
+                    .buildAndRegister();
+            BlackBronze = link(GTCMaterialIds.blackBronze, GTMaterials.BlackBronze)
+                    .withStats(HeadMaterialStats.ID, HandleMaterialStats.ID, StatlessMaterialStats.BINDING.getIdentifier(), LimbMaterialStats.ID, GripMaterialStats.ID)
+                    .buildAndRegister();
+            Cupronickel = link(GTCMaterialIds.cupronickel, GTMaterials.Cupronickel)
+                    .withStats(HeadMaterialStats.ID, HandleMaterialStats.ID, StatlessMaterialStats.BINDING.getIdentifier(), LimbMaterialStats.ID, GripMaterialStats.ID)
                     .buildAndRegister();
         }
 

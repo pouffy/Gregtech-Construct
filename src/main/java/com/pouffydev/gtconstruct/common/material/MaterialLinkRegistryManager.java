@@ -12,8 +12,10 @@ import it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap;
 import net.minecraft.resources.ResourceLocation;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import slimeknights.tconstruct.library.materials.MaterialRegistry;
 import slimeknights.tconstruct.library.materials.definition.IMaterial;
 import slimeknights.tconstruct.library.materials.definition.MaterialId;
+import slimeknights.tconstruct.library.materials.definition.MaterialManager;
 import slimeknights.tconstruct.library.materials.stats.MaterialStatsId;
 
 import java.util.ArrayList;
@@ -178,6 +180,8 @@ public final class MaterialLinkRegistryManager implements IMaterialLinkRegistryM
 
     @Override
     public boolean hasStat(MaterialId materialId, MaterialStatsId statsId) {
+        // Test this so we don't have to manually assign stats
+        //return MaterialRegistry.getInstance().getMaterialStats(materialId, statsId).isPresent();
         return getMaterialLink(materialId).getMaterialLinkInfo().getConnectedStats().contains(statsId);
     }
 
