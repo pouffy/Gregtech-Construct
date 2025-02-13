@@ -61,7 +61,13 @@ public class GTConstructAddon implements IGTAddon {
             CommonProxy.KJSEventWrapper.materialRegistry();
         }
 
-        managerInternal.freezeRegistries();
+        managerInternal.closeRegistries();
         ModLoader.get().postEvent(new PostMaterialLinkEvent());
+        if (GTCEu.Mods.isKubeJSLoaded()) {
+            CommonProxy.KJSEventWrapper.materialModification();
+        }
+
+        // Freeze Material Registry before processing Items, Blocks, and Fluids
+        managerInternal.freezeRegistries();
     }
 }

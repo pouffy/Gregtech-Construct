@@ -1,8 +1,11 @@
 package com.pouffydev.gtconstruct.common.material;
 
 import com.google.common.base.Preconditions;
+import com.gregtechceu.gtceu.api.data.chemical.material.IMaterialRegistryManager;
 import com.gregtechceu.gtceu.api.data.chemical.material.Material;
+import com.gregtechceu.gtceu.api.data.chemical.material.registry.MaterialRegistry;
 import com.gregtechceu.gtceu.common.data.GTMaterials;
+import com.gregtechceu.gtceu.common.unification.material.MaterialRegistryImpl;
 import com.pouffydev.gtconstruct.GTConstruct;
 import com.pouffydev.gtconstruct.api.GTConstructAPI;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
@@ -12,7 +15,6 @@ import it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap;
 import net.minecraft.resources.ResourceLocation;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import slimeknights.tconstruct.library.materials.MaterialRegistry;
 import slimeknights.tconstruct.library.materials.definition.IMaterial;
 import slimeknights.tconstruct.library.materials.definition.MaterialId;
 import slimeknights.tconstruct.library.materials.definition.MaterialManager;
@@ -182,7 +184,7 @@ public final class MaterialLinkRegistryManager implements IMaterialLinkRegistryM
     public boolean hasStat(MaterialId materialId, MaterialStatsId statsId) {
         // Test this so we don't have to manually assign stats
         //return MaterialRegistry.getInstance().getMaterialStats(materialId, statsId).isPresent();
-        return getMaterialLink(materialId).getMaterialLinkInfo().getConnectedStats().contains(statsId);
+        return getMaterialLink(materialId).hasStat(statsId);
     }
 
     @Override
@@ -195,15 +197,17 @@ public final class MaterialLinkRegistryManager implements IMaterialLinkRegistryM
         registrationPhase = IMaterialLinkRegistryManager.Phase.OPEN;
     }
 
-    public void freezeRegistries() {
+    public void closeRegistries() {
+        registries.values().forEach(MaterialLinkRegistryImpl::closeRegistry);
         Collection<MaterialLink> collection = new ArrayList<>();
-        int size = 0;
         for (MaterialLinkRegistry registry : registries.values()) {
             collection.addAll(registry.getAllLinkedMaterials());
-            size += registry.getAllLinkedMaterials().size();
         }
-        GTConstruct.LOGGER.info("froze registries for {} material links", size);
         registeredMaterialLinks = Collections.unmodifiableCollection(collection);
+        registrationPhase = IMaterialLinkRegistryManager.Phase.CLOSED;
+    }
+
+    public void freezeRegistries() {
         registries.values().forEach(MaterialLinkRegistryImpl::freeze);
         registrationPhase = IMaterialLinkRegistryManager.Phase.FROZEN;
     }

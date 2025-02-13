@@ -1,7 +1,9 @@
 package com.pouffydev.gtconstruct.common.material;
 
 import com.google.common.collect.ImmutableList;
+import com.gregtechceu.gtceu.api.GTCEuAPI;
 import com.gregtechceu.gtceu.api.data.chemical.material.Material;
+import com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialFlag;
 import com.gregtechceu.gtceu.api.registry.registrate.BuilderBase;
 import com.gregtechceu.gtceu.common.data.GTMaterials;
 import com.pouffydev.gtconstruct.api.GTConstructAPI;
@@ -26,8 +28,12 @@ public class MaterialLink implements Comparable<MaterialLink> {
     @NotNull
     private final MaterialLinkInfo materialLinkInfo;
 
-    private MaterialLink(@NotNull MaterialLinkInfo materialLinkInfo) {
+    @NotNull
+    private final ConnectedMaterialStats stats;
+
+    private MaterialLink(@NotNull MaterialLinkInfo materialLinkInfo, @NotNull ConnectedMaterialStats stats) {
         this.materialLinkInfo = materialLinkInfo;
+        this.stats = stats;
     }
 
     protected void registerMaterialLink() {
@@ -57,12 +63,28 @@ public class MaterialLink implements Comparable<MaterialLink> {
         return getModid() + ":" + getName();
     }
 
+    public void addStats(ResourceLocation... stats) {
+        if (!GTConstructAPI.materialLinkManager.canModifyMaterials()) throw new IllegalStateException("Cannot add stats to material link when registry is frozen!");
+        this.stats.addStats(stats).verify(this);
+    }
+
+    public boolean hasStat(ResourceLocation stat) {
+        return stats.hasStat(stat);
+    }
+
+    public boolean hasStats(ResourceLocation... stats) {
+        return Arrays.stream(stats).allMatch(this::hasStat);
+    }
+
+    public boolean hasAnyOfStats(ResourceLocation... stats) {
+        return Arrays.stream(stats).anyMatch(this::hasStat);
+    }
+
     @Getter
     public static class MaterialLinkInfo {
         private final ResourceLocation resourceLocation;
         public MaterialId tinkerMaterialId = IMaterial.UNKNOWN_ID;
         public Material gregTechMaterial = GTMaterials.NULL;
-        public Collection<MaterialStatsId> connectedStats;
 
         private MaterialLinkInfo(ResourceLocation resourceLocation) {
             this.resourceLocation = resourceLocation;
@@ -84,12 +106,15 @@ public class MaterialLink implements Comparable<MaterialLink> {
 
         private final MaterialLink.MaterialLinkInfo materialLinkInfo;
 
-        private List<MaterialStatsId> connectedStats = new ArrayList<>();
-        private List<MaterialStatsIdWrapper> connectedStatsSupplier;
+        private final ConnectedMaterialStats stats;
+
+        //private List<MaterialStatsId> connectedStats = new ArrayList<>();
+        //private List<MaterialStatsIdWrapper> connectedStatsSupplier;
 
         public Builder(ResourceLocation resourceLocation) {
             super(resourceLocation);
             materialLinkInfo = new MaterialLink.MaterialLinkInfo(resourceLocation);
+            stats = new ConnectedMaterialStats();
         }
 
         public Builder setTinkerMaterial(ResourceLocation tinkerMaterialId) {
@@ -103,12 +128,7 @@ public class MaterialLink implements Comparable<MaterialLink> {
         }
 
         public Builder withStats(MaterialStatsId... statsIds) {
-            connectedStats = Arrays.asList(statsIds);
-            return this;
-        }
-
-        public Builder withStats(ImmutableList<MaterialStatsId> statsIds) {
-            connectedStats = statsIds;
+            stats.addStats(statsIds);
             return this;
         }
 
@@ -122,13 +142,13 @@ public class MaterialLink implements Comparable<MaterialLink> {
             return this;
         }
 
-        public Builder kjs$withStats(MaterialStatsIdWrapper... materialStatsIdWrappers) {
-            connectedStatsSupplier = Arrays.asList(materialStatsIdWrappers);
+        public Builder kjs$withStats(ResourceLocation... statsRls) {
+            stats.addStats(statsRls);
             return this;
         }
 
-        public Builder kjs$withStats(ImmutableList<MaterialStatsIdWrapper> materialStatsIdWrappers) {
-            connectedStatsSupplier = materialStatsIdWrappers;
+        public Builder kjs$withStats(ImmutableList<ResourceLocation> statsRls) {
+            stats.addStats(statsRls);
             return this;
         }
 
@@ -138,11 +158,10 @@ public class MaterialLink implements Comparable<MaterialLink> {
 
         @HideFromJS
         public MaterialLink buildAndRegister() {
-            materialLinkInfo.connectedStats = connectedStats.isEmpty() && this.connectedStatsSupplier != null ? ImmutableList.copyOf(connectedStatsSupplier.stream().map(MaterialStatsIdWrapper::toMaterialStatsId).toArray(MaterialStatsId[]::new)) : ImmutableList.copyOf(connectedStats);
             if (!validateLink()) {
                 throw new IllegalStateException("Material Link must have both Tinker and GregTech materials set!");
             }
-            var matLink = new MaterialLink(materialLinkInfo);
+            var matLink = new MaterialLink(materialLinkInfo, stats);
             matLink.registerMaterialLink();
             return matLink;
         }

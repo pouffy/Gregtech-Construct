@@ -1,0 +1,1 @@
+com.pouffydev.gtconstruct.integration.kubejs.GTConstructKubeJSPlugin

@@ -1,11 +1,7 @@
 package com.pouffydev.gtconstruct.integration.kubejs;
 
-import com.gregtechceu.gtceu.GTCEu;
-import com.gregtechceu.gtceu.api.data.chemical.material.Material;
 import com.gregtechceu.gtceu.api.registry.GTRegistry;
 import com.gregtechceu.gtceu.api.registry.registrate.BuilderBase;
-import com.gregtechceu.gtceu.common.unification.material.MaterialRegistryManager;
-import com.gregtechceu.gtceu.integration.kjs.GTRegistryInfo;
 import com.pouffydev.gtconstruct.GTConstruct;
 import com.pouffydev.gtconstruct.common.material.MaterialLink;
 import com.pouffydev.gtconstruct.common.material.MaterialLinkRegistryManager;
@@ -126,7 +122,7 @@ public class GTCRegistryInfo<K, V> {
     }
 
     public void postEvent() {
-        GTCStartupEvents.REGISTRY.post(ScriptType.STARTUP, registryKey, new GTCRegistryEventJS<>(this));
+        GTConstructStartupEvents.REGISTRY.post(ScriptType.STARTUP, registryKey, new GTCRegistryEventJS<>(this));
     }
 
     public static void registerFor(ResourceLocation registry) {

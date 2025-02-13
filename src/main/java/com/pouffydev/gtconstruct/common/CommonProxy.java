@@ -1,11 +1,6 @@
 package com.pouffydev.gtconstruct.common;
 
 import com.gregtechceu.gtceu.GTCEu;
-import com.gregtechceu.gtceu.api.GTCEuAPI;
-import com.gregtechceu.gtceu.api.data.chemical.material.IMaterialRegistryManager;
-import com.gregtechceu.gtceu.api.data.chemical.material.event.PostMaterialEvent;
-import com.gregtechceu.gtceu.common.registry.GTRegistration;
-import com.gregtechceu.gtceu.common.unification.material.MaterialRegistryManager;
 import com.pouffydev.gtconstruct.GTConstruct;
 import com.pouffydev.gtconstruct.api.GTConstructAPI;
 import com.pouffydev.gtconstruct.common.material.event.MaterialLinkEvent;
@@ -13,9 +8,10 @@ import com.pouffydev.gtconstruct.common.material.event.MaterialLinkRegistryEvent
 import com.pouffydev.gtconstruct.common.material.MaterialLinkRegistryManager;
 import com.pouffydev.gtconstruct.common.material.event.PostMaterialLinkEvent;
 import com.pouffydev.gtconstruct.integration.kubejs.GTCRegistryInfo;
+import com.pouffydev.gtconstruct.integration.kubejs.GTConstructStartupEvents;
+import com.pouffydev.gtconstruct.integration.kubejs.events.MaterialLinkModificationEventJS;
 import com.pouffydev.gtconstruct.registry.GTCMaterialLinks;
 import com.pouffydev.gtconstruct.registry.GTCRegistration;
-import com.pouffydev.gtconstruct.registry.registrate.GTCItems;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModLoader;
@@ -55,8 +51,14 @@ public class CommonProxy {
             KJSEventWrapper.materialRegistry();
         }
 
-        managerInternal.freezeRegistries();
+        managerInternal.closeRegistries();
         ModLoader.get().postEvent(new PostMaterialLinkEvent());
+        if (GTCEu.Mods.isKubeJSLoaded()) {
+            KJSEventWrapper.materialModification();
+        }
+
+        // Freeze Material Registry before processing Items, Blocks, and Fluids
+        managerInternal.freezeRegistries();
     }
 
     @SubscribeEvent
@@ -69,6 +71,10 @@ public class CommonProxy {
 
         public static void materialRegistry() {
             GTCRegistryInfo.registerFor(GTConstructAPI.materialLinkManager.getRegistry(GTConstruct.MOD_ID).getRegistryName());
+        }
+
+        public static void materialModification() {
+            GTConstructStartupEvents.MATERIAL_LINK_MODIFICATION.post(new MaterialLinkModificationEventJS());
         }
 
     }

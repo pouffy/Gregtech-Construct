@@ -48,6 +48,10 @@ public interface IMaterialLinkRegistryManager {
     @NotNull
     Phase getPhase();
 
+    default boolean canModifyMaterials() {
+        return this.getPhase() != IMaterialLinkRegistryManager.Phase.FROZEN && this.getPhase() != IMaterialLinkRegistryManager.Phase.PRE;
+    }
+
     default Codec<MaterialLink> codec() {
         return ResourceLocation.CODEC
                 .flatXmap(
@@ -63,6 +67,8 @@ public interface IMaterialLinkRegistryManager {
         PRE,
         /** Material Link Registration is available */
         OPEN,
+        /** Material Registration is unavailable and only Modification is available */
+        CLOSED,
         /** Material Link Registration is unavailable */
         FROZEN
     }
