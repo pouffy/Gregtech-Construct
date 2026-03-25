@@ -3,15 +3,20 @@ package com.pouffydev.gtconstruct.datagen.material;
 import com.pouffydev.gtconstruct.common.stats.PlungerHeadMaterialStats;
 import com.pouffydev.gtconstruct.common.stats.SoftMalletHeadMaterialStats;
 import com.pouffydev.gtconstruct.registry.GTCMaterialIds;
-import com.pouffydev.gtconstruct.registry.GTCStatlessMaterialStats;
 import net.minecraft.resources.ResourceLocation;
 import slimeknights.tconstruct.library.client.data.material.AbstractMaterialSpriteProvider;
 import slimeknights.tconstruct.library.client.data.spritetransformer.GreyToColorMapping;
 import slimeknights.tconstruct.library.client.data.spritetransformer.GreyToSpriteTransformer;
 import slimeknights.tconstruct.library.client.data.spritetransformer.ISpriteTransformer;
+import slimeknights.tconstruct.library.materials.definition.MaterialId;
 import slimeknights.tconstruct.library.materials.definition.MaterialVariantId;
-import slimeknights.tconstruct.tools.data.material.MaterialIds;
+import slimeknights.tconstruct.library.materials.stats.MaterialStatsId;
 import slimeknights.tconstruct.tools.stats.StatlessMaterialStats;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.List;
 
 import static slimeknights.tconstruct.tools.data.sprite.TinkerPartSpriteProvider.WOOD;
 
@@ -23,11 +28,19 @@ public class GTCMaterialSpriteProv extends AbstractMaterialSpriteProvider {
 
     @Override
     protected void addAllMaterials() {
+        buildMaterial(GTCMaterialIds.duranium)
+                .meleeHarvest()
+                .fallbacks("metal").ranged()
+                .colorMapper(GreyToColorMapping.builderFromBlack().addARGB(63, 0xFF48443e).addARGB(102, 0xFF645f51).addARGB(140, 0xFF918969).addARGB(178, 0xFFc3b988).addARGB(216, 0xFFf0e4a7).addARGB(255, 0xFFf8f3dc).build());
+        buildMaterial(GTCMaterialIds.neutronium)
+                .meleeHarvest()
+                .fallbacks("metal").ranged()
+                .colorMapper(GreyToColorMapping.builderFromBlack().addARGB(63, 0xFF101010).addARGB(102, 0xFF272727).addARGB(140, 0xFF454545).addARGB(178, 0xFF6c6c6c).addARGB(216, 0xFF9b9b9b).addARGB(255, 0xFFcfcfcf).build());
+
         buildMaterial(GTCMaterialIds.bismuth)
                 .meleeHarvest()
                 .fallbacks("metal").ranged()
                 .colorMapper(GreyToColorMapping.builderFromBlack().addARGB(63, 0xFF24383e).addARGB(102, 0xFF274449).addARGB(140, 0xFF315e63).addARGB(178, 0xFF3d7d81).addARGB(216, 0xFF489fa2).addARGB(255, 0xFF55c5c5).build());
-
         buildMaterial(GTCMaterialIds.sterlingSilver)
                 .meleeHarvest()
                 .fallbacks("metal").ranged()
@@ -44,7 +57,6 @@ public class GTCMaterialSpriteProv extends AbstractMaterialSpriteProvider {
                 .meleeHarvest()
                 .fallbacks("metal").ranged()
                 .colorMapper(GreyToColorMapping.builderFromBlack().addARGB(63, 0xFF42301e).addARGB(102, 0xFF503c23).addARGB(140, 0xFF6e5530).addARGB(178, 0xFF917440).addARGB(216, 0xFFb99551).addARGB(255, 0xFFe3bb63).build());
-
         buildMaterial(GTCMaterialIds.blackSteel)
                 .meleeHarvest().armor()
                 .fallbacks("metal").ranged()
@@ -82,6 +94,34 @@ public class GTCMaterialSpriteProv extends AbstractMaterialSpriteProvider {
                 .fallbacks("cloth")
                 .statType(StatlessMaterialStats.BINDING.getIdentifier(), PlungerHeadMaterialStats.ID, SoftMalletHeadMaterialStats.ID).repairKit()
                 .colorMapper(GreyToColorMapping.builderFromBlack().addARGB(63, 0xFF070706).addARGB(102, 0xFF10100d).addARGB(140, 0xFF181813).addARGB(178, 0xFF21211a).addARGB(216, 0xFF2b2b21).addARGB(255, 0xFF5c5c54).build());
+    }
+
+    private MaterialSpriteInfoBuilder genericMetal(MaterialId material, int c63, int c102, int c140, int c178, int c216, int c255, Collection<MaterialStatsId> stats) {
+        return buildGeneric(material, c63, c102, c140, c178, c216, c255, stats, "metal");
+    }
+
+    private MaterialSpriteInfoBuilder genericSoft(MaterialId material, int c63, int c102, int c140, int c178, int c216, int c255, Collection<MaterialStatsId> stats) {
+        return buildGeneric(material, c63, c102, c140, c178, c216, c255, stats, "cloth").statType(StatlessMaterialStats.BINDING.getIdentifier(), PlungerHeadMaterialStats.ID, SoftMalletHeadMaterialStats.ID);
+    }
+
+
+    private MaterialSpriteInfoBuilder buildGeneric(MaterialId material, int c63, int c102, int c140, int c178, int c216, int c255, Collection<MaterialStatsId> stats, String... fallbacks) {
+        MaterialSpriteInfoBuilder builder = buildBlankMaterial(material, fallbacks).repairKit();
+        for (MaterialStatsId statId : stats) {
+            builder.statType(statId);
+        }
+        builder.colorMapper(GreyToColorMapping.builderFromBlack().addARGB(63, c63).addARGB(102, c102).addARGB(140, c140).addARGB(178, c178).addARGB(216, c216).addARGB(255, c255).build());
+        return builder;
+    }
+
+    private MaterialSpriteInfoBuilder buildBlankMaterial(MaterialId material, String... fallbacks) {
+        return buildMaterial(material).fallbacks(fallbacks);
+    }
+
+    private Collection<MaterialStatsId> addStats(MaterialStatsId... statsIds) {
+        Collection<MaterialStatsId> stats = new ArrayList<>(List.of());
+        stats.addAll(Arrays.asList(statsIds));
+        return stats;
     }
 
     public static ISpriteTransformer transformerFromSprite(ResourceLocation texture, int frames, int highlightColor) {

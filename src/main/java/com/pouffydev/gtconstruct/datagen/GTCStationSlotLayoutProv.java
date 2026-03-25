@@ -5,6 +5,7 @@ import com.pouffydev.gtconstruct.registry.GTCTools;
 import net.minecraft.data.PackOutput;
 import slimeknights.tconstruct.library.data.tinkering.AbstractStationSlotLayoutProvider;
 import slimeknights.tconstruct.tools.TinkerToolParts;
+import slimeknights.tconstruct.tools.TinkerTools;
 
 public class GTCStationSlotLayoutProv extends AbstractStationSlotLayoutProvider {
     public GTCStationSlotLayoutProv(PackOutput packOutput) {
@@ -54,6 +55,12 @@ public class GTCStationSlotLayoutProv extends AbstractStationSlotLayoutProvider 
                 .addInputItem(GTCToolParts.softMalletHead, 53, 22)
                 .addInputItem(TinkerToolParts.toolBinding, 15, 60)
                 .addInputItem(TinkerToolParts.toolHandle, 33, 42)
+                .build();
+
+        defineModifiable(GTCTools.mortar)
+                .sortIndex(SORT_HARVEST)
+                .addInputItem(TinkerToolParts.adzeHead, 33, 29)
+                .addInputItem(GTCToolParts.mortarBowl, 33, 53)
                 .build();
     }
 

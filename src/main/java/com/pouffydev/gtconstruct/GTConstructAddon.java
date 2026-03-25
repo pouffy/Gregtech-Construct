@@ -1,8 +1,10 @@
 package com.pouffydev.gtconstruct;
 
 import com.gregtechceu.gtceu.GTCEu;
+import com.gregtechceu.gtceu.api.GTCEuAPI;
 import com.gregtechceu.gtceu.api.addon.GTAddon;
 import com.gregtechceu.gtceu.api.addon.IGTAddon;
+import com.gregtechceu.gtceu.api.data.chemical.material.Material;
 import com.gregtechceu.gtceu.api.registry.registrate.GTRegistrate;
 import com.pouffydev.gtconstruct.api.GTConstructAPI;
 import com.pouffydev.gtconstruct.common.CommonProxy;
@@ -10,6 +12,7 @@ import com.pouffydev.gtconstruct.common.material.MaterialLinkRegistryManager;
 import com.pouffydev.gtconstruct.common.material.event.MaterialLinkEvent;
 import com.pouffydev.gtconstruct.common.material.event.MaterialLinkRegistryEvent;
 import com.pouffydev.gtconstruct.common.material.event.PostMaterialLinkEvent;
+import com.pouffydev.gtconstruct.datagen.recipe.GTCCraftingRecipeLoader;
 import com.pouffydev.gtconstruct.datagen.recipe.GTCMachineRecipeLoader;
 import com.pouffydev.gtconstruct.datagen.recipe.GTCMaterialRecipeHandler;
 import com.pouffydev.gtconstruct.registry.GTCMaterialLinks;
@@ -40,8 +43,12 @@ public class GTConstructAddon implements IGTAddon {
     }
 
     public void addRecipes(Consumer<FinishedRecipe> provider) {
-        GTCMaterialRecipeHandler.init(provider);
+        for (Material material : GTCEuAPI.materialManager.getRegisteredMaterials()) {
+            GTCMaterialRecipeHandler.init(provider, material);
+
+        }
         GTCMachineRecipeLoader.init(provider);
+        GTCCraftingRecipeLoader.init(provider);
     }
 
     private static void initMaterialLinks() {

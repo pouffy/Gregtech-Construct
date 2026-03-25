@@ -156,7 +156,7 @@ public class ModifiableGTToolItem extends ModifiableItem implements IGTTool {
                     FormattingUtil.formatNumbers(getCharge(stack)),
                     FormattingUtil.formatNumbers(getMaxCharge(stack)),
                     GTValues.VNF[getElectricTier()]));
-            ElectricStats.addCurrentChargeTooltip(tooltip, getCharge(stack), getMaxCharge(stack), getElectricTier());
+            ElectricStats.addCurrentChargeTooltip(tooltip, getCharge(stack), getMaxCharge(stack), getElectricTier(), false);
         }
 
         if (!tagCompound.getBoolean(UNBREAKABLE_KEY)) {

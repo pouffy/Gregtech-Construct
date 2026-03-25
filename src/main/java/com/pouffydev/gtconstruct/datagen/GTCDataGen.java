@@ -16,6 +16,7 @@ import slimeknights.tconstruct.library.client.data.material.MaterialPaletteDebug
 import slimeknights.tconstruct.library.client.data.material.MaterialPartTextureGenerator;
 import slimeknights.tconstruct.tools.data.material.MaterialRenderInfoProvider;
 import slimeknights.tconstruct.tools.data.sprite.TinkerMaterialSpriteProvider;
+import slimeknights.tconstruct.tools.data.sprite.TinkerPartSpriteProvider;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -44,14 +45,18 @@ public class GTCDataGen {
         GTCMaterialDataProv materials = new GTCMaterialDataProv(packOutput);
         GTCMaterialSpriteProv materialSprites = new GTCMaterialSpriteProv();
 
-        generator.addProvider(client, new GTCMaterialRenderInfoProv(packOutput, materialSprites, existingFileHelper));
-        generator.addProvider(client, new MaterialPartTextureGenerator(packOutput, existingFileHelper, partSprites, materialSprites));
-        generator.addProvider(client, new MaterialPaletteDebugGenerator(packOutput, GTConstruct.MOD_ID, materialSprites));
-
         generator.addProvider(server, new GTCMaterialRecipeProv(packOutput));
         generator.addProvider(server, materials);
         generator.addProvider(server, new GTCMaterialStatsProv(packOutput, materials));
         generator.addProvider(server, new GTCMaterialTraitsProv(packOutput, materials));
+
+        TinkerMaterialSpriteProvider tinkerMaterials = new TinkerMaterialSpriteProvider();
+        TinkerPartSpriteProvider tinkerParts = new TinkerPartSpriteProvider();
+
+        generator.addProvider(client, new GTCMaterialRenderInfoProv(packOutput, materialSprites, existingFileHelper));
+        generator.addProvider(client, new MaterialPaletteDebugGenerator(packOutput, GTConstruct.MOD_ID, materialSprites));
+        generator.addProvider(client, new MaterialPartTextureGenerator(packOutput, existingFileHelper, partSprites, tinkerMaterials, materialSprites));
+        generator.addProvider(client, new MaterialPartTextureGenerator(packOutput, existingFileHelper, tinkerParts, materialSprites));
     }
     private static void addExtraRegistrateData() {
         GTCRegistrateTags.addGenerators();

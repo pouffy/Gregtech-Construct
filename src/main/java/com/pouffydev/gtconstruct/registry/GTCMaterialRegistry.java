@@ -1,5 +1,6 @@
 package com.pouffydev.gtconstruct.registry;
 
+import com.pouffydev.gtconstruct.common.stats.GTStatlessMaterialStats;
 import com.pouffydev.gtconstruct.common.stats.PlungerHeadMaterialStats;
 import com.pouffydev.gtconstruct.common.stats.SoftMalletHeadMaterialStats;
 import slimeknights.tconstruct.library.materials.IMaterialRegistry;
@@ -11,7 +12,8 @@ public class GTCMaterialRegistry {
 
     public static void setup() {
         IMaterialRegistry registry = MaterialRegistry.getInstance();
-        registry.registerStatType(PlungerHeadMaterialStats.TYPE, MELEE_HARVEST);
-        registry.registerStatType(SoftMalletHeadMaterialStats.TYPE, MELEE_HARVEST);
+        registry.registerStatType(PlungerHeadMaterialStats.TYPE);
+        registry.registerStatType(SoftMalletHeadMaterialStats.TYPE);
+        registry.registerStatType(GTStatlessMaterialStats.MORTAR_BOWL.getType());
     }
 }

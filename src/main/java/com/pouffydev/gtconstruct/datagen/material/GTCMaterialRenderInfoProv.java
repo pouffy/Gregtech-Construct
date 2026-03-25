@@ -15,6 +15,9 @@ public class GTCMaterialRenderInfoProv extends AbstractMaterialRenderInfoProvide
 
     @Override
     protected void addMaterialRenderInfo() {
+        buildRenderInfo(GTCMaterialIds.neutronium).fallbacks("metal");
+        buildRenderInfo(GTCMaterialIds.duranium).fallbacks("metal");
+
         buildRenderInfo(GTCMaterialIds.sterlingSilver).fallbacks("metal");
         buildRenderInfo(GTCMaterialIds.bismuthBronze).fallbacks("metal");
         buildRenderInfo(GTCMaterialIds.cupronickel).fallbacks("metal");

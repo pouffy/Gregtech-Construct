@@ -1,9 +1,9 @@
 repositories {
     mavenLocal()
     mavenCentral()
-    maven { // KubeJS and Rhino
-        name = "Saps.dev Maven"
-        url = "https://maven.saps.dev/minecraft"
+    exclusiveContent { // KubeJS and Rhino
+        forRepository { maven { url = "https://maven.latvian.dev/releases" } }
+        filter { includeGroup("dev.latvian.mods")}
     }
     maven {
         name = "Jared's maven"

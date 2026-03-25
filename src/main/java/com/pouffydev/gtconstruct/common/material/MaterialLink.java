@@ -1,13 +1,10 @@
 package com.pouffydev.gtconstruct.common.material;
 
 import com.google.common.collect.ImmutableList;
-import com.gregtechceu.gtceu.api.GTCEuAPI;
 import com.gregtechceu.gtceu.api.data.chemical.material.Material;
-import com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialFlag;
 import com.gregtechceu.gtceu.api.registry.registrate.BuilderBase;
 import com.gregtechceu.gtceu.common.data.GTMaterials;
 import com.pouffydev.gtconstruct.api.GTConstructAPI;
-import com.pouffydev.gtconstruct.integration.kubejs.helper.MaterialStatsIdWrapper;
 import com.pouffydev.gtconstruct.integration.kubejs.helper.MaterialWrapper;
 import com.pouffydev.gtconstruct.integration.kubejs.helper.TinkerMaterialIdWrapper;
 import dev.latvian.mods.rhino.util.HideFromJS;
@@ -19,10 +16,7 @@ import slimeknights.tconstruct.library.materials.definition.IMaterial;
 import slimeknights.tconstruct.library.materials.definition.MaterialId;
 import slimeknights.tconstruct.library.materials.stats.MaterialStatsId;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
-import java.util.List;
 
 public class MaterialLink implements Comparable<MaterialLink> {
     @NotNull

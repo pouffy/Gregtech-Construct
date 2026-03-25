@@ -113,6 +113,14 @@ public class GTCToolDefinitionProv extends AbstractToolDefinitionDataProvider {
                         .set(ToolStats.ATTACK_SPEED, -2.4F).build()))
                 .smallToolStartingSlots()
                 .build();
+        define(GTCToolDefinitions.MORTAR)
+                .module(PartStatsModule.parts()
+                        .part(TinkerToolParts.adzeHead)
+                        .part(GTCToolParts.mortarBowl)
+                        .build())
+                .module(defaultTwoParts)
+                .smallToolStartingSlots()
+                .build();
     }
 
     @Override

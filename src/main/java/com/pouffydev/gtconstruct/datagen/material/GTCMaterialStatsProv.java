@@ -1,10 +1,12 @@
 package com.pouffydev.gtconstruct.datagen.material;
 
+import com.gregtechceu.gtceu.GTCEu;
+import com.pouffydev.gtconstruct.common.stats.GTStatlessMaterialStats;
 import com.pouffydev.gtconstruct.common.stats.PlungerHeadMaterialStats;
 import com.pouffydev.gtconstruct.common.stats.SoftMalletHeadMaterialStats;
 import com.pouffydev.gtconstruct.registry.GTCMaterialIds;
-import com.pouffydev.gtconstruct.registry.GTCStatlessMaterialStats;
 import net.minecraft.data.PackOutput;
+import net.minecraftforge.common.TierSortingRegistry;
 import slimeknights.tconstruct.library.data.material.AbstractMaterialDataProvider;
 import slimeknights.tconstruct.library.data.material.AbstractMaterialStatsDataProvider;
 import slimeknights.tconstruct.tools.data.material.MaterialIds;
@@ -26,6 +28,15 @@ public class GTCMaterialStatsProv extends AbstractMaterialStatsDataProvider {
     }
 
     private void addMeleeHarvest() {
+        addMaterialStats(GTCMaterialIds.neutronium,
+                new HeadMaterialStats(65535, 180.0F, TierSortingRegistry.byName(GTCEu.id("neutronium")), 100.0F),
+                HandleMaterialStats.multipliers().durability(10.75f).build(),
+                StatlessMaterialStats.BINDING);
+        addMaterialStats(GTCMaterialIds.duranium,
+                new HeadMaterialStats(8192, 14.0F, TierSortingRegistry.byName(GTCEu.id("duranium")), 12.0F),
+                HandleMaterialStats.multipliers().durability(3.05f).build(),
+                StatlessMaterialStats.BINDING);
+
         addMaterialStats(GTCMaterialIds.bismuth,
                 new HeadMaterialStats(270, 6.5f, IRON, 1.5f),
                 HandleMaterialStats.multipliers().durability(1.05f).build(),
@@ -63,6 +74,13 @@ public class GTCMaterialStatsProv extends AbstractMaterialStatsDataProvider {
     }
 
     private void addRanged() {
+        addMaterialStats(GTCMaterialIds.neutronium,
+                new LimbMaterialStats(65535, -0.04f, 4.7f, 100f),
+                new GripMaterialStats(10.75f, 0.85f, 100f));
+        addMaterialStats(GTCMaterialIds.duranium,
+                new LimbMaterialStats(8192, -0.004f, 2.3f, 12f),
+                new GripMaterialStats(3.05f, 0.68f, 12f));
+
         addMaterialStats(GTCMaterialIds.bismuth,
                 new LimbMaterialStats(270, -0.05f, 0.15f, 0),
                 new GripMaterialStats(1.05f, 0f, 1.5f));
@@ -89,6 +107,9 @@ public class GTCMaterialStatsProv extends AbstractMaterialStatsDataProvider {
         addMaterialStats(GTCMaterialIds.redSteel,
                 new LimbMaterialStats(1140, -0.05f, 0.15f, 0.45f),
                 new GripMaterialStats(1.4f, 0.25f, 2.2f));
+
+        addMaterialStats(MaterialIds.rock, GTStatlessMaterialStats.MORTAR_BOWL);
+        addMaterialStats(MaterialIds.whitestone, GTStatlessMaterialStats.MORTAR_BOWL);
 
         addMaterialStats(MaterialIds.wood, new SoftMalletHeadMaterialStats(60, 2f, WOOD, 0f));
         addMaterialStats(MaterialIds.bamboo, new SoftMalletHeadMaterialStats(70, 1.5f, WOOD, 0f));

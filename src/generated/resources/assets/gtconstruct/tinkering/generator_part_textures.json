@@ -22,11 +22,15 @@
     },
     {
       "path": "gtconstruct:item/tool/parts/plunger_head",
-      "stat_type": "gtconstruct:plunger_head"
+      "stat_type": "tconstruct:repair_kit"
     },
     {
       "path": "gtconstruct:item/tool/parts/soft_mallet_head",
-      "stat_type": "gtconstruct:soft_mallet_head"
+      "stat_type": "tconstruct:repair_kit"
+    },
+    {
+      "path": "gtconstruct:item/tool/parts/mortar_bowl",
+      "stat_type": "tconstruct:repair_kit"
     },
     {
       "path": "gtconstruct:item/tool/saw/head",
@@ -98,11 +102,11 @@
     },
     {
       "path": "gtconstruct:item/tool/plunger/head",
-      "stat_type": "gtconstruct:plunger_head"
+      "stat_type": "tconstruct:repair_kit"
     },
     {
       "path": "gtconstruct:item/tool/plunger/head_broken",
-      "stat_type": "gtconstruct:plunger_head"
+      "stat_type": "tconstruct:repair_kit"
     },
     {
       "path": "gtconstruct:item/tool/plunger/handle",
@@ -114,11 +118,11 @@
     },
     {
       "path": "gtconstruct:item/tool/soft_mallet/head",
-      "stat_type": "gtconstruct:soft_mallet_head"
+      "stat_type": "tconstruct:repair_kit"
     },
     {
       "path": "gtconstruct:item/tool/soft_mallet/head_broken",
-      "stat_type": "gtconstruct:soft_mallet_head"
+      "stat_type": "tconstruct:repair_kit"
     },
     {
       "path": "gtconstruct:item/tool/soft_mallet/handle",
@@ -127,6 +131,18 @@
     {
       "path": "gtconstruct:item/tool/soft_mallet/binding",
       "stat_type": "tconstruct:binding"
+    },
+    {
+      "path": "gtconstruct:item/tool/mortar/head",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "gtconstruct:item/tool/mortar/head_broken",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "gtconstruct:item/tool/mortar/mortar_bowl",
+      "stat_type": "tconstruct:repair_kit"
     }
   ],
   "replace": false

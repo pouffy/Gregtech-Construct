@@ -12,6 +12,7 @@ import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.Item;
@@ -37,7 +38,14 @@ public class GTCRegistrateTags {
         prov.tag(TagUtil.createItemTag("tools/files", false)).add(GTCTools.file.asItem());
         prov.tag(TagUtil.createItemTag("tools/wire_cutters", false)).add(GTCTools.wirecutter.asItem());
         prov.tag(TagUtil.createItemTag("tools/plungers", false)).add(GTCTools.plunger.asItem());
-        prov.tag(TagUtil.createItemTag("tools/soft_mallets", false)).add(GTCTools.softMallet.asItem());
+        prov.tag(TagUtil.createItemTag("tools/mallets", false)).add(GTCTools.softMallet.asItem());
+        prov.tag(TagUtil.createItemTag("tools/mortars", false)).add(GTCTools.mortar.asItem());
+
+        prov.tag(ItemTags.create(GTConstruct.appendId("gtceu:tools/crafting_saws"))).add(GTCTools.saw.asItem());
+        prov.tag(ItemTags.create(GTConstruct.appendId("gtceu:tools/crafting_screwdrivers"))).add(GTCTools.screwdriver.asItem());
+        prov.tag(ItemTags.create(GTConstruct.appendId("gtceu:tools/crafting_files"))).add(GTCTools.file.asItem());
+        prov.tag(ItemTags.create(GTConstruct.appendId("gtceu:tools/crafting_wire_cutters"))).add(GTCTools.wirecutter.asItem());
+        prov.tag(ItemTags.create(GTConstruct.appendId("gtceu:tools/crafting_mortars"))).add(GTCTools.mortar.asItem());
 
         prov.tag(TagUtil.createItemTag("tools", false))
                 .add(
@@ -46,7 +54,8 @@ public class GTCRegistrateTags {
                         GTCTools.file.asItem(),
                         GTCTools.wirecutter.asItem(),
                         GTCTools.plunger.asItem(),
-                        GTCTools.softMallet.asItem()
+                        GTCTools.softMallet.asItem(),
+                        GTCTools.mortar.asItem()
                 );
 
         prov.tag(TagUtil.createItemTag("tools", true))
@@ -56,7 +65,8 @@ public class GTCRegistrateTags {
                         GTCTools.file.asItem(),
                         GTCTools.wirecutter.asItem(),
                         GTCTools.plunger.asItem(),
-                        GTCTools.softMallet.asItem()
+                        GTCTools.softMallet.asItem(),
+                        GTCTools.mortar.asItem()
                 );
 
         prov.tag(TagUtil.optionalTag(BuiltInRegistries.ITEM, TConstruct.getResource("modifiable")))
@@ -66,7 +76,8 @@ public class GTCRegistrateTags {
                         GTCTools.file.asItem(),
                         GTCTools.wirecutter.asItem(),
                         GTCTools.plunger.asItem(),
-                        GTCTools.softMallet.asItem()
+                        GTCTools.softMallet.asItem(),
+                        GTCTools.mortar.asItem()
                 );
 
         prov.tag(TagUtil.optionalTag(BuiltInRegistries.ITEM, TConstruct.getResource("modifiable/interactable")))

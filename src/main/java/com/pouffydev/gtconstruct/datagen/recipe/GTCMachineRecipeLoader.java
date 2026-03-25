@@ -20,7 +20,6 @@ public class GTCMachineRecipeLoader {
     }
 
     private static void registerBendingCompressingRecipes(Consumer<FinishedRecipe> provider) {
-
         for (ItemEntry<Item> shapeExtruder : SHAPE_EXTRUDERS) {
             if (shapeExtruder == null) continue;
             FORMING_PRESS_RECIPES.recipeBuilder("copy_shape_" + shapeExtruder.get())

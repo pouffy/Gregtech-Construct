@@ -48,7 +48,7 @@ public class GTCToolsRecipeProv extends GTCRecipeProvider implements IMaterialRe
         toolBuilding(consumer, GTCTools.wirecutter, folder);
         toolBuilding(consumer, GTCTools.plunger, folder);
         toolBuilding(consumer, GTCTools.softMallet, folder);
-
+        toolBuilding(consumer, GTCTools.mortar, folder);
     }
 
     private void addPartRecipes(Consumer<FinishedRecipe> consumer) {
@@ -62,6 +62,7 @@ public class GTCToolsRecipeProv extends GTCRecipeProvider implements IMaterialRe
         partRecipes(consumer, GTCToolParts.wrenchHandle,     GTCSmeltery.wrenchHandleCast,     4, partFolder, castFolder);
 
         uncastablePart(consumer, GTCToolParts.plungerHead.get(), 2, null, partFolder);
+        uncastablePart(consumer, GTCToolParts.mortarBowl.get(), 3, null, partFolder);
         uncastablePart(consumer, GTCToolParts.softMalletHead.get(), 1, PlatingMaterialStats.SHIELD.getId(), partFolder);
     }
 }

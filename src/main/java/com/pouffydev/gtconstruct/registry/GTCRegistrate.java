@@ -48,7 +48,7 @@ public class GTCRegistrate extends GTRegistrate {
     }
 
     @Override
-    public Registrate registerEventListeners(IEventBus bus) {
+    public GTRegistrate registerEventListeners(IEventBus bus) {
         if (!registered.getAndSet(true)) {
             return super.registerEventListeners(bus);
         }
@@ -69,7 +69,7 @@ public class GTCRegistrate extends GTRegistrate {
 
 
     @Override
-    public <T extends Item> @NotNull ItemBuilder<T, Registrate> item(String name,
+    public <T extends Item> @NotNull ItemBuilder<T, GTRegistrate> item(String name,
                                                                      NonNullFunction<Item.Properties, T> factory) {
         return super.item(name, factory).lang(FormattingUtil.toEnglishName(name.replaceAll("\\.", "_")));
     }

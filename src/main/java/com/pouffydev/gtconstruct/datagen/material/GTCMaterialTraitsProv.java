@@ -19,6 +19,10 @@ public class GTCMaterialTraitsProv extends AbstractMaterialTraitDataProvider {
 
     @Override
     protected void addMaterialTraits() {
+        addTraits(GTCMaterialIds.neutronium, MELEE_HARVEST, TinkerModifiers.unbreakable, TinkerModifiers.magnetic);
+        addTraits(GTCMaterialIds.neutronium, RANGED, TinkerModifiers.unbreakable);
+        addTraits(GTCMaterialIds.duranium, MELEE_HARVEST, TinkerModifiers.magnetic);
+
         addTraits(GTCMaterialIds.sterlingSilver, MELEE_HARVEST, ModifierIds.smite, new ModifierId(TConstruct.MOD_ID, "dwarven"));
         addTraits(GTCMaterialIds.sterlingSilver, RANGED, TinkerModifiers.holy, TinkerModifiers.dwarven);
         addTraits(GTCMaterialIds.sterlingSilver, ARMOR, ModifierIds.consecrated, new ModifierId(TConstruct.MOD_ID, "dwarven"));

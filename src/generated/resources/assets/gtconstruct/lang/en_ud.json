@@ -4,6 +4,8 @@
   "item.gtconstruct.file_head_cast": "ʇsɐƆ pןo⅁ pɐǝH ǝןıℲ",
   "item.gtconstruct.file_head_red_sand_cast": "ʇsɐƆ puɐS pǝᴚ pɐǝH ǝןıℲ",
   "item.gtconstruct.file_head_sand_cast": "ʇsɐƆ puɐS pɐǝH ǝןıℲ",
+  "item.gtconstruct.mortar": "ɹɐʇɹoW",
+  "item.gtconstruct.mortar_bowl": "ןʍoᗺ ɹɐʇɹoW",
   "item.gtconstruct.plunger": "ɹǝbunןԀ",
   "item.gtconstruct.plunger_head": "pɐǝH ɹǝbunןԀ",
   "item.gtconstruct.plunger_head_extruder_mold": ")pɐǝH ɹǝbunןԀ( pןoW ɹǝpnɹʇxƎ",
@@ -37,6 +39,8 @@
   "material.gtconstruct.black_steel": "ןǝǝʇS ʞɔɐןᗺ",
   "material.gtconstruct.blue_steel": "ןǝǝʇS ǝnןᗺ",
   "material.gtconstruct.cupronickel": "ןǝʞɔıuoɹdnƆ",
+  "material.gtconstruct.duranium": "ɯnıuɐɹnᗡ",
+  "material.gtconstruct.neutronium": "ɯnıuoɹʇnǝN",
   "material.gtconstruct.polybenzimidazole": "ǝןozɐpıɯızuǝqʎןoԀ",
   "material.gtconstruct.polyethylene": "ǝuǝןʎɥʇǝʎןoԀ",
   "material.gtconstruct.polytetrafluoroethylene": "ǝuǝןʎɥʇǝoɹonןɟɐɹʇǝʇʎןoԀ",
@@ -48,10 +52,14 @@
   "modifier.gtconstruct.blunt": "ʇunןᗺ",
   "modifier.gtconstruct.ice_cutter": "ɹǝʇʇnƆ ǝɔI",
   "pattern.gtconstruct.file_head": "pɐǝH ǝןıℲ",
+  "pattern.gtconstruct.mortar_bowl": "ןʍoᗺ ɹɐʇɹoW",
   "pattern.gtconstruct.plunger_head": "pɐǝH ɹǝbunןԀ",
   "pattern.gtconstruct.saw_blade": "ǝpɐןᗺ ʍɐS",
   "pattern.gtconstruct.screwdriver_tip": "dı⟘ ɹǝʌıɹpʍǝɹɔS",
   "pattern.gtconstruct.soft_mallet_head": "pɐǝH ʇǝןןɐW ʇɟoS",
   "pattern.gtconstruct.wirecutter_claws": "sʍɐןƆ ɹǝʇʇnɔǝɹıM",
-  "pattern.gtconstruct.wrench_handle": "ǝןpuɐH ɥɔuǝɹM"
+  "pattern.gtconstruct.wrench_handle": "ǝןpuɐH ɥɔuǝɹM",
+  "stat.gtconstruct.mortar_bowl": "ןʍoᗺ ɹɐʇɹoW",
+  "stat.gtconstruct.plunger_head": "pɐǝH ɹǝbunןԀ",
+  "stat.gtconstruct.soft_mallet_head": "pɐǝH ʇǝןןɐW ʇɟoS"
 }

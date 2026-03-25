@@ -20,6 +20,7 @@ public class TinkerLang {
         toEng(provider, "item.gtconstruct.wire_cutters");
         toEng(provider, "item.gtconstruct.plunger");
         toEng(provider, "item.gtconstruct.soft_mallet");
+        toEng(provider, "item.gtconstruct.mortar");
     }
 
     private static void initCastsAndPatterns(RegistrateLangProvider provider) {
@@ -30,6 +31,7 @@ public class TinkerLang {
         createCastsAndPattern(provider, "wrench_handle");
         createPattern(provider, "plunger_head");
         createPattern(provider, "soft_mallet_head");
+        createPattern(provider, "mortar_bowl");
     }
 
     private static void initModifiers(RegistrateLangProvider provider) {
@@ -45,9 +47,10 @@ public class TinkerLang {
         toEng(provider, "item.gtconstruct.wrench_handle");
         toEng(provider, "item.gtconstruct.plunger_head");
         toEng(provider, "item.gtconstruct.soft_mallet_head");
-
+        toEng(provider, "item.gtconstruct.mortar_bowl");
         toEng(provider, "stat.gtconstruct.plunger_head");
         toEng(provider, "stat.gtconstruct.soft_mallet_head");
+        toEng(provider, "stat.gtconstruct.mortar_bowl");
     }
 
     private static void initMaterials(RegistrateLangProvider provider) {
@@ -59,6 +62,8 @@ public class TinkerLang {
         toEng(provider, "material.gtconstruct.blue_steel");
         toEng(provider, "material.gtconstruct.red_steel");
         toEng(provider, "material.gtconstruct.bismuth");
+        toEng(provider, "material.gtconstruct.duranium");
+        toEng(provider, "material.gtconstruct.neutronium");
         toEng(provider, "material.gtconstruct.silicone_rubber");
         toEng(provider, "material.gtconstruct.styrene_butadiene_rubber");
         toEng(provider, "material.gtconstruct.polybenzimidazole");

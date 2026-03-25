@@ -5,6 +5,9 @@ import slimeknights.tconstruct.library.materials.definition.MaterialId;
 
 public class GTCMaterialIds {
 
+    //Metals
+    public static final MaterialId neutronium = id("neutronium"); // Nt x1
+    public static final MaterialId duranium = id("duranium"); // Dr x1
     // Alloys
     public static final MaterialId sterlingSilver = id("sterling_silver"); // Ag x4, Cu x1
     public static final MaterialId blackBronze = id("black_bronze"); // Au x1, Ag x1, Cu x3

@@ -14,4 +14,5 @@ public class GTCToolDefinitions {
 
     public static final ToolDefinition PLUNGER = ToolDefinition.create(GTCTools.plunger);
     public static final ToolDefinition SOFT_MALLET = ToolDefinition.create(GTCTools.softMallet);
+    public static final ToolDefinition MORTAR = ToolDefinition.create(GTCTools.mortar);
 }

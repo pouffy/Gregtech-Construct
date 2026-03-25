@@ -27,11 +27,14 @@ public class GTCMaterialDataProv extends AbstractMaterialDataProvider {
         addMaterial(GTCMaterialIds.blueSteel,               4, ORDER_COMPAT + ORDER_SPECIAL, false);
         addMaterial(GTCMaterialIds.redSteel,                4, ORDER_COMPAT + ORDER_SPECIAL, false);
 
-        addMaterial(GTCMaterialIds.siliconeRubber,          1, ORDER_COMPAT + ORDER_GENERAL, false);
-        addMaterial(GTCMaterialIds.styreneButadieneRubber,  1, ORDER_COMPAT + ORDER_GENERAL, false);
-        addMaterial(GTCMaterialIds.polybenzimidazole,       1, ORDER_COMPAT + ORDER_GENERAL, false);
-        addMaterial(GTCMaterialIds.polyethylene,            1, ORDER_COMPAT + ORDER_GENERAL, false);
-        addMaterial(GTCMaterialIds.polytetrafluoroethylene, 1, ORDER_COMPAT + ORDER_GENERAL, false);
-        addMaterial(GTCMaterialIds.rubber,                  1, ORDER_COMPAT + ORDER_GENERAL, false);
+        addMaterial(GTCMaterialIds.neutronium,              6, ORDER_COMPAT + ORDER_SPECIAL, false);
+        addMaterial(GTCMaterialIds.duranium,                5, ORDER_COMPAT + ORDER_SPECIAL, false);
+
+        addMaterial(GTCMaterialIds.siliconeRubber,          1, ORDER_COMPAT + ORDER_GENERAL, true);
+        addMaterial(GTCMaterialIds.styreneButadieneRubber,  1, ORDER_COMPAT + ORDER_GENERAL, true);
+        addMaterial(GTCMaterialIds.polybenzimidazole,       1, ORDER_COMPAT + ORDER_GENERAL, true);
+        addMaterial(GTCMaterialIds.polyethylene,            1, ORDER_COMPAT + ORDER_GENERAL, true);
+        addMaterial(GTCMaterialIds.polytetrafluoroethylene, 1, ORDER_COMPAT + ORDER_GENERAL, true);
+        addMaterial(GTCMaterialIds.rubber,                  1, ORDER_COMPAT + ORDER_GENERAL, true);
     }
 }

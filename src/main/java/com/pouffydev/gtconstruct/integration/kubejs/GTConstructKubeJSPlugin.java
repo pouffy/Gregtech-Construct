@@ -4,6 +4,7 @@ import com.pouffydev.gtconstruct.GTConstruct;
 import com.pouffydev.gtconstruct.api.GTConstructAPI;
 import com.pouffydev.gtconstruct.common.material.MaterialLink;
 import com.pouffydev.gtconstruct.common.material.MaterialLinkRegistryManager;
+import com.pouffydev.gtconstruct.common.stats.GTStatlessMaterialStats;
 import com.pouffydev.gtconstruct.common.stats.PlungerHeadMaterialStats;
 import com.pouffydev.gtconstruct.common.stats.SoftMalletHeadMaterialStats;
 import com.pouffydev.gtconstruct.registry.GTCMaterialIds;
@@ -51,5 +52,6 @@ public class GTConstructKubeJSPlugin extends KubeJSPlugin {
         event.add("GTCMaterialLinks", GTCMaterialLinks.class);
         event.add("PlungerHeadMaterialStats", PlungerHeadMaterialStats.class);
         event.add("SoftMalletHeadMaterialStats", SoftMalletHeadMaterialStats.class);
+        event.add("GTStatlessMaterialStats", GTStatlessMaterialStats.class);
     }
 }

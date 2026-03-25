@@ -4,6 +4,8 @@
   "item.gtconstruct.file_head_cast": "File Head Gold Cast",
   "item.gtconstruct.file_head_red_sand_cast": "File Head Red Sand Cast",
   "item.gtconstruct.file_head_sand_cast": "File Head Sand Cast",
+  "item.gtconstruct.mortar": "Mortar",
+  "item.gtconstruct.mortar_bowl": "Mortar Bowl",
   "item.gtconstruct.plunger": "Plunger",
   "item.gtconstruct.plunger_head": "Plunger Head",
   "item.gtconstruct.plunger_head_extruder_mold": "Extruder Mold (Plunger Head)",
@@ -37,6 +39,8 @@
   "material.gtconstruct.black_steel": "Black Steel",
   "material.gtconstruct.blue_steel": "Blue Steel",
   "material.gtconstruct.cupronickel": "Cupronickel",
+  "material.gtconstruct.duranium": "Duranium",
+  "material.gtconstruct.neutronium": "Neutronium",
   "material.gtconstruct.polybenzimidazole": "Polybenzimidazole",
   "material.gtconstruct.polyethylene": "Polyethylene",
   "material.gtconstruct.polytetrafluoroethylene": "Polytetrafluoroethylene",
@@ -48,10 +52,14 @@
   "modifier.gtconstruct.blunt": "Blunt",
   "modifier.gtconstruct.ice_cutter": "Ice Cutter",
   "pattern.gtconstruct.file_head": "File Head",
+  "pattern.gtconstruct.mortar_bowl": "Mortar Bowl",
   "pattern.gtconstruct.plunger_head": "Plunger Head",
   "pattern.gtconstruct.saw_blade": "Saw Blade",
   "pattern.gtconstruct.screwdriver_tip": "Screwdriver Tip",
   "pattern.gtconstruct.soft_mallet_head": "Soft Mallet Head",
   "pattern.gtconstruct.wirecutter_claws": "Wirecutter Claws",
-  "pattern.gtconstruct.wrench_handle": "Wrench Handle"
+  "pattern.gtconstruct.wrench_handle": "Wrench Handle",
+  "stat.gtconstruct.mortar_bowl": "Mortar Bowl",
+  "stat.gtconstruct.plunger_head": "Plunger Head",
+  "stat.gtconstruct.soft_mallet_head": "Soft Mallet Head"
 }

@@ -40,7 +40,7 @@ public class MaterialLinkRegistryImpl extends MaterialLinkRegistry {
     @NotNull
     @Override
     public Collection<MaterialLink> getAllLinkedMaterials() {
-        return Collections.unmodifiableCollection(this.registry.values());
+        return Collections.unmodifiableCollection(this.registry().values());
     }
 
     @Override

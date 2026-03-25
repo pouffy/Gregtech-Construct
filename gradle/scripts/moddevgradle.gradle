@@ -35,6 +35,7 @@ legacyForge {
             sourceSet = sourceSets.extra
             ideName = "Client 1"
 
+            programArguments.addAll('--username', 'PouffyDev_1')
             systemProperty('forge.enabledGameTestNamespaces', "gtconstruct")
         }
 
@@ -43,7 +44,7 @@ legacyForge {
             sourceSet = sourceSets.extra
             ideName = "Client 2"
 
-            programArguments.addAll('--username', '_Pouffy_')
+            programArguments.addAll('--username', 'PouffyDev_2')
             systemProperty('forge.enabledGameTestNamespaces', "gtconstruct")
         }
 
