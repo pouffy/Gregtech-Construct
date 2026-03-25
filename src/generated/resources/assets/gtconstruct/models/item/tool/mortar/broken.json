@@ -1,0 +1,22 @@
+{
+  "loader": "tconstruct:tool",
+  "parent": "forge:item/default-tool",
+  "textures": {
+    "head": "gtconstruct:item/tool/mortar/head_broken",
+    "mortar_bowl": "gtconstruct:item/tool/mortar/mortar_bowl"
+  },
+  "modifier_roots": [
+    "gtconstruct:item/tool/mortar/modifiers/broken/",
+    "gtconstruct:item/tool/mortar/modifiers/"
+  ],
+  "parts": [
+    {
+      "name": "head",
+      "index": 0
+    },
+    {
+      "name": "mortar_bowl",
+      "index": 1
+    }
+  ]
+}

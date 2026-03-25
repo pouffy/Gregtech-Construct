@@ -1,0 +1,20 @@
+{
+  "perStat": {
+    "tconstruct:melee_harvest": [
+      {
+        "level": 1,
+        "name": "tconstruct:unbreakable"
+      },
+      {
+        "level": 1,
+        "name": "tconstruct:magnetic"
+      }
+    ],
+    "tconstruct:ranged": [
+      {
+        "level": 1,
+        "name": "tconstruct:unbreakable"
+      }
+    ]
+  }
+}

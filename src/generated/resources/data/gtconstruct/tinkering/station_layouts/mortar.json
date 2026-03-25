@@ -1,0 +1,28 @@
+{
+  "icon": {
+    "item": "gtconstruct:mortar",
+    "nbt": "{Damage:0,tic_broken:0b,tic_display:1b,tic_materials:[\"tconstruct:ui_render#head\",\"tconstruct:ui_render#handle\",\"tconstruct:ui_render#extra\",\"tconstruct:ui_render#large\",\"tconstruct:ui_render#extra_large\"]}"
+  },
+  "input_slots": [
+    {
+      "filter": {
+        "item": "tconstruct:adze_head"
+      },
+      "icon": "tconstruct:adze_head",
+      "translation_key": "item.tconstruct.adze_head",
+      "x": 33,
+      "y": 29
+    },
+    {
+      "filter": {
+        "item": "gtconstruct:mortar_bowl"
+      },
+      "icon": "gtconstruct:mortar_bowl",
+      "translation_key": "item.gtconstruct.mortar_bowl",
+      "x": 33,
+      "y": 53
+    }
+  ],
+  "sortIndex": 6,
+  "translation_key": "item.gtconstruct.mortar"
+}

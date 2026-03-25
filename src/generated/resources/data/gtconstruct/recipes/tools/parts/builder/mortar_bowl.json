@@ -1,0 +1,11 @@
+{
+  "type": "tconstruct:part_builder",
+  "cost": 3,
+  "pattern": "gtconstruct:mortar_bowl",
+  "pattern_item": {
+    "tag": "tconstruct:patterns/default"
+  },
+  "result": {
+    "item": "gtconstruct:mortar_bowl"
+  }
+}

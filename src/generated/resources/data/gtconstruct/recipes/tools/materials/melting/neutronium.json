@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_melting",
+  "input": "gtconstruct:neutronium",
+  "result": {
+    "amount": 90,
+    "fluid": "gtceu:neutronium"
+  },
+  "temperature": 99700
+}

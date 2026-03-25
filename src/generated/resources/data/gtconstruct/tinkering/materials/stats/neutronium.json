@@ -1,0 +1,28 @@
+{
+  "stats": {
+    "tconstruct:binding": {},
+    "tconstruct:grip": {
+      "accuracy": 0.85,
+      "durability": 10.75,
+      "melee_damage": 100.0
+    },
+    "tconstruct:handle": {
+      "durability": 9.75,
+      "melee_damage": 0.0,
+      "melee_speed": 0.0,
+      "mining_speed": 0.0
+    },
+    "tconstruct:head": {
+      "durability": 65535,
+      "melee_attack": 100.0,
+      "mining_speed": 180.0,
+      "mining_tier": "gtceu:neutronium"
+    },
+    "tconstruct:limb": {
+      "accuracy": 100.0,
+      "draw_speed": -0.04,
+      "durability": 65535,
+      "velocity": 4.7
+    }
+  }
+}

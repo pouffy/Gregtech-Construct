@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_melting",
+  "input": "gtconstruct:duranium",
+  "result": {
+    "amount": 90,
+    "fluid": "gtceu:duranium"
+  },
+  "temperature": 7200
+}
