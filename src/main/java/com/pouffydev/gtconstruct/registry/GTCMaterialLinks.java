@@ -27,10 +27,25 @@ public class GTCMaterialLinks {
 
     public static MaterialLink SterlingSilver;
     public static MaterialLink BlackBronze;
+    public static MaterialLink BismuthBronze;
     public static MaterialLink Cupronickel;
     public static MaterialLink BlackSteel;
     public static MaterialLink BlueSteel;
     public static MaterialLink RedSteel;
+
+    public static MaterialLink Duranium;
+    public static MaterialLink Neutronium;
+
+    //tinker stuff
+    public static MaterialLink Steel;
+    public static MaterialLink Bronze;
+    public static MaterialLink Silver;
+    public static MaterialLink Invar;
+    public static MaterialLink Cobalt;
+    public static MaterialLink Osmium;
+    public static MaterialLink Lead;
+    public static MaterialLink RoseGold;
+    public static MaterialLink Electrum;
 
     //vanilla stuff
     public static MaterialLink Iron;
@@ -68,6 +83,9 @@ public class GTCMaterialLinks {
             BlackBronze = link(GTCMaterialIds.blackBronze, GTMaterials.BlackBronze)
                     .withStats(HeadMaterialStats.ID, HandleMaterialStats.ID, StatlessMaterialStats.BINDING.getIdentifier(), LimbMaterialStats.ID, GripMaterialStats.ID)
                     .buildAndRegister();
+            BismuthBronze = link(GTCMaterialIds.bismuthBronze, GTMaterials.BismuthBronze)
+                    .withStats(HeadMaterialStats.ID, HandleMaterialStats.ID, StatlessMaterialStats.BINDING.getIdentifier(), LimbMaterialStats.ID, GripMaterialStats.ID)
+                    .buildAndRegister();
             Cupronickel = link(GTCMaterialIds.cupronickel, GTMaterials.Cupronickel)
                     .withStats(HeadMaterialStats.ID, HandleMaterialStats.ID, StatlessMaterialStats.BINDING.getIdentifier(), LimbMaterialStats.ID, GripMaterialStats.ID)
                     .buildAndRegister();
@@ -84,6 +102,13 @@ public class GTCMaterialLinks {
                             PlatingMaterialStats.BOOTS.getId(), PlatingMaterialStats.LEGGINGS.getId(), PlatingMaterialStats.CHESTPLATE.getId(), PlatingMaterialStats.HELMET.getId(), StatlessMaterialStats.MAILLE.getIdentifier())
                     .buildAndRegister();
 
+            Duranium = link(GTCMaterialIds.duranium, GTMaterials.Duranium)
+                    .withStats(HeadMaterialStats.ID, HandleMaterialStats.ID, StatlessMaterialStats.BINDING.getIdentifier(), LimbMaterialStats.ID, GripMaterialStats.ID)
+                    .buildAndRegister();
+            Neutronium = link(GTCMaterialIds.neutronium, GTMaterials.Neutronium)
+                    .withStats(HeadMaterialStats.ID, HandleMaterialStats.ID, StatlessMaterialStats.BINDING.getIdentifier(), LimbMaterialStats.ID, GripMaterialStats.ID)
+                    .buildAndRegister();
+
             Iron = link(MaterialIds.iron, GTMaterials.Iron)
                     .withStats(HeadMaterialStats.ID, HandleMaterialStats.ID, StatlessMaterialStats.BINDING.getIdentifier(), LimbMaterialStats.ID, GripMaterialStats.ID,
                             PlatingMaterialStats.BOOTS.getId(), PlatingMaterialStats.LEGGINGS.getId(), PlatingMaterialStats.CHESTPLATE.getId(), PlatingMaterialStats.HELMET.getId(), StatlessMaterialStats.MAILLE.getIdentifier())
@@ -92,6 +117,42 @@ public class GTCMaterialLinks {
                     .withStats(PlatingMaterialStats.BOOTS.getId(), PlatingMaterialStats.LEGGINGS.getId(), PlatingMaterialStats.CHESTPLATE.getId(), PlatingMaterialStats.HELMET.getId(), StatlessMaterialStats.MAILLE.getIdentifier())
                     .buildAndRegister();
             Copper = link(MaterialIds.copper, GTMaterials.Copper)
+                    .withStats(HeadMaterialStats.ID, HandleMaterialStats.ID, StatlessMaterialStats.BINDING.getIdentifier(), LimbMaterialStats.ID, GripMaterialStats.ID,
+                            PlatingMaterialStats.BOOTS.getId(), PlatingMaterialStats.LEGGINGS.getId(), PlatingMaterialStats.CHESTPLATE.getId(), PlatingMaterialStats.HELMET.getId(), StatlessMaterialStats.MAILLE.getIdentifier())
+                    .buildAndRegister();
+            Steel = link(MaterialIds.steel, GTMaterials.Steel)
+                    .withStats(HeadMaterialStats.ID, HandleMaterialStats.ID, StatlessMaterialStats.BINDING.getIdentifier(), LimbMaterialStats.ID, GripMaterialStats.ID,
+                            PlatingMaterialStats.BOOTS.getId(), PlatingMaterialStats.LEGGINGS.getId(), PlatingMaterialStats.CHESTPLATE.getId(), PlatingMaterialStats.HELMET.getId(), StatlessMaterialStats.MAILLE.getIdentifier())
+                    .buildAndRegister();
+            Bronze = link(MaterialIds.bronze, GTMaterials.Bronze)
+                    .withStats(HeadMaterialStats.ID, HandleMaterialStats.ID, StatlessMaterialStats.BINDING.getIdentifier(), LimbMaterialStats.ID, GripMaterialStats.ID,
+                            PlatingMaterialStats.BOOTS.getId(), PlatingMaterialStats.LEGGINGS.getId(), PlatingMaterialStats.CHESTPLATE.getId(), PlatingMaterialStats.HELMET.getId(), StatlessMaterialStats.MAILLE.getIdentifier())
+                    .buildAndRegister();
+            Silver = link(MaterialIds.silver, GTMaterials.Silver)
+                    .withStats(HeadMaterialStats.ID, HandleMaterialStats.ID, StatlessMaterialStats.BINDING.getIdentifier(), LimbMaterialStats.ID, GripMaterialStats.ID,
+                            PlatingMaterialStats.BOOTS.getId(), PlatingMaterialStats.LEGGINGS.getId(), PlatingMaterialStats.CHESTPLATE.getId(), PlatingMaterialStats.HELMET.getId(), StatlessMaterialStats.MAILLE.getIdentifier())
+                    .buildAndRegister();
+            Invar = link(MaterialIds.invar, GTMaterials.Invar)
+                    .withStats(HeadMaterialStats.ID, HandleMaterialStats.ID, StatlessMaterialStats.BINDING.getIdentifier(), LimbMaterialStats.ID, GripMaterialStats.ID,
+                            PlatingMaterialStats.BOOTS.getId(), PlatingMaterialStats.LEGGINGS.getId(), PlatingMaterialStats.CHESTPLATE.getId(), PlatingMaterialStats.HELMET.getId(), StatlessMaterialStats.MAILLE.getIdentifier())
+                    .buildAndRegister();
+            Cobalt = link(MaterialIds.cobalt, GTMaterials.Cobalt)
+                    .withStats(HeadMaterialStats.ID, HandleMaterialStats.ID, StatlessMaterialStats.BINDING.getIdentifier(), LimbMaterialStats.ID, GripMaterialStats.ID,
+                            PlatingMaterialStats.BOOTS.getId(), PlatingMaterialStats.LEGGINGS.getId(), PlatingMaterialStats.CHESTPLATE.getId(), PlatingMaterialStats.HELMET.getId(), StatlessMaterialStats.MAILLE.getIdentifier())
+                    .buildAndRegister();
+            Osmium = link(MaterialIds.osmium, GTMaterials.Osmium)
+                    .withStats(HeadMaterialStats.ID, HandleMaterialStats.ID, StatlessMaterialStats.BINDING.getIdentifier(),
+                            PlatingMaterialStats.BOOTS.getId(), PlatingMaterialStats.LEGGINGS.getId(), PlatingMaterialStats.CHESTPLATE.getId(), PlatingMaterialStats.HELMET.getId(), StatlessMaterialStats.MAILLE.getIdentifier())
+                    .buildAndRegister();
+            Lead = link(MaterialIds.lead, GTMaterials.Lead)
+                    .withStats(HeadMaterialStats.ID, HandleMaterialStats.ID, StatlessMaterialStats.BINDING.getIdentifier(), LimbMaterialStats.ID, GripMaterialStats.ID,
+                            PlatingMaterialStats.BOOTS.getId(), PlatingMaterialStats.LEGGINGS.getId(), PlatingMaterialStats.CHESTPLATE.getId(), PlatingMaterialStats.HELMET.getId(), StatlessMaterialStats.MAILLE.getIdentifier())
+                    .buildAndRegister();
+            RoseGold = link(MaterialIds.roseGold, GTMaterials.RoseGold)
+                    .withStats(HeadMaterialStats.ID, HandleMaterialStats.ID, StatlessMaterialStats.BINDING.getIdentifier(), LimbMaterialStats.ID, GripMaterialStats.ID, StatlessMaterialStats.BOWSTRING.getIdentifier(),
+                            PlatingMaterialStats.BOOTS.getId(), PlatingMaterialStats.LEGGINGS.getId(), PlatingMaterialStats.CHESTPLATE.getId(), PlatingMaterialStats.HELMET.getId(), StatlessMaterialStats.MAILLE.getIdentifier())
+                    .buildAndRegister();
+            Electrum = link(MaterialIds.electrum, GTMaterials.Electrum)
                     .withStats(HeadMaterialStats.ID, HandleMaterialStats.ID, StatlessMaterialStats.BINDING.getIdentifier(), LimbMaterialStats.ID, GripMaterialStats.ID,
                             PlatingMaterialStats.BOOTS.getId(), PlatingMaterialStats.LEGGINGS.getId(), PlatingMaterialStats.CHESTPLATE.getId(), PlatingMaterialStats.HELMET.getId(), StatlessMaterialStats.MAILLE.getIdentifier())
                     .buildAndRegister();

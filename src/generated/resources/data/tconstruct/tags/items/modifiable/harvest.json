@@ -1,10 +1,8 @@
 {
   "values": [
     "gtconstruct:saw",
-    "gtconstruct:screwdriver",
     "gtconstruct:file",
     "gtconstruct:wire_cutters",
-    "gtconstruct:plunger",
     "gtconstruct:soft_mallet"
   ]
 }

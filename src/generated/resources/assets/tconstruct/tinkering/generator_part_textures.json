@@ -1,0 +1,149 @@
+{
+  "parts": [
+    {
+      "path": "gtconstruct:item/tool/parts/screwdriver_tip",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "gtconstruct:item/tool/parts/wirecutter_claws",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "gtconstruct:item/tool/parts/saw_blade",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "gtconstruct:item/tool/parts/wrench_handle",
+      "stat_type": "tconstruct:handle"
+    },
+    {
+      "path": "gtconstruct:item/tool/parts/file_head",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "gtconstruct:item/tool/parts/plunger_head",
+      "stat_type": "tconstruct:repair_kit"
+    },
+    {
+      "path": "gtconstruct:item/tool/parts/soft_mallet_head",
+      "stat_type": "tconstruct:repair_kit"
+    },
+    {
+      "path": "gtconstruct:item/tool/parts/mortar_bowl",
+      "stat_type": "tconstruct:repair_kit"
+    },
+    {
+      "path": "gtconstruct:item/tool/saw/head",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "gtconstruct:item/tool/saw/head_broken",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "gtconstruct:item/tool/saw/handle",
+      "stat_type": "tconstruct:handle"
+    },
+    {
+      "path": "gtconstruct:item/tool/saw/binding",
+      "stat_type": "tconstruct:binding"
+    },
+    {
+      "path": "gtconstruct:item/tool/screwdriver/head",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "gtconstruct:item/tool/screwdriver/head_broken",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "gtconstruct:item/tool/screwdriver/handle",
+      "stat_type": "tconstruct:handle"
+    },
+    {
+      "path": "gtconstruct:item/tool/screwdriver/binding",
+      "stat_type": "tconstruct:binding"
+    },
+    {
+      "path": "gtconstruct:item/tool/file/head",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "gtconstruct:item/tool/file/head_broken",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "gtconstruct:item/tool/file/handle",
+      "stat_type": "tconstruct:handle"
+    },
+    {
+      "path": "gtconstruct:item/tool/file/binding",
+      "stat_type": "tconstruct:binding"
+    },
+    {
+      "path": "gtconstruct:item/tool/wire_cutters/head",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "gtconstruct:item/tool/wire_cutters/head_broken",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "gtconstruct:item/tool/wire_cutters/right_handle",
+      "stat_type": "tconstruct:handle"
+    },
+    {
+      "path": "gtconstruct:item/tool/wire_cutters/left_handle",
+      "stat_type": "tconstruct:handle"
+    },
+    {
+      "path": "gtconstruct:item/tool/wire_cutters/binding",
+      "stat_type": "tconstruct:binding"
+    },
+    {
+      "path": "gtconstruct:item/tool/plunger/head",
+      "stat_type": "tconstruct:repair_kit"
+    },
+    {
+      "path": "gtconstruct:item/tool/plunger/head_broken",
+      "stat_type": "tconstruct:repair_kit"
+    },
+    {
+      "path": "gtconstruct:item/tool/plunger/handle",
+      "stat_type": "tconstruct:handle"
+    },
+    {
+      "path": "gtconstruct:item/tool/plunger/binding",
+      "stat_type": "tconstruct:binding"
+    },
+    {
+      "path": "gtconstruct:item/tool/soft_mallet/head",
+      "stat_type": "tconstruct:repair_kit"
+    },
+    {
+      "path": "gtconstruct:item/tool/soft_mallet/head_broken",
+      "stat_type": "tconstruct:repair_kit"
+    },
+    {
+      "path": "gtconstruct:item/tool/soft_mallet/handle",
+      "stat_type": "tconstruct:handle"
+    },
+    {
+      "path": "gtconstruct:item/tool/soft_mallet/binding",
+      "stat_type": "tconstruct:binding"
+    },
+    {
+      "path": "gtconstruct:item/tool/mortar/head",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "gtconstruct:item/tool/mortar/head_broken",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "gtconstruct:item/tool/mortar/mortar_bowl",
+      "stat_type": "tconstruct:repair_kit"
+    }
+  ],
+  "replace": false
+}

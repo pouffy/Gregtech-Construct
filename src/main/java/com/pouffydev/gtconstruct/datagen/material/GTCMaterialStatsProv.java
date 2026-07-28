@@ -109,6 +109,9 @@ public class GTCMaterialStatsProv extends AbstractMaterialStatsDataProvider {
                 new GripMaterialStats(1.4f, 0.25f, 2.2f));
 
         addMaterialStats(MaterialIds.rock, GTStatlessMaterialStats.MORTAR_BOWL);
+        addMaterialStats(MaterialIds.flint, GTStatlessMaterialStats.MORTAR_BOWL);
+        addMaterialStats(MaterialIds.scorchedStone, GTStatlessMaterialStats.MORTAR_BOWL);
+        addMaterialStats(MaterialIds.searedStone, GTStatlessMaterialStats.MORTAR_BOWL);
         addMaterialStats(MaterialIds.whitestone, GTStatlessMaterialStats.MORTAR_BOWL);
 
         addMaterialStats(MaterialIds.wood, new SoftMalletHeadMaterialStats(60, 2f, WOOD, 0f));

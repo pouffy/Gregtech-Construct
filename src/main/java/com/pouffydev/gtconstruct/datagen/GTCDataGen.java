@@ -3,6 +3,7 @@ package com.pouffydev.gtconstruct.datagen;
 import com.pouffydev.gtconstruct.GTConstruct;
 import com.pouffydev.gtconstruct.datagen.lang.LangHandler;
 import com.pouffydev.gtconstruct.datagen.material.*;
+import com.pouffydev.gtconstruct.registry.GTCMaterialRegistry;
 import com.pouffydev.gtconstruct.registry.GTCRegistration;
 import com.tterrag.registrate.providers.ProviderType;
 import net.minecraft.core.HolderLookup;
@@ -39,6 +40,7 @@ public class GTCDataGen {
         generator.addProvider(client, new GTCToolItemModelProv(packOutput, existingFileHelper));
         GTCPartSpriteProv partSprites = new GTCPartSpriteProv();
         generator.addProvider(client, new GeneratorPartTextureJsonGenerator(packOutput, GTConstruct.MOD_ID, partSprites));
+        generator.addProvider(client, new GeneratorPartTextureJsonGenerator(packOutput, TConstruct.MOD_ID, partSprites));
         generator.addProvider(server, new GTCModifierProv(packOutput));
         generator.addProvider(client, new GTCItemModelProv(packOutput, existingFileHelper));
 
@@ -55,9 +57,10 @@ public class GTCDataGen {
 
         generator.addProvider(client, new GTCMaterialRenderInfoProv(packOutput, materialSprites, existingFileHelper));
         generator.addProvider(client, new MaterialPaletteDebugGenerator(packOutput, GTConstruct.MOD_ID, materialSprites));
-        generator.addProvider(client, new MaterialPartTextureGenerator(packOutput, existingFileHelper, partSprites, tinkerMaterials, materialSprites));
+        generator.addProvider(client, new MaterialPartTextureGenerator(packOutput, existingFileHelper, partSprites, GTCMaterialRegistry.getStatOverrides(), materialSprites, tinkerMaterials));
         generator.addProvider(client, new MaterialPartTextureGenerator(packOutput, existingFileHelper, tinkerParts, materialSprites));
     }
+
     private static void addExtraRegistrateData() {
         GTCRegistrateTags.addGenerators();
 
