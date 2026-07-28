@@ -101,7 +101,8 @@ public class GTCRegistrateTags {
                 GTCTools.file.asItem(),
                 GTCTools.wirecutter.asItem(),
                 GTCTools.plunger.asItem(),
-                GTCTools.softMallet.asItem()
+                GTCTools.softMallet.asItem(),
+                GTCTools.mortar.asItem()
         );
         prov.tag(TinkerTags.Items.BROAD_TOOLS).add(
                 GTCTools.wirecutter.asItem()
@@ -119,7 +120,8 @@ public class GTCRegistrateTags {
                 GTCTools.file.asItem(),
                 GTCTools.wirecutter.asItem(),
                 GTCTools.plunger.asItem(),
-                GTCTools.softMallet.asItem()
+                GTCTools.softMallet.asItem(),
+                GTCTools.mortar.asItem()
         );
         prov.tag(TinkerTags.Items.MELEE).add(
                 GTCTools.saw.asItem(),
@@ -141,7 +143,8 @@ public class GTCRegistrateTags {
                 GTCTools.file.asItem(),
                 GTCTools.wirecutter.asItem(),
                 GTCTools.plunger.asItem(),
-                GTCTools.softMallet.asItem()
+                GTCTools.softMallet.asItem(),
+                GTCTools.mortar.asItem()
         );
         prov.tag(TinkerTags.Items.BALLISTA_AMMO).add(
                 GTCTools.screwdriver.asItem(),
@@ -155,7 +158,8 @@ public class GTCRegistrateTags {
                 GTCTools.file.asItem(),
                 GTCTools.wirecutter.asItem(),
                 GTCTools.plunger.asItem(),
-                GTCTools.softMallet.asItem()
+                GTCTools.softMallet.asItem(),
+                GTCTools.mortar.asItem()
         );
 
         prov.tag(GTCSmeltery.sawBladeCast.getMultiUseTag()).add(GTCSmeltery.sawBladeCast.get());
