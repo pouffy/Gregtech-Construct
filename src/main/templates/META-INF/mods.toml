@@ -28,12 +28,20 @@ ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.${mod_id}]]
-modId = "ldlib"
+modId = "gtceu"
+mandatory = true
+versionRange = "${minecraft_version}"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "gtceu"
 mandatory = true
 embedded = true
-versionRange = "[${ldlib_version},)"
-ordering = "AFTER"
+versionRange = "[${gtceu_version},)"
+ordering = "BEFORE"
 side = "BOTH"
+
 [dependencies.${mod_id}.mc-publish]
 ignore = false
 modrinth = "ldlib"

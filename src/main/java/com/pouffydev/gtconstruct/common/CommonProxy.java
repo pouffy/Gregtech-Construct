@@ -44,7 +44,7 @@ public class CommonProxy {
         GTConstruct.LOGGER.info("Registering GTConstruct Material Links");
         GTCMaterialLinks.init();
 
-        GTCEu.LOGGER.info("Registering addon Material Links");
+        GTConstruct.LOGGER.info("Registering addon Material Links");
         MaterialLinkEvent materialLinkEvent = new MaterialLinkEvent();
         ModLoader.get().postEvent(materialLinkEvent);
         if (GTCEu.Mods.isKubeJSLoaded()) {

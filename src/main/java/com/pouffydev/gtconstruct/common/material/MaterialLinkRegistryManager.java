@@ -109,8 +109,8 @@ public final class MaterialLinkRegistryManager implements IMaterialLinkRegistryM
         Collection<MaterialLink> links = GTConstructAPI.materialLinkManager.getRegisteredMaterialLinks();
         MaterialLink toReturn = null;
         for (MaterialLink link : links) {
-            ResourceLocation linkedGreg = link.getMaterialLinkInfo().getGregTechMaterial();
-            if (material.getResourceLocation() == linkedGreg) {
+            Material linkedGreg = link.getMaterialLinkInfo().getGregTechMaterial();
+            if (material == linkedGreg) {
                 toReturn = link;
             }
             if (toReturn != null) break;
@@ -142,8 +142,8 @@ public final class MaterialLinkRegistryManager implements IMaterialLinkRegistryM
         boolean toReturn = false;
         Collection<MaterialLink> links = GTConstructAPI.materialLinkManager.getRegisteredMaterialLinks();
         for (MaterialLink link : links) {
-            ResourceLocation linkedGreg = link.getMaterialLinkInfo().getGregTechMaterial();
-            toReturn = material.getResourceLocation() == linkedGreg;
+            Material linkedGreg = link.getMaterialLinkInfo().getGregTechMaterial();
+            toReturn = material == linkedGreg;
             if (toReturn) break;
         }
         return toReturn;
@@ -166,8 +166,8 @@ public final class MaterialLinkRegistryManager implements IMaterialLinkRegistryM
         MaterialId toReturn = IMaterial.UNKNOWN_ID;
         Collection<MaterialLink> links = GTConstructAPI.materialLinkManager.getRegisteredMaterialLinks();
         for (MaterialLink link : links) {
-            ResourceLocation linkedGreg = link.getMaterialLinkInfo().getGregTechMaterial();
-            if (material.getResourceLocation() == linkedGreg) {
+            Material linkedGreg = link.getMaterialLinkInfo().getGregTechMaterial();
+            if (material == linkedGreg) {
                 toReturn = link.getMaterialLinkInfo().getTinkerMaterialId();
             }
             if (toReturn != IMaterial.UNKNOWN_ID) break;
@@ -177,16 +177,16 @@ public final class MaterialLinkRegistryManager implements IMaterialLinkRegistryM
 
     @Override
     public Material getGregMaterial(MaterialId materialId) {
-        ResourceLocation toReturn = GTMaterials.NULL.getResourceLocation();
+        Material toReturn = GTMaterials.NULL;
         Collection<MaterialLink> links = GTConstructAPI.materialLinkManager.getRegisteredMaterialLinks();
         for (MaterialLink link : links) {
             MaterialId linkedTinker = link.getMaterialLinkInfo().getTinkerMaterialId();
             if (materialId == linkedTinker) {
                 toReturn = link.getMaterialLinkInfo().getGregTechMaterial();
             }
-            if (toReturn != GTMaterials.NULL.getResourceLocation()) break;
+            if (toReturn != GTMaterials.NULL) break;
         }
-        return GTCEuAPI.materialManager.getMaterial(toReturn.toString());
+        return toReturn;
     }
 
     @Override
