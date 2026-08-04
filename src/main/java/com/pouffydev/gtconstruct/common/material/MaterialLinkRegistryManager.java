@@ -1,11 +1,9 @@
 package com.pouffydev.gtconstruct.common.material;
 
 import com.google.common.base.Preconditions;
-import com.gregtechceu.gtceu.api.data.chemical.material.IMaterialRegistryManager;
+import com.gregtechceu.gtceu.api.GTCEuAPI;
 import com.gregtechceu.gtceu.api.data.chemical.material.Material;
-import com.gregtechceu.gtceu.api.data.chemical.material.registry.MaterialRegistry;
 import com.gregtechceu.gtceu.common.data.GTMaterials;
-import com.gregtechceu.gtceu.common.unification.material.MaterialRegistryImpl;
 import com.pouffydev.gtconstruct.GTConstruct;
 import com.pouffydev.gtconstruct.api.GTConstructAPI;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
@@ -17,7 +15,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import slimeknights.tconstruct.library.materials.definition.IMaterial;
 import slimeknights.tconstruct.library.materials.definition.MaterialId;
-import slimeknights.tconstruct.library.materials.definition.MaterialManager;
 import slimeknights.tconstruct.library.materials.stats.MaterialStatsId;
 
 import java.util.ArrayList;
@@ -112,8 +109,8 @@ public final class MaterialLinkRegistryManager implements IMaterialLinkRegistryM
         Collection<MaterialLink> links = GTConstructAPI.materialLinkManager.getRegisteredMaterialLinks();
         MaterialLink toReturn = null;
         for (MaterialLink link : links) {
-            Material linkedGreg = link.getMaterialLinkInfo().getGregTechMaterial();
-            if (material == linkedGreg) {
+            ResourceLocation linkedGreg = link.getMaterialLinkInfo().getGregTechMaterial();
+            if (material.getResourceLocation() == linkedGreg) {
                 toReturn = link;
             }
             if (toReturn != null) break;
@@ -145,8 +142,20 @@ public final class MaterialLinkRegistryManager implements IMaterialLinkRegistryM
         boolean toReturn = false;
         Collection<MaterialLink> links = GTConstructAPI.materialLinkManager.getRegisteredMaterialLinks();
         for (MaterialLink link : links) {
-            Material linkedGreg = link.getMaterialLinkInfo().getGregTechMaterial();
-            toReturn = material == linkedGreg;
+            ResourceLocation linkedGreg = link.getMaterialLinkInfo().getGregTechMaterial();
+            toReturn = material.getResourceLocation() == linkedGreg;
+            if (toReturn) break;
+        }
+        return toReturn;
+    }
+
+    @Override
+    public boolean isLinked(MaterialId materialId) {
+        boolean toReturn = false;
+        Collection<MaterialLink> links = GTConstructAPI.materialLinkManager.getRegisteredMaterialLinks();
+        for (MaterialLink link : links) {
+            MaterialId linkedTinker = link.getMaterialLinkInfo().getTinkerMaterialId();
+            toReturn = materialId == linkedTinker;
             if (toReturn) break;
         }
         return toReturn;
@@ -157,8 +166,8 @@ public final class MaterialLinkRegistryManager implements IMaterialLinkRegistryM
         MaterialId toReturn = IMaterial.UNKNOWN_ID;
         Collection<MaterialLink> links = GTConstructAPI.materialLinkManager.getRegisteredMaterialLinks();
         for (MaterialLink link : links) {
-            Material linkedGreg = link.getMaterialLinkInfo().getGregTechMaterial();
-            if (material == linkedGreg) {
+            ResourceLocation linkedGreg = link.getMaterialLinkInfo().getGregTechMaterial();
+            if (material.getResourceLocation() == linkedGreg) {
                 toReturn = link.getMaterialLinkInfo().getTinkerMaterialId();
             }
             if (toReturn != IMaterial.UNKNOWN_ID) break;
@@ -168,16 +177,16 @@ public final class MaterialLinkRegistryManager implements IMaterialLinkRegistryM
 
     @Override
     public Material getGregMaterial(MaterialId materialId) {
-        Material toReturn = GTMaterials.NULL;
+        ResourceLocation toReturn = GTMaterials.NULL.getResourceLocation();
         Collection<MaterialLink> links = GTConstructAPI.materialLinkManager.getRegisteredMaterialLinks();
         for (MaterialLink link : links) {
             MaterialId linkedTinker = link.getMaterialLinkInfo().getTinkerMaterialId();
             if (materialId == linkedTinker) {
                 toReturn = link.getMaterialLinkInfo().getGregTechMaterial();
             }
-            if (toReturn != GTMaterials.NULL) break;
+            if (toReturn != GTMaterials.NULL.getResourceLocation()) break;
         }
-        return toReturn;
+        return GTCEuAPI.materialManager.getMaterial(toReturn.toString());
     }
 
     @Override

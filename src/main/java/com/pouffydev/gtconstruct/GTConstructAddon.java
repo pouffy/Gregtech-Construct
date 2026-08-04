@@ -33,7 +33,7 @@ public class GTConstructAddon implements IGTAddon {
 
     @Override
     public void initializeAddon() {
-        initMaterialLinks();
+        //initMaterialLinks();
         GTCItems.init();
     }
 

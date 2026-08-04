@@ -78,7 +78,7 @@ public class MaterialLink implements Comparable<MaterialLink> {
     public static class MaterialLinkInfo {
         private final ResourceLocation resourceLocation;
         public MaterialId tinkerMaterialId = IMaterial.UNKNOWN_ID;
-        public Material gregTechMaterial = GTMaterials.NULL;
+        public ResourceLocation gregTechMaterial = GTMaterials.NULL.getResourceLocation();
 
         private MaterialLinkInfo(ResourceLocation resourceLocation) {
             this.resourceLocation = resourceLocation;
@@ -90,7 +90,7 @@ public class MaterialLink implements Comparable<MaterialLink> {
         }
 
         public MaterialLink.MaterialLinkInfo setGregTechMaterial(final Material gregTechMaterial) {
-            this.gregTechMaterial = gregTechMaterial;
+            this.gregTechMaterial = gregTechMaterial.getResourceLocation();
             return this;
         }
     }
@@ -147,7 +147,7 @@ public class MaterialLink implements Comparable<MaterialLink> {
         }
 
         private boolean validateLink() {
-            return materialLinkInfo.tinkerMaterialId != IMaterial.UNKNOWN_ID && materialLinkInfo.gregTechMaterial != GTMaterials.NULL;
+            return materialLinkInfo.tinkerMaterialId != IMaterial.UNKNOWN_ID && materialLinkInfo.gregTechMaterial != GTMaterials.NULL.getResourceLocation();
         }
 
         @HideFromJS

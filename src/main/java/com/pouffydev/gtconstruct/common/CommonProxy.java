@@ -29,7 +29,7 @@ public class CommonProxy {
 
     public static void init() {
         GTConstruct.LOGGER.info("GTConstruct common proxy init!");
-        //initMaterialLinks();
+        initMaterialLinks();
 
         GTCRegistration.REGISTRATE.registerRegistrate();
     }

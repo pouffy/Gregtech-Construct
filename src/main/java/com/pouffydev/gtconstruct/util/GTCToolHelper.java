@@ -8,9 +8,9 @@ import com.gregtechceu.gtceu.api.data.tag.TagPrefix;
 import com.gregtechceu.gtceu.api.item.IGTTool;
 import com.gregtechceu.gtceu.api.item.tool.ToolHelper;
 import com.gregtechceu.gtceu.common.data.GTMaterials;
+import com.pouffydev.gtconstruct.api.GTConstructAPI;
 import com.pouffydev.gtconstruct.common.item.ModifiableGTToolItem;
-import com.pouffydev.gtconstruct.common.material.MaterialLink;
-import com.pouffydev.gtconstruct.common.material.MaterialLinkRegistryManager;
+import com.pouffydev.gtconstruct.common.material.IMaterialLinkRegistryManager;
 import net.minecraft.ChatFormatting;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.nbt.CompoundTag;
@@ -22,7 +22,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -33,7 +32,6 @@ import slimeknights.tconstruct.common.TinkerTags;
 import slimeknights.tconstruct.library.materials.definition.MaterialId;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.modifiers.ModifierHooks;
-import slimeknights.tconstruct.library.modifiers.hook.display.TooltipModifierHook;
 import slimeknights.tconstruct.library.modifiers.hook.interaction.EntityInteractionModifierHook;
 import slimeknights.tconstruct.library.tools.definition.ToolDefinition;
 import slimeknights.tconstruct.library.tools.helper.ToolDamageUtil;
@@ -187,9 +185,10 @@ public class GTCToolHelper {
     public static Material getValidHazardMaterial(ItemStack part) {
         Material material = GTMaterials.NULL;
         Item var6 = part.getItem();
+        IMaterialLinkRegistryManager registryManager = GTConstructAPI.materialLinkManager;
         if (var6 instanceof ToolPartItem partItem) {
             MaterialId materialId = partItem.getMaterial(part).getId();
-            material = MaterialLinkRegistryManager.getInstance().getGregMaterial(materialId);
+            material = registryManager.getGregMaterial(materialId);
         }
         HazardProperty property = material.getProperty(PropertyKey.HAZARD);
         if (property == null) {
@@ -201,9 +200,10 @@ public class GTCToolHelper {
 
     public static MaterialEntry getMaterialEntry(ItemStack part) {
         Material material = GTMaterials.NULL;
+        IMaterialLinkRegistryManager registryManager = GTConstructAPI.materialLinkManager;
         if (part.getItem() instanceof ToolPartItem partItem) {
             MaterialId materialId = partItem.getMaterial(part).getId();
-            material = MaterialLinkRegistryManager.getInstance().getGregMaterial(materialId);
+            material = registryManager.getGregMaterial(materialId);
         }
         return new MaterialEntry(TagPrefix.toolHeadScrewdriver, material);
     }

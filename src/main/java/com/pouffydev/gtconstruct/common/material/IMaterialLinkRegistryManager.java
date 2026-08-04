@@ -39,6 +39,8 @@ public interface IMaterialLinkRegistryManager {
 
     boolean isLinked(Material material);
 
+    boolean isLinked(MaterialId materialId);
+
     MaterialId getTinkerMaterial(Material material);
 
     Material getGregMaterial(MaterialId materialId);
