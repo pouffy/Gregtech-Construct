@@ -32,6 +32,8 @@ public class GTCPartSpriteProv extends AbstractPartSpriteProvider {
         buildTool("screwdriver").addBreakableHead("head").addHandle("handle").addBinding("binding");
         buildTool("file").addBreakableHead("head").addHandle("handle").addBinding("binding");
         buildTool("wire_cutters").addBreakableHead("head").addHandle("right_handle").addHandle("left_handle").addBinding("binding");
+        buildTool("wrench").addBreakableHead("head").addHandle("handle").addHead("claw");
+
         buildTool("plunger").addBreakablePart("head", StatlessMaterialStats.REPAIR_KIT.getIdentifier()).addHandle("handle").addBinding("binding");
         buildTool("soft_mallet").addBreakablePart("head", StatlessMaterialStats.REPAIR_KIT.getIdentifier()).addHandle("handle").addBinding("binding");
         buildTool("mortar").addBreakableHead("head").addPart("mortar_bowl", StatlessMaterialStats.REPAIR_KIT.getIdentifier());

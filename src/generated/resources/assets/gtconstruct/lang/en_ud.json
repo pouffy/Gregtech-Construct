@@ -29,6 +29,7 @@
   "item.gtconstruct.wirecutter_claws_cast": "ʇsɐƆ pןo⅁ sʍɐןƆ ɹǝʇʇnɔǝɹıM",
   "item.gtconstruct.wirecutter_claws_red_sand_cast": "ʇsɐƆ puɐS pǝᴚ sʍɐןƆ ɹǝʇʇnɔǝɹıM",
   "item.gtconstruct.wirecutter_claws_sand_cast": "ʇsɐƆ puɐS sʍɐןƆ ɹǝʇʇnɔǝɹıM",
+  "item.gtconstruct.wrench": "ɥɔuǝɹM",
   "item.gtconstruct.wrench_handle": "ǝןpuɐH ɥɔuǝɹM",
   "item.gtconstruct.wrench_handle_cast": "ʇsɐƆ pןo⅁ ǝןpuɐH ɥɔuǝɹM",
   "item.gtconstruct.wrench_handle_red_sand_cast": "ʇsɐƆ puɐS pǝᴚ ǝןpuɐH ɥɔuǝɹM",
@@ -61,5 +62,7 @@
   "pattern.gtconstruct.wrench_handle": "ǝןpuɐH ɥɔuǝɹM",
   "stat.gtconstruct.mortar_bowl": "ןʍoᗺ ɹɐʇɹoW",
   "stat.gtconstruct.plunger_head": "pɐǝH ɹǝbunןԀ",
-  "stat.gtconstruct.soft_mallet_head": "pɐǝH ʇǝןןɐW ʇɟoS"
+  "stat.gtconstruct.soft_mallet_head": "pɐǝH ʇǝןןɐW ʇɟoS",
+  "stat.tconstruct.harvest_tier.gtceu.duranium": "ɯnıuɐɹnᗡ",
+  "stat.tconstruct.harvest_tier.gtceu.neutronium": "ɯnıuoɹʇnǝN"
 }

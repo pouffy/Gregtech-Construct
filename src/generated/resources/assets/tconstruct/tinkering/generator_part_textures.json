@@ -101,6 +101,22 @@
       "stat_type": "tconstruct:binding"
     },
     {
+      "path": "gtconstruct:item/tool/wrench/head",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "gtconstruct:item/tool/wrench/head_broken",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "gtconstruct:item/tool/wrench/handle",
+      "stat_type": "tconstruct:handle"
+    },
+    {
+      "path": "gtconstruct:item/tool/wrench/claw",
+      "stat_type": "tconstruct:head"
+    },
+    {
       "path": "gtconstruct:item/tool/plunger/head",
       "stat_type": "tconstruct:repair_kit"
     },

@@ -1,6 +1,7 @@
 package com.pouffydev.gtconstruct.datagen.material;
 
 import com.gregtechceu.gtceu.GTCEu;
+import com.gregtechceu.gtceu.common.data.GTToolTiers;
 import com.pouffydev.gtconstruct.common.stats.GTStatlessMaterialStats;
 import com.pouffydev.gtconstruct.common.stats.PlungerHeadMaterialStats;
 import com.pouffydev.gtconstruct.common.stats.SoftMalletHeadMaterialStats;

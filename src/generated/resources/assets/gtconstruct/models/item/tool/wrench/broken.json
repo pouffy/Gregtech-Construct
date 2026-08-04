@@ -1,0 +1,27 @@
+{
+  "loader": "tconstruct:tool",
+  "parent": "forge:item/default-tool",
+  "textures": {
+    "head": "gtconstruct:item/tool/wrench/head_broken",
+    "claw": "gtconstruct:item/tool/wrench/claw",
+    "handle": "gtconstruct:item/tool/wrench/handle"
+  },
+  "modifier_roots": [
+    "gtconstruct:item/tool/wrench/modifiers/broken/",
+    "gtconstruct:item/tool/wrench/modifiers/"
+  ],
+  "parts": [
+    {
+      "name": "head",
+      "index": 0
+    },
+    {
+      "name": "claw",
+      "index": 1
+    },
+    {
+      "name": "handle",
+      "index": 2
+    }
+  ]
+}

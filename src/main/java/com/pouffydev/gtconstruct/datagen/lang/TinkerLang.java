@@ -6,6 +6,7 @@ import com.tterrag.registrate.providers.RegistrateLangProvider;
 public class TinkerLang {
 
     public static void init(RegistrateLangProvider provider) {
+        initStats(provider);
         initToolNames(provider);
         initCastsAndPatterns(provider);
         initModifiers(provider);
@@ -13,11 +14,17 @@ public class TinkerLang {
         initMaterials(provider);
     }
 
+    private static void initStats(RegistrateLangProvider provider) {
+        toEng(provider, "stat.tconstruct.harvest_tier.gtceu.duranium");
+        toEng(provider, "stat.tconstruct.harvest_tier.gtceu.neutronium");
+    }
+
     private static void initToolNames(RegistrateLangProvider provider) {
         toEng(provider, "item.gtconstruct.saw");
         toEng(provider, "item.gtconstruct.screwdriver");
         toEng(provider, "item.gtconstruct.file");
         toEng(provider, "item.gtconstruct.wire_cutters");
+        toEng(provider, "item.gtconstruct.wrench");
         toEng(provider, "item.gtconstruct.plunger");
         toEng(provider, "item.gtconstruct.soft_mallet");
         toEng(provider, "item.gtconstruct.mortar");

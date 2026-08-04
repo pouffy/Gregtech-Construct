@@ -40,17 +40,22 @@ public class GTCTools extends GTCModule {
 
     public static final ItemObject<ModifiableGTToolItem> mortar = ITEMS.register("mortar", () -> new ModifiableGTToolItem(UNSTACKABLE_PROPS, GTCToolDefinitions.MORTAR, GTToolType.MORTAR));
 
+    public static final ItemObject<ModifiableGTToolItem> wrench = ITEMS.register("wrench", () -> new ModifiableGTToolItem(UNSTACKABLE_PROPS, GTCToolDefinitions.WRENCH, GTToolType.WRENCH));
+
     //TODO: Wrench, Crafting Hammer, Soft Mallet
 
     private static void addTabItems(CreativeModeTab.ItemDisplayParameters itemDisplayParameters, CreativeModeTab.Output tab) {
         Consumer<ItemStack> output = tab::accept;
-        acceptTool(output, saw);
-        acceptTool(output, screwdriver);
+
+        acceptTool(output, mortar);
+        acceptTool(output, softMallet);
         acceptTool(output, file);
         acceptTool(output, wirecutter);
+        acceptTool(output, saw);
+        acceptTool(output, screwdriver);
+        acceptTool(output, wrench);
         acceptTool(output, plunger);
-        acceptTool(output, softMallet);
-        acceptTool(output, mortar);
+
     }
 
 

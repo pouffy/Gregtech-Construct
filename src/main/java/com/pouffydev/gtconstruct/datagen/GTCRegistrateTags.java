@@ -41,14 +41,18 @@ public class GTCRegistrateTags {
         prov.tag(TagUtil.createItemTag("tools/screwdrivers", false)).add(GTCTools.screwdriver.asItem());
         prov.tag(TagUtil.createItemTag("tools/files", false)).add(GTCTools.file.asItem());
         prov.tag(TagUtil.createItemTag("tools/wire_cutters", false)).add(GTCTools.wirecutter.asItem());
+        prov.tag(TagUtil.createItemTag("tools/wrenches", false)).add(GTCTools.wrench.asItem());
         prov.tag(TagUtil.createItemTag("tools/plungers", false)).add(GTCTools.plunger.asItem());
         prov.tag(TagUtil.createItemTag("tools/mallets", false)).add(GTCTools.softMallet.asItem());
         prov.tag(TagUtil.createItemTag("tools/mortars", false)).add(GTCTools.mortar.asItem());
+
 
         prov.tag(ItemTags.create(GTConstruct.appendId("gtceu:tools/crafting_saws"))).add(GTCTools.saw.asItem());
         prov.tag(ItemTags.create(GTConstruct.appendId("gtceu:tools/crafting_screwdrivers"))).add(GTCTools.screwdriver.asItem());
         prov.tag(ItemTags.create(GTConstruct.appendId("gtceu:tools/crafting_files"))).add(GTCTools.file.asItem());
         prov.tag(ItemTags.create(GTConstruct.appendId("gtceu:tools/crafting_wire_cutters"))).add(GTCTools.wirecutter.asItem());
+        prov.tag(ItemTags.create(GTConstruct.appendId("gtceu:tools/crafting_wrenches"))).add(GTCTools.wrench.asItem());
+        prov.tag(ItemTags.create(GTConstruct.appendId("gtceu:tools/crafting_mallets"))).add(GTCTools.softMallet.asItem());
         prov.tag(ItemTags.create(GTConstruct.appendId("gtceu:tools/crafting_mortars"))).add(GTCTools.mortar.asItem());
 
         prov.tag(TinkerTags.Items.TOOL_PARTS)
@@ -69,6 +73,7 @@ public class GTCRegistrateTags {
                         GTCTools.screwdriver.asItem(),
                         GTCTools.file.asItem(),
                         GTCTools.wirecutter.asItem(),
+                        GTCTools.wrench.asItem(),
                         GTCTools.plunger.asItem(),
                         GTCTools.softMallet.asItem(),
                         GTCTools.mortar.asItem()
@@ -80,6 +85,7 @@ public class GTCRegistrateTags {
                         GTCTools.screwdriver.asItem(),
                         GTCTools.file.asItem(),
                         GTCTools.wirecutter.asItem(),
+                        GTCTools.wrench.asItem(),
                         GTCTools.plunger.asItem(),
                         GTCTools.softMallet.asItem(),
                         GTCTools.mortar.asItem()
@@ -91,6 +97,7 @@ public class GTCRegistrateTags {
                         GTCTools.screwdriver.asItem(),
                         GTCTools.file.asItem(),
                         GTCTools.wirecutter.asItem(),
+                        GTCTools.wrench.asItem(),
                         GTCTools.plunger.asItem(),
                         GTCTools.softMallet.asItem()
                 );
@@ -100,6 +107,7 @@ public class GTCRegistrateTags {
                 GTCTools.screwdriver.asItem(),
                 GTCTools.file.asItem(),
                 GTCTools.wirecutter.asItem(),
+                GTCTools.wrench.asItem(),
                 GTCTools.plunger.asItem(),
                 GTCTools.softMallet.asItem(),
                 GTCTools.mortar.asItem()
@@ -111,6 +119,7 @@ public class GTCRegistrateTags {
                 GTCTools.saw.asItem(),
                 GTCTools.screwdriver.asItem(),
                 GTCTools.file.asItem(),
+                GTCTools.wrench.asItem(),
                 GTCTools.plunger.asItem(),
                 GTCTools.softMallet.asItem()
         );
@@ -119,6 +128,7 @@ public class GTCRegistrateTags {
                 GTCTools.screwdriver.asItem(),
                 GTCTools.file.asItem(),
                 GTCTools.wirecutter.asItem(),
+                GTCTools.wrench.asItem(),
                 GTCTools.plunger.asItem(),
                 GTCTools.softMallet.asItem(),
                 GTCTools.mortar.asItem()
@@ -128,6 +138,7 @@ public class GTCRegistrateTags {
                 GTCTools.screwdriver.asItem(),
                 GTCTools.file.asItem(),
                 GTCTools.wirecutter.asItem(),
+                GTCTools.wrench.asItem(),
                 GTCTools.plunger.asItem(),
                 GTCTools.softMallet.asItem()
         );
@@ -135,6 +146,7 @@ public class GTCRegistrateTags {
                 GTCTools.saw.asItem(),
                 GTCTools.file.asItem(),
                 GTCTools.wirecutter.asItem(),
+                GTCTools.wrench.asItem(),
                 GTCTools.softMallet.asItem()
         );
         prov.tag(TinkerTags.Items.DURABILITY).add(
@@ -142,6 +154,7 @@ public class GTCRegistrateTags {
                 GTCTools.screwdriver.asItem(),
                 GTCTools.file.asItem(),
                 GTCTools.wirecutter.asItem(),
+                GTCTools.wrench.asItem(),
                 GTCTools.plunger.asItem(),
                 GTCTools.softMallet.asItem(),
                 GTCTools.mortar.asItem()
@@ -149,6 +162,7 @@ public class GTCRegistrateTags {
         prov.tag(TinkerTags.Items.BALLISTA_AMMO).add(
                 GTCTools.screwdriver.asItem(),
                 GTCTools.file.asItem(),
+                GTCTools.wrench.asItem(),
                 GTCTools.plunger.asItem(),
                 GTCTools.softMallet.asItem()
         );
@@ -157,6 +171,7 @@ public class GTCRegistrateTags {
                 GTCTools.screwdriver.asItem(),
                 GTCTools.file.asItem(),
                 GTCTools.wirecutter.asItem(),
+                GTCTools.wrench.asItem(),
                 GTCTools.plunger.asItem(),
                 GTCTools.softMallet.asItem(),
                 GTCTools.mortar.asItem()

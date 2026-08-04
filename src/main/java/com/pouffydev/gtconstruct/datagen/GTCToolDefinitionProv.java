@@ -89,6 +89,21 @@ public class GTCToolDefinitionProv extends AbstractToolDefinitionDataProvider {
                 .module(IsEffectiveModule.tag(TagUtil.createBlockTag("mineable/wire_cutter", false)))
                 .build();
 
+        define(GTCToolDefinitions.WRENCH)
+                .module(PartStatsModule.parts()
+                        .part(TinkerToolParts.pickHead)
+                        .part(TinkerToolParts.adzeHead)
+                        .part(GTCToolParts.wrenchHandle)
+                        .build())
+                .module(defaultThreeParts)
+                .module(new SetStatsModule(StatsNBT.builder()
+                        .set(ToolStats.ATTACK_DAMAGE, 1.0F)
+                        .set(ToolStats.ATTACK_SPEED, -2.8F).build()))
+                .smallToolStartingSlots()
+                //.module(ToolTraitsModule.builder().trait(ModifierIds., 1).build())
+                .module(IsEffectiveModule.tag(TagUtil.createBlockTag("mineable/wrench", false)))
+                .build();
+
         define(GTCToolDefinitions.PLUNGER)
                 .module(PartStatsModule.parts()
                         .part(GTCToolParts.plungerHead)

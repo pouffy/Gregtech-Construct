@@ -46,6 +46,7 @@ public class GTCToolsRecipeProv extends GTCRecipeProvider implements IMaterialRe
         toolBuilding(consumer, GTCTools.screwdriver, folder);
         toolBuilding(consumer, GTCTools.file, folder);
         toolBuilding(consumer, GTCTools.wirecutter, folder);
+        toolBuilding(consumer, GTCTools.wrench, folder);
         toolBuilding(consumer, GTCTools.plunger, folder);
         toolBuilding(consumer, GTCTools.softMallet, folder);
         toolBuilding(consumer, GTCTools.mortar, folder);
@@ -55,11 +56,11 @@ public class GTCToolsRecipeProv extends GTCRecipeProvider implements IMaterialRe
         String partFolder = "tools/parts/";
         String castFolder = "smeltery/casts/";
 
-        partRecipes(consumer, GTCToolParts.sawBlade,     GTCSmeltery.sawBladeCast,     2, partFolder, castFolder);
-        partRecipes(consumer, GTCToolParts.fileHead,     GTCSmeltery.fileHeadCast,     1, partFolder, castFolder);
+        partRecipes(consumer, GTCToolParts.sawBlade, GTCSmeltery.sawBladeCast, 2, partFolder, castFolder);
+        partRecipes(consumer, GTCToolParts.fileHead, GTCSmeltery.fileHeadCast, 1, partFolder, castFolder);
         partCasting(consumer, GTCToolParts.wirecutterClaws.get(), GTCSmeltery.wirecutterClawsCast, 3, partFolder, castFolder);
         partCasting(consumer, GTCToolParts.screwdriverTip.get(), GTCSmeltery.screwdriverTipCast, 1, partFolder, castFolder);
-        partRecipes(consumer, GTCToolParts.wrenchHandle,     GTCSmeltery.wrenchHandleCast,     4, partFolder, castFolder);
+        partRecipes(consumer, GTCToolParts.wrenchHandle, GTCSmeltery.wrenchHandleCast, 4, partFolder, castFolder);
 
         uncastablePart(consumer, GTCToolParts.plungerHead.get(), 2, null, partFolder);
         uncastablePart(consumer, GTCToolParts.mortarBowl.get(), 3, null, partFolder);

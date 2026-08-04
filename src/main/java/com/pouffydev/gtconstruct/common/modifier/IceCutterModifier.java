@@ -50,6 +50,9 @@ public class IceCutterModifier extends NoLevelsModifier implements BlockBreakMod
                     igtTool.playSound(context.getPlayer());
                 }
             }
+            for (ItemStack stack : drops) {
+                Block.popResource(context.getWorld(), context.getPos(), stack);
+            }
         }
     }
 }
